@@ -1,0 +1,2032 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<roster id="0cf7-d825-0192-ae09" name="Tau Sa&apos;cea Full Roster" battleScribeVersion="2.03" gameSystemId="a467-5f42-d24c-6e5b" gameSystemName="Warhammer 40,000: Kill Team (2018)" gameSystemRevision="40" xmlns="http://www.battlescribe.net/schema/rosterSchema">
+  <costs>
+    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="283.0"/>
+  </costs>
+  <forces>
+    <force id="7451-1919-f3ce-3ac9" name="Kill Team List" entryId="cf61-9e5a-51cd-b4d2" catalogueId="7ac4-f90b-e0a6-ae72" catalogueRevision="21" catalogueName="T&apos;au Empire">
+      <rules>
+        <rule id="5543-2652-4943-3dc0" name="Calm Discipline (Sa&apos;cea)" hidden="false">
+          <description>Add 1 to the Leadership characteristic of models in your kill team. In addition, you can re-roll hit rolls of 1 for shooting attacks made by models in your kill team.</description>
+        </rule>
+      </rules>
+      <selections>
+        <selection id="cf2c-9fd5-56ea-1746" name="List Configuration" entryId="5c5e-a332-5578-705f::24de-9906-6401-a20e" number="1" type="upgrade">
+          <selections>
+            <selection id="b7ba-3b29-daf8-cf4c" name="Matched Play: Kill Team" entryId="5c5e-a332-5578-705f::46a8-9e97-401a-03f7" entryGroupId="5c5e-a332-5578-705f::a763-c901-e2be-22eb" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="8687-624d-8f97-98ec" name="Style: Matched" entryId="c502-39de-965b-6780" primary="false"/>
+                <category id="8e0a-b3b9-b485-7fbb" name="List: Kill Team" entryId="beaf-798d-961f-353d" primary="false"/>
+                <category id="c1d6-9dc1-3aa8-9496" name="List: Battle-Forged Kill Team" entryId="c0f7-c442-b695-bf07" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+          </costs>
+          <categories>
+            <category id="8e1c-44eb-1e0e-15fd" name="Configuration" entryId="f868-bdfd-567c-3eac" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="8208-41ab-844d-4e6f" name="XV25 Stealth Battlesuit Shas&apos;vre" entryId="bb60-a729-694c-9fbd::9121-9617-86d0-8997" number="1" type="model">
+          <rules>
+            <rule id="bb60-a729-694c-9fbd::bbda-1415-814e-a2a8::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="bb60-a729-694c-9fbd::5582-3424-ed18-df77" name="Stealth Shas&apos;vre" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">4</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">2</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">3</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">8</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">3+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="bb60-a729-694c-9fbd::51fd-7bb9-b6d4-4fba::0f37-d6f7-1dcf-ca23" name="Stealth Team Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Stealth Shas&apos;uis or Stealth Shas&apos;vres from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="bb60-a729-694c-9fbd::60f5-3211-4ffe-6a69::d442-638c-2c8d-f247" name="Camouflage Fields" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">Your opponent must subtract 1 from all hit rolls for attacks that target this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="1ed4-1cd4-881f-5db4" name="Burst cannon" entryId="bb60-a729-694c-9fbd::eb5e-9d50-6c26-7a49::3f7a-abe4-2c46-9b46::9bcd-9e2a-ef93-4293" entryGroupId="bb60-a729-694c-9fbd::eb5e-9d50-6c26-7a49::95ea-1a6d-a402-7f86" number="1" type="upgrade">
+              <profiles>
+                <profile id="bb60-a729-694c-9fbd::eb5e-9d50-6c26-7a49::3f7a-abe4-2c46-9b46::f767-ac4f-8a78-775a::a03a-0a3a-0fb1-ff42" name="Burst cannon" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 4</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="8a8a-6ded-c769-aaac" name="Markerlight &amp; Target lock" entryId="bb60-a729-694c-9fbd::9da7-39af-7eee-3b48::e93a-f5dc-7257-da20" number="1" type="upgrade">
+              <rules>
+                <rule id="bb60-a729-694c-9fbd::9da7-39af-7eee-3b48::af3c-f09b-d5e1-ddf3::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="bb60-a729-694c-9fbd::9da7-39af-7eee-3b48::5c55-90e5-d38b-9fa0::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="bb60-a729-694c-9fbd::9da7-39af-7eee-3b48::f386-80dc-e623-1f2d::2d10-c4cb-6ffa-9157" name="Target lock" hidden="false" typeId="0883-432d-b2ca-f11a" typeName="Wargear">
+                  <characteristics>
+                    <characteristic name="Ability" typeId="8b56-49a8-40e5-242a">A model with a target lock does not suffer the penalty to their hit rolls for Advancing and firing Assault weapons.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="1.0"/>
+              </costs>
+            </selection>
+            <selection id="c049-4482-2dd4-01c1" name="Sa&apos;cea Sept" entryId="bb60-a729-694c-9fbd::5ac5-5fd0-4577-892a::4632-f834-c51a-e265" entryGroupId="bb60-a729-694c-9fbd::5ac5-5fd0-4577-892a::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="6b9c-1901-8fdb-5d43" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="9e5a-d587-e91a-ac41" name="Leader" entryId="bb60-a729-694c-9fbd::42b6-e00f-897d-5af5::9b7f-4fe5-420a-a874::2abd-70f4-e7e8-4d18" entryGroupId="bb60-a729-694c-9fbd::42b6-e00f-897d-5af5::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="d4b7-0682-94d8-70b5" name="Level 1: Resourceful" entryId="bb60-a729-694c-9fbd::42b6-e00f-897d-5af5::9b7f-4fe5-420a-a874::49c6-1aa8-c120-1cf1" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="bb60-a729-694c-9fbd::42b6-e00f-897d-5af5::9b7f-4fe5-420a-a874::0827-f431-3c0e-66c0::b8d6-5870-939e-3cdf" name="Resourceful" publicationId="a467-5f42-pubN89361" page="68" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">As long as this model is on the battlefield and not shaken, you gain an additional Command Point at the beginning of the battle round.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="6047-e2ae-bc1d-f34e" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="20.0"/>
+          </costs>
+          <categories>
+            <category id="3568-aadd-6270-e83b" name="Battlesuit" entryId="fd6f-ea1b-53af-11ab" primary="false"/>
+            <category id="e3c7-82c2-7783-cc22" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="7bb3-ea0c-a783-dbac" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="e3c9-884c-460e-0701" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="0440-e009-5f1d-e71d" name="Jet Pack" entryId="95a6-6b90-5f87-ca85" primary="false"/>
+            <category id="4f8e-9af2-5a13-6d0e" name="XV25 Stealth Battlesuit" entryId="2ed3-4683-ef2f-117f" primary="false"/>
+            <category id="72a7-affa-1cdf-ba7b" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="5123-6383-451b-bab1" name="Leader" entryId="ade4-0710-e40e-be3f" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="f3a1-1fc8-df33-97fc" name="Pathfinder Gunner" entryId="0056-0d04-55fe-9d63::83c5-f23b-de87-b5c1" number="1" type="model">
+          <rules>
+            <rule id="0056-0d04-55fe-9d63::f38e-4f9e-d3f4-e1fd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0056-0d04-55fe-9d63::51b0-136f-24c0-ea8b" name="Pathfinder Gunner" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0056-0d04-55fe-9d63::dbba-4b52-11d1-ea44::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="6d41-b9de-b504-b55a" name="Photon grenades" entryId="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="1669-9b82-ce73-8248" name="Sa&apos;cea Sept" entryId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::4632-f834-c51a-e265" entryGroupId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="3297-87ff-d079-8aa9" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="ddc9-b0ee-9db2-4ab1" name="Comms" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::09a9-b92b-b36f-658e::02a0-4107-4818-7c99" entryGroupId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="8499-ff7e-fc27-d2f2" name="Level 1: Scanner" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::09a9-b92b-b36f-658e::91b5-71e4-b90e-3b34" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::09a9-b92b-b36f-658e::fe35-3bbe-31c6-22e3::fc51-0351-b8c9-fe7e" name="Scanner" publicationId="a467-5f42-pubN89361" page="70" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">Once per Shooting phase, if this model is not shaken, when you pick another model from your kill team within 6&quot; of this model to shoot, you can add 1 to hit rolls for that model in this phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="387b-5035-213c-c3f0" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="e8aa-55e7-ca5b-72a6" name="Rail rifle" entryId="0056-0d04-55fe-9d63::9177-6b8a-09d7-59c6::513b-6721-3a8a-b4bb" entryGroupId="0056-0d04-55fe-9d63::7c11-d8ca-5453-38ba" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::9177-6b8a-09d7-59c6::fe9a-9974-1d53-5591::893c-9ecd-f3c0-34bd" name="Rail rifle" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">6</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-4</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">D3</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">For each wound roll of 6+ made for this weapon, the target model suffers a mortal wound in addition to the normal damage.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="5.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="458c-e484-66a0-45ae" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="82a1-07a2-10b6-073a" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="97f9-c66f-9b3a-f407" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="9f49-1f08-e7d4-58bb" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="402d-fe3c-dde3-47a7" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="a875-2cc1-70b3-d7bc" name="Pathfinder Gunner" entryId="0056-0d04-55fe-9d63::83c5-f23b-de87-b5c1" number="1" type="model">
+          <rules>
+            <rule id="0056-0d04-55fe-9d63::f38e-4f9e-d3f4-e1fd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0056-0d04-55fe-9d63::51b0-136f-24c0-ea8b" name="Pathfinder Gunner" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0056-0d04-55fe-9d63::dbba-4b52-11d1-ea44::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="600f-c118-a0f5-f9e5" name="Photon grenades" entryId="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="0f59-048b-4ffd-8202" name="Rail rifle" entryId="0056-0d04-55fe-9d63::9177-6b8a-09d7-59c6::513b-6721-3a8a-b4bb" entryGroupId="0056-0d04-55fe-9d63::7c11-d8ca-5453-38ba" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::9177-6b8a-09d7-59c6::fe9a-9974-1d53-5591::893c-9ecd-f3c0-34bd" name="Rail rifle" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">6</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-4</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">D3</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">For each wound roll of 6+ made for this weapon, the target model suffers a mortal wound in addition to the normal damage.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="5.0"/>
+              </costs>
+            </selection>
+            <selection id="586d-382d-a248-565a" name="Demolitions" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::19b7-0f30-978a-4164::1933-2ec9-f5b1-5666" entryGroupId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="97e6-5eb3-5fca-4177" name="Level 1: Breacher" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::19b7-0f30-978a-4164::fd1c-53b4-e856-de6a" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::19b7-0f30-978a-4164::b3c3-3354-744a-fc9d::ffe1-1e6b-e52b-9cc7" name="Breacher" publicationId="a467-5f42-pubN89361" page="71" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">You can add 1 to this model&apos;s wound rolls against targets that are obscured.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="790d-fd81-a148-c774" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="cf51-fcf3-4164-a30e" name="Sa&apos;cea Sept" entryId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::4632-f834-c51a-e265" entryGroupId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="4f6f-1772-7a12-04aa" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="2efc-9334-5167-fca9" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="ac1f-c0fe-4c7d-c2d7" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="e060-b0b1-a8fc-1d6c" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="c1c8-c84b-2f7d-8259" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="e5dd-57f3-bcab-a55b" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="74b6-d517-6c3a-6653" name="Pathfinder Gunner" entryId="0056-0d04-55fe-9d63::83c5-f23b-de87-b5c1" number="1" type="model">
+          <rules>
+            <rule id="0056-0d04-55fe-9d63::f38e-4f9e-d3f4-e1fd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0056-0d04-55fe-9d63::51b0-136f-24c0-ea8b" name="Pathfinder Gunner" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0056-0d04-55fe-9d63::dbba-4b52-11d1-ea44::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="1152-a6a3-6e62-7257" name="Photon grenades" entryId="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="14f4-b792-3445-1ac7" name="Sa&apos;cea Sept" entryId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::4632-f834-c51a-e265" entryGroupId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="b282-de42-f096-b165" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="9e55-e4ce-f571-32d2" name="Rail rifle" entryId="0056-0d04-55fe-9d63::9177-6b8a-09d7-59c6::513b-6721-3a8a-b4bb" entryGroupId="0056-0d04-55fe-9d63::7c11-d8ca-5453-38ba" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::9177-6b8a-09d7-59c6::fe9a-9974-1d53-5591::893c-9ecd-f3c0-34bd" name="Rail rifle" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">6</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-4</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">D3</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">For each wound roll of 6+ made for this weapon, the target model suffers a mortal wound in addition to the normal damage.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="5.0"/>
+              </costs>
+            </selection>
+            <selection id="de93-2750-3fa8-f133" name="Sniper" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::84c6-1649-4d53-0213::ead5-ea32-5412-c857" entryGroupId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="6219-05fb-747c-9bb6" name="Level 1: Marksman" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::84c6-1649-4d53-0213::b5b2-a1ad-bbf0-b381" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::84c6-1649-4d53-0213::aaa1-c9c7-a48f-6a23::476c-6e3d-0038-5251" name="Marksman" publicationId="a467-5f42-pubN89361" page="75" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">You can re-roll hit rolls of 1 for this model when it makes a shooting attack.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="5549-55c9-b20a-c8c3" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="1b09-667c-1161-8baa" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="37dc-cf9c-27ec-abc5" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="6963-823e-ce80-2fbe" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="6ca5-36c4-ab8a-234b" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="3c05-6233-e75e-61ef" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="eaa6-b15b-0c55-9bcd" name="Pathfinder Gunner" entryId="0056-0d04-55fe-9d63::83c5-f23b-de87-b5c1" number="1" type="model">
+          <rules>
+            <rule id="0056-0d04-55fe-9d63::f38e-4f9e-d3f4-e1fd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0056-0d04-55fe-9d63::51b0-136f-24c0-ea8b" name="Pathfinder Gunner" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0056-0d04-55fe-9d63::dbba-4b52-11d1-ea44::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="bf93-b28b-1622-1124" name="Photon grenades" entryId="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="a116-5678-e3cc-f09b" name="Sa&apos;cea Sept" entryId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::4632-f834-c51a-e265" entryGroupId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="cb56-3ff3-5080-c3ba" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="183d-118c-4f2b-e182" name="Comms" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::09a9-b92b-b36f-658e::02a0-4107-4818-7c99" entryGroupId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="6832-7451-7a73-66d8" name="Level 1: Scanner" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::09a9-b92b-b36f-658e::91b5-71e4-b90e-3b34" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::09a9-b92b-b36f-658e::fe35-3bbe-31c6-22e3::fc51-0351-b8c9-fe7e" name="Scanner" publicationId="a467-5f42-pubN89361" page="70" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">Once per Shooting phase, if this model is not shaken, when you pick another model from your kill team within 6&quot; of this model to shoot, you can add 1 to hit rolls for that model in this phase.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="3dc5-aad6-69d0-b720" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="e776-7df4-0bab-da27" name="Ion rifle" entryId="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::f3b1-6e27-c68b-f2a1" entryGroupId="0056-0d04-55fe-9d63::7c11-d8ca-5453-38ba" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::67e8-8411-6984-5338::2858-c099-c67f-7dcb" name="Ion rifle (2. overcharge)" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy D3</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">8</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-1</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">2</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">If you make one or more unmodified hit rolls of 1, the bearer suffers a mortal wound after all of this weapon&apos;s shots have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::ad26-af84-4791-28ed::8ce1-bc88-026d-d80e" name="Ion rifle (1. standard)" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">7</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-1</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="3.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="bdd8-126e-8dca-b8d7" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="7912-610a-54f3-cd9d" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="313d-e000-d63e-4138" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="2b42-6566-3ec3-4d17" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="7100-7bf3-ff25-af3b" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="6363-1956-a668-675b" name="Pathfinder Gunner" entryId="0056-0d04-55fe-9d63::83c5-f23b-de87-b5c1" number="1" type="model">
+          <rules>
+            <rule id="0056-0d04-55fe-9d63::f38e-4f9e-d3f4-e1fd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0056-0d04-55fe-9d63::51b0-136f-24c0-ea8b" name="Pathfinder Gunner" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0056-0d04-55fe-9d63::dbba-4b52-11d1-ea44::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="e9c5-32ec-0ed8-061d" name="Photon grenades" entryId="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="f845-acd7-93a2-98ba" name="Demolitions" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::19b7-0f30-978a-4164::1933-2ec9-f5b1-5666" entryGroupId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="9c37-3fe8-e881-6c8d" name="Level 1: Breacher" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::19b7-0f30-978a-4164::fd1c-53b4-e856-de6a" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::19b7-0f30-978a-4164::b3c3-3354-744a-fc9d::ffe1-1e6b-e52b-9cc7" name="Breacher" publicationId="a467-5f42-pubN89361" page="71" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">You can add 1 to this model&apos;s wound rolls against targets that are obscured.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="b6e4-fe15-485e-a222" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="5bfd-a427-05f3-f19d" name="Sa&apos;cea Sept" entryId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::4632-f834-c51a-e265" entryGroupId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="39a4-547f-6bfa-8063" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="1d19-e2e7-ffd5-6bff" name="Ion rifle" entryId="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::f3b1-6e27-c68b-f2a1" entryGroupId="0056-0d04-55fe-9d63::7c11-d8ca-5453-38ba" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::67e8-8411-6984-5338::2858-c099-c67f-7dcb" name="Ion rifle (2. overcharge)" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy D3</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">8</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-1</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">2</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">If you make one or more unmodified hit rolls of 1, the bearer suffers a mortal wound after all of this weapon&apos;s shots have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::ad26-af84-4791-28ed::8ce1-bc88-026d-d80e" name="Ion rifle (1. standard)" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">7</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-1</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="3.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="7265-5063-94e0-ccf1" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="121f-676d-2265-7384" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="b690-f44f-2746-262e" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="c5b3-67e5-5e05-8536" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="be93-fdc6-83e0-b01e" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="c9f7-f354-8504-d286" name="Pathfinder Gunner" entryId="0056-0d04-55fe-9d63::83c5-f23b-de87-b5c1" number="1" type="model">
+          <rules>
+            <rule id="0056-0d04-55fe-9d63::f38e-4f9e-d3f4-e1fd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0056-0d04-55fe-9d63::51b0-136f-24c0-ea8b" name="Pathfinder Gunner" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">3</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0056-0d04-55fe-9d63::dbba-4b52-11d1-ea44::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="1a0d-ddcd-6e52-aec8" name="Photon grenades" entryId="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::a827-c22d-42e3-2e0a::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="2431-475a-1c21-ba27" name="Sniper" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::84c6-1649-4d53-0213::ead5-ea32-5412-c857" entryGroupId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="2872-8c1d-e1a1-d085" name="Level 1: Marksman" entryId="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::84c6-1649-4d53-0213::b5b2-a1ad-bbf0-b381" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0056-0d04-55fe-9d63::ef62-4b7f-c511-707f::84c6-1649-4d53-0213::aaa1-c9c7-a48f-6a23::476c-6e3d-0038-5251" name="Marksman" publicationId="a467-5f42-pubN89361" page="75" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">You can re-roll hit rolls of 1 for this model when it makes a shooting attack.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="aa13-509e-f79f-6161" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="ca2e-1fa3-3b77-90c0" name="Sa&apos;cea Sept" entryId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::4632-f834-c51a-e265" entryGroupId="0056-0d04-55fe-9d63::54ec-4cbb-d113-fc7f::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="a1ae-f050-b21f-6575" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="7e2e-8665-3660-7891" name="Ion rifle" entryId="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::f3b1-6e27-c68b-f2a1" entryGroupId="0056-0d04-55fe-9d63::7c11-d8ca-5453-38ba" number="1" type="upgrade">
+              <profiles>
+                <profile id="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::67e8-8411-6984-5338::2858-c099-c67f-7dcb" name="Ion rifle (2. overcharge)" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy D3</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">8</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-1</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">2</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">If you make one or more unmodified hit rolls of 1, the bearer suffers a mortal wound after all of this weapon&apos;s shots have been resolved.</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="0056-0d04-55fe-9d63::aaad-ce9b-1214-9f97::ad26-af84-4791-28ed::8ce1-bc88-026d-d80e" name="Ion rifle (1. standard)" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">7</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-1</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="3.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="37f8-0af8-f7b2-27e8" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="eca5-1356-43dd-fa8e" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="5e86-a8a7-f89e-59c1" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="27a2-865d-d760-b0e2" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="e425-eafa-90d8-6302" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="9f48-19bb-96f8-decf" name="Pathfinder" entryId="41f8-ac5b-7b7a-79cd::79c4-3e23-66af-4cdf" number="1" type="model">
+          <rules>
+            <rule id="41f8-ac5b-7b7a-79cd::e04e-3413-9a66-a2c3::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="41f8-ac5b-7b7a-79cd::2e8a-1440-de8b-41dd" name="Pathfinder" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="41f8-ac5b-7b7a-79cd::a785-b0cf-17b7-1089::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="8cff-4682-5aa2-c3bc" name="Photon grenades" entryId="41f8-ac5b-7b7a-79cd::cbc6-5deb-47dc-0d43::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="41f8-ac5b-7b7a-79cd::cbc6-5deb-47dc-0d43::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="8895-280c-f2fa-003a" name="Pulse carbine w/ Markerlight" entryId="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::94a0-f018-fb53-c85a" number="1" type="upgrade">
+              <rules>
+                <rule id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::d949-25b9-135d-e636::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::36ba-def6-44f6-fb33::fe07-6db0-569b-bbdd" name="Pulse carbine" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 2</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::68bb-3067-2419-213e::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="17fc-7131-b8fa-9780" name="Sa&apos;cea Sept" entryId="41f8-ac5b-7b7a-79cd::276f-ab4c-15c0-e8e6::4632-f834-c51a-e265" entryGroupId="41f8-ac5b-7b7a-79cd::276f-ab4c-15c0-e8e6::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="e321-45bd-21c1-2ffd" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="6.0"/>
+          </costs>
+          <categories>
+            <category id="19b4-77e7-d9c9-7da8" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="bd08-09cc-ef71-d23e" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="1f29-2a6a-4c64-982e" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="2d18-8b77-b0fc-7733" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="fb1b-60de-9891-8232" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="5bbc-87f9-ec72-b3db" name="Pathfinder" entryId="41f8-ac5b-7b7a-79cd::79c4-3e23-66af-4cdf" number="1" type="model">
+          <rules>
+            <rule id="41f8-ac5b-7b7a-79cd::e04e-3413-9a66-a2c3::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="41f8-ac5b-7b7a-79cd::2e8a-1440-de8b-41dd" name="Pathfinder" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="41f8-ac5b-7b7a-79cd::a785-b0cf-17b7-1089::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="4f28-1a94-6603-1421" name="Photon grenades" entryId="41f8-ac5b-7b7a-79cd::cbc6-5deb-47dc-0d43::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="41f8-ac5b-7b7a-79cd::cbc6-5deb-47dc-0d43::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="d49f-2966-3d04-0353" name="Pulse carbine w/ Markerlight" entryId="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::94a0-f018-fb53-c85a" number="1" type="upgrade">
+              <rules>
+                <rule id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::d949-25b9-135d-e636::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::36ba-def6-44f6-fb33::fe07-6db0-569b-bbdd" name="Pulse carbine" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 2</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::68bb-3067-2419-213e::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="d451-b587-f081-ae0d" name="Sa&apos;cea Sept" entryId="41f8-ac5b-7b7a-79cd::276f-ab4c-15c0-e8e6::4632-f834-c51a-e265" entryGroupId="41f8-ac5b-7b7a-79cd::276f-ab4c-15c0-e8e6::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="ce43-42bb-1a61-b84b" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="6.0"/>
+          </costs>
+          <categories>
+            <category id="d0b3-0956-d0e6-e0b7" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="48a9-2490-137a-503a" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="920f-712d-4065-52cf" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="f634-3f19-b864-a052" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="a716-8a43-8424-beb9" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="b18e-b985-c2d6-38dd" name="Pathfinder" entryId="41f8-ac5b-7b7a-79cd::79c4-3e23-66af-4cdf" number="1" type="model">
+          <rules>
+            <rule id="41f8-ac5b-7b7a-79cd::e04e-3413-9a66-a2c3::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="41f8-ac5b-7b7a-79cd::2e8a-1440-de8b-41dd" name="Pathfinder" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="41f8-ac5b-7b7a-79cd::a785-b0cf-17b7-1089::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="9760-956d-754a-a9f5" name="Photon grenades" entryId="41f8-ac5b-7b7a-79cd::cbc6-5deb-47dc-0d43::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="41f8-ac5b-7b7a-79cd::cbc6-5deb-47dc-0d43::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="dbff-68db-911a-d827" name="Pulse carbine w/ Markerlight" entryId="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::94a0-f018-fb53-c85a" number="1" type="upgrade">
+              <rules>
+                <rule id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::d949-25b9-135d-e636::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::36ba-def6-44f6-fb33::fe07-6db0-569b-bbdd" name="Pulse carbine" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 2</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="41f8-ac5b-7b7a-79cd::8eed-8ee4-c50e-3509::68bb-3067-2419-213e::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="58b3-4294-c676-009b" name="Sa&apos;cea Sept" entryId="41f8-ac5b-7b7a-79cd::276f-ab4c-15c0-e8e6::4632-f834-c51a-e265" entryGroupId="41f8-ac5b-7b7a-79cd::276f-ab4c-15c0-e8e6::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="da27-543e-70e0-828a" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="6.0"/>
+          </costs>
+          <categories>
+            <category id="2332-6daa-0f24-f6b1" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="8a0e-bc06-3610-0229" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="4e93-60ad-12b1-c40f" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="34e1-e945-f611-2822" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="79cc-8682-e219-ee6f" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="71a9-9b6f-2d30-82a6" name="XV25 Stealth Battlesuit Shas&apos;ui" entryId="4340-dab1-7330-f462::7fa5-5063-e682-a11a" number="1" type="model">
+          <rules>
+            <rule id="4340-dab1-7330-f462::d9a2-9935-bf53-6800::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="4340-dab1-7330-f462::bc10-e108-8af1-f2a2" name="Stealth Shas&apos;ui" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">4</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">2</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">2</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">7</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">3+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4340-dab1-7330-f462::48c9-0282-8c33-16b4::0f37-d6f7-1dcf-ca23" name="Stealth Team Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Stealth Shas&apos;uis or Stealth Shas&apos;vres from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4340-dab1-7330-f462::fe39-5245-719f-9d5f::d442-638c-2c8d-f247" name="Camouflage Fields" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">Your opponent must subtract 1 from all hit rolls for attacks that target this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="9202-8549-9ef6-a11c" name="Burst cannon" entryId="4340-dab1-7330-f462::6569-8b18-ada1-cf36::3f7a-abe4-2c46-9b46::9bcd-9e2a-ef93-4293" entryGroupId="4340-dab1-7330-f462::6569-8b18-ada1-cf36::95ea-1a6d-a402-7f86" number="1" type="upgrade">
+              <profiles>
+                <profile id="4340-dab1-7330-f462::6569-8b18-ada1-cf36::3f7a-abe4-2c46-9b46::f767-ac4f-8a78-775a::a03a-0a3a-0fb1-ff42" name="Burst cannon" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 4</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="6c30-f340-1b3e-596e" name="Sa&apos;cea Sept" entryId="4340-dab1-7330-f462::cba0-609c-0b1a-a657::4632-f834-c51a-e265" entryGroupId="4340-dab1-7330-f462::cba0-609c-0b1a-a657::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="0b54-e485-a55e-c3aa" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="20.0"/>
+          </costs>
+          <categories>
+            <category id="4d05-b60e-4c8c-03ef" name="Battlesuit" entryId="fd6f-ea1b-53af-11ab" primary="false"/>
+            <category id="ea93-f234-f5ec-fa9b" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="060b-a078-1478-7ed9" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="50fa-6283-dc72-789b" name="Jet Pack" entryId="95a6-6b90-5f87-ca85" primary="false"/>
+            <category id="62f4-928c-9fba-6434" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="5277-3a7b-0459-472d" name="XV25 Stealth Battlesuit" entryId="2ed3-4683-ef2f-117f" primary="false"/>
+            <category id="492a-a02b-3860-9e07" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="78a9-ff35-1328-b412" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="5b95-a61b-fb77-e22f" name="XV25 Stealth Battlesuit Shas&apos;ui" entryId="4340-dab1-7330-f462::7fa5-5063-e682-a11a" number="1" type="model">
+          <rules>
+            <rule id="4340-dab1-7330-f462::d9a2-9935-bf53-6800::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="4340-dab1-7330-f462::bc10-e108-8af1-f2a2" name="Stealth Shas&apos;ui" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">4</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">2</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">2</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">7</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">3+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4340-dab1-7330-f462::48c9-0282-8c33-16b4::0f37-d6f7-1dcf-ca23" name="Stealth Team Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Stealth Shas&apos;uis or Stealth Shas&apos;vres from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="4340-dab1-7330-f462::fe39-5245-719f-9d5f::d442-638c-2c8d-f247" name="Camouflage Fields" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">Your opponent must subtract 1 from all hit rolls for attacks that target this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="5cfa-a060-fc0c-115f" name="Burst cannon" entryId="4340-dab1-7330-f462::6569-8b18-ada1-cf36::3f7a-abe4-2c46-9b46::9bcd-9e2a-ef93-4293" entryGroupId="4340-dab1-7330-f462::6569-8b18-ada1-cf36::95ea-1a6d-a402-7f86" number="1" type="upgrade">
+              <profiles>
+                <profile id="4340-dab1-7330-f462::6569-8b18-ada1-cf36::3f7a-abe4-2c46-9b46::f767-ac4f-8a78-775a::a03a-0a3a-0fb1-ff42" name="Burst cannon" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 4</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="bea3-3c5c-d3dd-fb57" name="Sa&apos;cea Sept" entryId="4340-dab1-7330-f462::cba0-609c-0b1a-a657::4632-f834-c51a-e265" entryGroupId="4340-dab1-7330-f462::cba0-609c-0b1a-a657::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="9309-f62b-b9ef-2369" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="20.0"/>
+          </costs>
+          <categories>
+            <category id="38f8-6d48-2493-2eac" name="Battlesuit" entryId="fd6f-ea1b-53af-11ab" primary="false"/>
+            <category id="d071-6480-535e-7792" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="f124-4fc1-385d-b045" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="30e5-ef97-1a33-2880" name="Jet Pack" entryId="95a6-6b90-5f87-ca85" primary="false"/>
+            <category id="2912-fb47-63bd-166e" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="4026-5d14-877c-bd08" name="XV25 Stealth Battlesuit" entryId="2ed3-4683-ef2f-117f" primary="false"/>
+            <category id="2ed8-2b44-7806-d1d2" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="9861-3d8a-9b8e-f13c" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="3220-4d8c-476d-44ae" name="MB3 Recon Drone" entryId="60d2-9f39-99d7-1879::1122-65af-80de-fd2a" number="1" type="model">
+          <rules>
+            <rule id="60d2-9f39-99d7-1879::c7e7-5fc7-0f22-9671::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+            <rule id="60d2-9f39-99d7-1879::4249-32a4-0ccc-4537::2dc5-df84-ff7a-03c6" name="Support Subroutines" hidden="false">
+              <description>Drones cannot be specialists, are not part of the fire team and cannot gain experience.</description>
+            </rule>
+            <rule id="60d2-9f39-99d7-1879::6af8-54ce-49f1-6e90::42a8-a9e6-e825-ded8" name="Saviour Protocols" hidden="false">
+              <description>When a friendly T&apos;AU EMPIRE INFANTRY or BATTLESUIT model within 3&quot; of this model would lose any wounds as a result of an attack made with a ranged or melee weapon, this model can intercept that attack. If it does, that model does not lose those wounds and this model suffers 1 mortal wound.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="60d2-9f39-99d7-1879::bde6-3f11-d611-f153" name="MB3 Recon Drone" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">5+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">4</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">2</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">4+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="60d2-9f39-99d7-1879::8831-4842-beaf-4712" name="Recon Suite" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">At the start of the Shooting phase, you can choose a PATHFINDER from your kill team within 6&quot; of a friendly Recon Drone. Until the end of the phase, that model does not suffer penalties to their hit and Injury rolls due to their target being obscured.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="d011-059b-dfbf-7cc0" name="Burst cannon" entryId="60d2-9f39-99d7-1879::66b7-b5a5-db6d-ab73::9bcd-9e2a-ef93-4293" number="1" type="upgrade">
+              <profiles>
+                <profile id="60d2-9f39-99d7-1879::66b7-b5a5-db6d-ab73::f767-ac4f-8a78-775a::a03a-0a3a-0fb1-ff42" name="Burst cannon" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 4</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="e216-ed92-6aba-39b8" name="Sa&apos;cea Sept" entryId="60d2-9f39-99d7-1879::c93d-bf13-3cc8-c242::4632-f834-c51a-e265" entryGroupId="60d2-9f39-99d7-1879::c93d-bf13-3cc8-c242::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="004a-202a-78af-6f34" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="2f5a-e9c4-51c8-3795" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="db8a-e72b-ab04-cb7b" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="6e2f-47bb-41b7-3451" name="Drone" entryId="580b-8df1-70dc-452b" primary="false"/>
+            <category id="be56-a50c-4217-36fa" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+            <category id="d59c-f04f-c769-4fdb" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+          </categories>
+        </selection>
+        <selection id="746b-708c-5279-0880" name="MV1 Gun Drone" entryId="b04b-2b5a-8583-102d::7a62-e3b5-b04f-af7b" number="1" type="model">
+          <rules>
+            <rule id="b04b-2b5a-8583-102d::ee98-dad0-7110-06dd::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+            <rule id="b04b-2b5a-8583-102d::06d5-9d9a-4795-d2b2::2dc5-df84-ff7a-03c6" name="Support Subroutines" hidden="false">
+              <description>Drones cannot be specialists, are not part of the fire team and cannot gain experience.</description>
+            </rule>
+            <rule id="b04b-2b5a-8583-102d::53f8-03e3-46e9-13d7::42a8-a9e6-e825-ded8" name="Saviour Protocols" hidden="false">
+              <description>When a friendly T&apos;AU EMPIRE INFANTRY or BATTLESUIT model within 3&quot; of this model would lose any wounds as a result of an attack made with a ranged or melee weapon, this model can intercept that attack. If it does, that model does not lose those wounds and this model suffers 1 mortal wound.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="b04b-2b5a-8583-102d::46f0-8241-d15a-a7b4" name="MV1 Gun Drone" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">5+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">4+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="bc53-d605-d6a3-2eb2" name="Pulse carbine" entryId="b04b-2b5a-8583-102d::9585-c6e4-17fc-fa4f::34b4-b2bf-01d2-1645" number="2" type="upgrade">
+              <profiles>
+                <profile id="b04b-2b5a-8583-102d::9585-c6e4-17fc-fa4f::da5e-8c19-eb2e-a930::fe07-6db0-569b-bbdd" name="Pulse carbine" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 2</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="2802-3573-1258-f48f" name="Sa&apos;cea Sept" entryId="b04b-2b5a-8583-102d::5788-68a0-05cf-c198::4632-f834-c51a-e265" entryGroupId="b04b-2b5a-8583-102d::5788-68a0-05cf-c198::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="922a-96da-a9c2-6756" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="8adc-7c67-d0c7-8c3e" name="Drone" entryId="580b-8df1-70dc-452b" primary="false"/>
+            <category id="c15e-3ca7-3bcf-dac2" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="cb8f-5504-7a36-80fe" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="77d0-cbaa-ba8f-3a6c" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+            <category id="f13e-5f6e-f8f3-bfcd" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+          </categories>
+        </selection>
+        <selection id="da8b-4c30-2296-13e9" name="MV33 Grav-inhibitor Drone" entryId="2601-88a5-6e6f-d791::7b5e-818f-31be-c2d3" number="1" type="model">
+          <rules>
+            <rule id="2601-88a5-6e6f-d791::588d-224d-d840-2652::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+            <rule id="2601-88a5-6e6f-d791::fce4-9edb-d80b-3138::2dc5-df84-ff7a-03c6" name="Support Subroutines" hidden="false">
+              <description>Drones cannot be specialists, are not part of the fire team and cannot gain experience.</description>
+            </rule>
+            <rule id="2601-88a5-6e6f-d791::0a18-07df-d25d-086c::42a8-a9e6-e825-ded8" name="Saviour Protocols" hidden="false">
+              <description>When a friendly T&apos;AU EMPIRE INFANTRY or BATTLESUIT model within 3&quot; of this model would lose any wounds as a result of an attack made with a ranged or melee weapon, this model can intercept that attack. If it does, that model does not lose those wounds and this model suffers 1 mortal wound.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="2601-88a5-6e6f-d791::a0a2-cafa-7654-f9c3" name="MV33 Grav-inhibitor Drone" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">5+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">4+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="2601-88a5-6e6f-d791::a05c-2e26-c483-f367" name="Gravity Wave Projector" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">Enemy models beginning a charge move within 12&quot; of any Grav-inhibitor Drones reduce their charge distance by D3&quot;.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="eefb-2dec-96a4-33c9" name="Sa&apos;cea Sept" entryId="2601-88a5-6e6f-d791::84be-ef35-a05f-13a2::4632-f834-c51a-e265" entryGroupId="2601-88a5-6e6f-d791::84be-ef35-a05f-13a2::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="dfe7-9657-4480-5d52" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="5f68-438b-edce-ebed" name="Drone" entryId="580b-8df1-70dc-452b" primary="false"/>
+            <category id="42d1-9243-94c3-c7d9" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="713b-d801-1f46-7d55" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="1165-8500-4c88-e7e5" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+            <category id="3e4a-74bc-c632-7fd0" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+          </categories>
+        </selection>
+        <selection id="600a-ee0c-c6fd-faa4" name="MV7 Marker Drone" entryId="dd4e-2338-09fe-71b6::0cfa-c4d3-6e31-166a" number="1" type="model">
+          <rules>
+            <rule id="dd4e-2338-09fe-71b6::ebf7-15b4-d925-90be::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+            <rule id="dd4e-2338-09fe-71b6::866f-4d66-99e8-23da::2dc5-df84-ff7a-03c6" name="Support Subroutines" hidden="false">
+              <description>Drones cannot be specialists, are not part of the fire team and cannot gain experience.</description>
+            </rule>
+            <rule id="dd4e-2338-09fe-71b6::7251-0a6a-968c-765b::42a8-a9e6-e825-ded8" name="Saviour Protocols" hidden="false">
+              <description>When a friendly T&apos;AU EMPIRE INFANTRY or BATTLESUIT model within 3&quot; of this model would lose any wounds as a result of an attack made with a ranged or melee weapon, this model can intercept that attack. If it does, that model does not lose those wounds and this model suffers 1 mortal wound.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="dd4e-2338-09fe-71b6::d206-b8f6-638c-4cf1" name="MV7 Marker Drone" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">5+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">1</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">6</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">4+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="dd4e-2338-09fe-71b6::98f4-e711-252b-62d7" name="Stable Platform" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">This model does not suffer the penalty to hit rolls for moving and firing Heavy weapons.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="2f58-5bab-8020-dbb3" name="Markerlight" entryId="dd4e-2338-09fe-71b6::9d90-26b6-e686-005e::6038-3ed8-159d-da29" number="1" type="upgrade">
+              <rules>
+                <rule id="dd4e-2338-09fe-71b6::9d90-26b6-e686-005e::73d9-bb18-5386-0f5b::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="dd4e-2338-09fe-71b6::9d90-26b6-e686-005e::ebd4-ce0f-f580-1be4::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="e520-7d43-8247-acd2" name="Sa&apos;cea Sept" entryId="dd4e-2338-09fe-71b6::8dc7-5592-9d5b-10c5::4632-f834-c51a-e265" entryGroupId="dd4e-2338-09fe-71b6::8dc7-5592-9d5b-10c5::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="8105-aa39-b1a8-d84c" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="d7ff-89e7-0c60-9dab" name="Drone" entryId="580b-8df1-70dc-452b" primary="false"/>
+            <category id="9667-d6b5-c720-29cf" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="738a-de8e-18ee-6cba" name="Non-specialist" entryId="79c6-76fc-47ee-c005" primary="true"/>
+            <category id="2e26-350f-e41f-0b0f" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+          </categories>
+        </selection>
+        <selection id="bced-d976-07e3-77fc" name="XV8 Crisis Battlesuit Shas&apos;vre" entryId="0578-6011-c54e-5f7d::2046-70f1-50aa-7d33" number="1" type="model">
+          <rules>
+            <rule id="0578-6011-c54e-5f7d::6ee7-db9c-5e96-6085::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="0578-6011-c54e-5f7d::f0f7-a85c-3b64-b6f6" name="XV8 Crisis Shas&apos;vre (XV8-02 Upgrade)" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">5</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">5</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">3</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">3</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">8</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">2+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="0578-6011-c54e-5f7d::8968-1e9d-47e3-3a0e::8d21-fc51-6582-4630" name="XV8 Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from nerve tests for XV8 Crisis Shas&apos;uis or XV8 Crisis Shas&apos;vres from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="157d-1b5d-8aef-d9bc" name="Sa&apos;cea Sept" entryId="0578-6011-c54e-5f7d::7b64-f54c-d1dc-235b::4632-f834-c51a-e265" entryGroupId="0578-6011-c54e-5f7d::7b64-f54c-d1dc-235b::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="ce8f-4756-0a3b-43c1" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="4af2-8a16-bfbd-c72f" name="Leader" entryId="0578-6011-c54e-5f7d::9d0f-c8cb-b5ca-7d02::9b7f-4fe5-420a-a874::2abd-70f4-e7e8-4d18" entryGroupId="0578-6011-c54e-5f7d::9d0f-c8cb-b5ca-7d02::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="98af-0438-008c-4ccd" name="Level 1: Resourceful" entryId="0578-6011-c54e-5f7d::9d0f-c8cb-b5ca-7d02::9b7f-4fe5-420a-a874::49c6-1aa8-c120-1cf1" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="0578-6011-c54e-5f7d::9d0f-c8cb-b5ca-7d02::9b7f-4fe5-420a-a874::0827-f431-3c0e-66c0::b8d6-5870-939e-3cdf" name="Resourceful" publicationId="a467-5f42-pubN89361" page="68" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">As long as this model is on the battlefield and not shaken, you gain an additional Command Point at the beginning of the battle round.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="d173-ba46-f6cb-2c19" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="da39-a0ea-70c8-a61c" name="Flamer" entryId="0578-6011-c54e-5f7d::8f73-e562-a0d2-7c12::94df-0da6-61c3-c133::1462-48c0-6e54-e7d3" entryGroupId="0578-6011-c54e-5f7d::8f73-e562-a0d2-7c12::1cf4-294a-009a-06fc" number="2" type="upgrade">
+              <profiles>
+                <profile id="0578-6011-c54e-5f7d::8f73-e562-a0d2-7c12::94df-0da6-61c3-c133::8812-1203-584f-053e::ad62-72de-8f23-ee3f" name="Flamer" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">8</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">4</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon automatically hits its target.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="8.0"/>
+              </costs>
+            </selection>
+            <selection id="479a-9a6c-5efe-f108" name="XV8-02 Upgrade" entryId="0578-6011-c54e-5f7d::6848-789b-b6ae-f7e3::adc9-e68c-54a2-bff8" number="1" type="upgrade">
+              <profiles>
+                <profile id="0578-6011-c54e-5f7d::6848-789b-b6ae-f7e3::6871-a1c5-06da-8fed::fd4d-9648-3726-8c21" name="XV8-02 Crisis Iridium Battlesuit" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b373-019d-503a-1124">A model with an XV8-02 Crisis Iridium Battlesuit has a save characteristic of 2+.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="10.0"/>
+              </costs>
+            </selection>
+            <selection id="a7f3-99bb-7f0b-b5c8" name="Advanced Targeting System" entryId="0578-6011-c54e-5f7d::8f73-e562-a0d2-7c12::c9b8-0abc-4d22-9095::2fba-2863-2d89-529a::29ea-2a23-e3b3-ad75" entryGroupId="0578-6011-c54e-5f7d::8f73-e562-a0d2-7c12::c9b8-0abc-4d22-9095::b812-152d-9f76-e11e" number="1" type="upgrade">
+              <profiles>
+                <profile id="0578-6011-c54e-5f7d::8f73-e562-a0d2-7c12::c9b8-0abc-4d22-9095::2fba-2863-2d89-529a::933f-1751-cea0-df2c::cca0-c0cc-f26e-1a6f" name="Advanced Targeting System" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                  <characteristics>
+                    <characteristic name="Description" typeId="b373-019d-503a-1124">Improve the AP characteristic of this model&apos;s ranged weapons by 1 (e.g. an AP 0 becomes AP -1, an AP -1 becomes AP -2).</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="5.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="33.0"/>
+          </costs>
+          <categories>
+            <category id="fed7-7b1b-89b8-d581" name="Battlesuit" entryId="fd6f-ea1b-53af-11ab" primary="false"/>
+            <category id="eb5e-5981-7012-e57a" name="Jet Pack" entryId="95a6-6b90-5f87-ca85" primary="false"/>
+            <category id="c7c2-e85b-39f1-6e02" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="417c-cf92-6e05-7e0b" name="XV8 Crisis Battlesuit" entryId="66f2-ed47-c749-e425" primary="false"/>
+            <category id="8245-13b1-1b9d-f5d5" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="68ed-9828-1aa8-e5d2" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="9ea1-14dc-2a89-ce61" name="Leader" entryId="ade4-0710-e40e-be3f" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="ab9e-c98d-b5ab-17d4" name="Cadre Fireblade" entryId="d7c8-8c91-c186-a39d::ffb5-d906-9b6e-d51c" number="1" type="model">
+          <rules>
+            <rule id="d7c8-8c91-c186-a39d::06a9-7d95-36dd-c8db::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="d7c8-8c91-c186-a39d::c1f9-23e6-f545-b95f" name="Cadre Fireblade" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">6&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">3+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">2+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">5</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">3</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">8</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">4+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">1</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="42c0-88c7-ca2e-6c16" name="Markerlight" entryId="d7c8-8c91-c186-a39d::66c3-c1ab-4ed9-0d6b::6038-3ed8-159d-da29" number="1" type="upgrade">
+              <rules>
+                <rule id="d7c8-8c91-c186-a39d::66c3-c1ab-4ed9-0d6b::73d9-bb18-5386-0f5b::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="d7c8-8c91-c186-a39d::66c3-c1ab-4ed9-0d6b::ebd4-ce0f-f580-1be4::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="b50f-b10d-f85d-f11b" name="Pulse rifle" entryId="d7c8-8c91-c186-a39d::75b5-e9ce-a011-dec1::f331-756c-ee59-d14f" number="1" type="upgrade">
+              <profiles>
+                <profile id="d7c8-8c91-c186-a39d::75b5-e9ce-a011-dec1::b26b-fbb1-c203-5bda::5e2e-11ee-c19e-0502" name="Pulse rifle" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">30&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Rapid Fire 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="23b0-0169-453c-ad9b" name="Photon grenades" entryId="d7c8-8c91-c186-a39d::9699-1de5-de75-953b::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="d7c8-8c91-c186-a39d::9699-1de5-de75-953b::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="df1c-b0f0-806d-eeab" name="Sa&apos;cea Sept" entryId="d7c8-8c91-c186-a39d::0e31-bf67-21b4-f8ec::4632-f834-c51a-e265" entryGroupId="d7c8-8c91-c186-a39d::0e31-bf67-21b4-f8ec::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="4f01-3fb6-5d36-dfaf" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="4ebe-a5e9-7393-9cd0" name="Shooting" entryId="d7c8-8c91-c186-a39d::e546-61c3-6b89-9168::30c6-ec85-6e3f-694a::3b6a-c3c2-c00b-170e" entryGroupId="d7c8-8c91-c186-a39d::e546-61c3-6b89-9168::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="cb9a-ebcb-2598-7e8a" name="Level 1: Shootist" entryId="d7c8-8c91-c186-a39d::e546-61c3-6b89-9168::30c6-ec85-6e3f-694a::7088-a1ce-44f9-b351" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="d7c8-8c91-c186-a39d::e546-61c3-6b89-9168::30c6-ec85-6e3f-694a::6747-98a8-eda7-5cf2::2dc6-312c-338c-e3a7" name="Shootist" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">Re-roll hit rolls of 1 for this model when it makes a shooting attack.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="c939-3d01-dfad-3184" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="23.0"/>
+          </costs>
+          <categories>
+            <category id="d2fe-ce73-ec37-5eb0" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="c621-ce2f-f9c6-fe12" name="Commander" entryId="6c25-5825-9054-44a7" primary="true"/>
+            <category id="dccf-7a0f-86ef-cf48" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="2942-f159-ea2f-c1f5" name="Cadre Fireblade" entryId="321a-79ee-9b56-5a4d" primary="false"/>
+            <category id="5297-24ee-9d04-1fc6" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+          </categories>
+        </selection>
+        <selection id="9829-a043-ffbe-aaee" name="XV25 Stealth Battlesuit Shas&apos;ui" entryId="6ace-177f-5b8a-339e::7fa5-5063-e682-a11a" number="1" type="model">
+          <rules>
+            <rule id="6ace-177f-5b8a-339e::d9a2-9935-bf53-6800::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="6ace-177f-5b8a-339e::bc10-e108-8af1-f2a2" name="Stealth Shas&apos;ui" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">8&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">4</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">4</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">2</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">2</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">7</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">3+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">-</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6ace-177f-5b8a-339e::48c9-0282-8c33-16b4::0f37-d6f7-1dcf-ca23" name="Stealth Team Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Stealth Shas&apos;uis or Stealth Shas&apos;vres from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="6ace-177f-5b8a-339e::fe39-5245-719f-9d5f::d442-638c-2c8d-f247" name="Camouflage Fields" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">Your opponent must subtract 1 from all hit rolls for attacks that target this model.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="05de-b2cd-d06d-ba11" name="Sa&apos;cea Sept" entryId="6ace-177f-5b8a-339e::cba0-609c-0b1a-a657::4632-f834-c51a-e265" entryGroupId="6ace-177f-5b8a-339e::cba0-609c-0b1a-a657::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="2b50-c53c-87f9-6204" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="91a3-6b43-b082-30ab" name="Heavy" entryId="6ace-177f-5b8a-339e::c50f-46b4-2145-0467::5abb-6b65-738c-fa61::8c9b-a772-02e7-d673" entryGroupId="6ace-177f-5b8a-339e::c50f-46b4-2145-0467::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="dc1c-70b0-75b4-6629" name="Level 1: Relentless" entryId="6ace-177f-5b8a-339e::c50f-46b4-2145-0467::5abb-6b65-738c-fa61::5308-cce0-90b6-1881" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="6ace-177f-5b8a-339e::c50f-46b4-2145-0467::5abb-6b65-738c-fa61::3bfc-5415-5d96-2a37::32fd-6f95-11d2-943d" name="Relentless" publicationId="a467-5f42-pubN89361" page="72" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">This model does not suffer the -1 penalty for shooting with a Heavy weapon after moving in the preceding Movement phase, or for shooting an Assault weapon after Advancing.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="cd6a-730d-f363-9eb8" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="7f5e-c373-59a6-f918" name="Fusion blaster" entryId="6ace-177f-5b8a-339e::6569-8b18-ada1-cf36::ff00-eb47-75fe-6a9f::e3bb-76cd-c8a1-4beb" entryGroupId="6ace-177f-5b8a-339e::6569-8b18-ada1-cf36::95ea-1a6d-a402-7f86" number="1" type="upgrade">
+              <profiles>
+                <profile id="6ace-177f-5b8a-339e::6569-8b18-ada1-cf36::ff00-eb47-75fe-6a9f::3055-be4d-ff1e-d82c::b979-eda3-514c-0995" name="Fusion blaster" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">8</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-4</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">D6</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">If the target is within half range of this weapon, roll two dice when inflicting damage with it and discard the lowest result.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="4.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="20.0"/>
+          </costs>
+          <categories>
+            <category id="fdcb-75f7-3753-f6d4" name="Battlesuit" entryId="fd6f-ea1b-53af-11ab" primary="false"/>
+            <category id="f3b5-65e4-e5bc-312a" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="2ad9-ca3d-87dc-5508" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="ee11-81de-bc27-f5e0" name="Jet Pack" entryId="95a6-6b90-5f87-ca85" primary="false"/>
+            <category id="bfb6-7870-686d-3ef9" name="Fly" entryId="5976-3b31-eca7-9828" primary="false"/>
+            <category id="8184-794f-2cbc-2607" name="XV25 Stealth Battlesuit" entryId="2ed3-4683-ef2f-117f" primary="false"/>
+            <category id="3af4-e30b-736a-6cad" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="f873-39e8-893c-e6ef" name="Specialist" entryId="29e7-d60f-5acd-4d99" primary="true"/>
+          </categories>
+        </selection>
+        <selection id="e6f3-1c3d-7379-3d1f" name="Pathfinder Shas&apos;ui" entryId="9239-e2cf-56b2-72f9::3992-4431-9edb-6e15" number="1" type="model">
+          <rules>
+            <rule id="9239-e2cf-56b2-72f9::2ddb-4857-dd32-7289::7084-9ac7-95d2-a29f" name="For the Greater Good" hidden="false">
+              <description>When an enemy model declares a charge against a model from your kill team, models from your kill team with this ability within 6&quot; of one of the charging model&apos;s targets may fire Overwatch as if they were also targeted. Once a model has done so, they cannot fire Overwatch or Retreat for the rest of the phase.</description>
+            </rule>
+          </rules>
+          <profiles>
+            <profile id="9239-e2cf-56b2-72f9::7603-12e6-5316-f063" name="Pathfinder Shas&apos;ui" hidden="false" typeId="bb0a-aba1-abd0-beb3" typeName="Model">
+              <characteristics>
+                <characteristic name="M" typeId="0a65-6cb0-f00d-e414">7&quot;</characteristic>
+                <characteristic name="WS" typeId="99d4-2590-8bac-3ad3">5+</characteristic>
+                <characteristic name="BS" typeId="27ff-d5c5-5422-1614">4+</characteristic>
+                <characteristic name="S" typeId="d474-89b0-047c-4f3a">3</characteristic>
+                <characteristic name="T" typeId="803c-5453-20c4-4b94">3</characteristic>
+                <characteristic name="W" typeId="0c48-aed0-609b-9818">1</characteristic>
+                <characteristic name="A" typeId="d63d-20cc-db25-5dd5">2</characteristic>
+                <characteristic name="Ld" typeId="411b-5228-afed-8334">7</characteristic>
+                <characteristic name="Sv" typeId="c319-1a2d-3648-2294">5+</characteristic>
+                <characteristic name="Max" typeId="44ec-172b-6381-4908">1</characteristic>
+              </characteristics>
+            </profile>
+            <profile id="9239-e2cf-56b2-72f9::4c40-9224-1518-21c9::54df-f8eb-92f5-87fb" name="Pathfinder Bonding Knife Ritual" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+              <characteristics>
+                <characteristic name="Description" typeId="b373-019d-503a-1124">You can subtract 1 from Nerve tests for Pathfinders, Pathfinder Gunners or Pathfinder Shas&apos;uis from your kill team within 3&quot; of any other friendly models with this ability that are not shaken.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <selections>
+            <selection id="f2ec-0a89-57b9-e0c6" name="Photon grenades" entryId="9239-e2cf-56b2-72f9::c8ab-1761-3be9-12dd::1f76-6a16-1e9d-e519" number="1" type="upgrade">
+              <profiles>
+                <profile id="9239-e2cf-56b2-72f9::c8ab-1761-3be9-12dd::ee61-bdd1-5507-8e64::7c61-568c-e4f5-1df2" name="Photon grenade" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Grenade D6</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">This weapon does not inflict any damage. Your opponent must subtract 1 from hit rolls made for INFANTRY models that have suffered any hits from photon grenades until the end of the battle round.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="5d97-345b-f3c6-2d98" name="Pulse carbine w/ Markerlight" entryId="9239-e2cf-56b2-72f9::bb12-e002-30bd-3e72::94a0-f018-fb53-c85a" number="1" type="upgrade">
+              <rules>
+                <rule id="9239-e2cf-56b2-72f9::bb12-e002-30bd-3e72::d949-25b9-135d-e636::405a-1189-7953-f9af" name="Markerlight" hidden="false">
+                  <description>If a model fires a markerlight, it cannot fire any other weapons in that phase. When a model is hit by a markerlight, place a counter next to it for the remainder of the phase. The table below describes the benefits models from your kill team receive when shooting at a model that has markerlight counters. All benefits are cumulative.
+
+* 1 - You can re-roll hit rolls of 1 for attacks that target this model.
+* 2 - Add 1 to hit rolls for attacks that target this model if it is obscured.
+* 3 - Models attacking this model do not suffer the penalty for moving and firing Heavy weapons or Advancing and firing Assault weapons.
+* 4+ - Add 1 to hit rolls for attacks that target this model.</description>
+                </rule>
+              </rules>
+              <profiles>
+                <profile id="9239-e2cf-56b2-72f9::bb12-e002-30bd-3e72::36ba-def6-44f6-fb33::fe07-6db0-569b-bbdd" name="Pulse carbine" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">18&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Assault 2</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+                <profile id="9239-e2cf-56b2-72f9::bb12-e002-30bd-3e72::68bb-3067-2419-213e::3815-6cc3-d18c-addb" name="Markerlight" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">36&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Heavy 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">-</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">-</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">-</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">See Markerlight rules.</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="0641-c93d-57b2-9fdf" name="Pulse pistol" entryId="9239-e2cf-56b2-72f9::a181-b4c6-0285-f968::610a-d5ff-5b16-9636" number="1" type="upgrade">
+              <profiles>
+                <profile id="9239-e2cf-56b2-72f9::a181-b4c6-0285-f968::2b68-e204-f446-de29::0e13-a24b-999a-1fff" name="Pulse pistol" hidden="false" typeId="c067-7929-f4dc-7825" typeName="Weapon">
+                  <characteristics>
+                    <characteristic name="Range" typeId="5410-0b42-87cc-bbc6">12&quot;</characteristic>
+                    <characteristic name="Type" typeId="38ea-c4e0-d3bb-d1e9">Pistol 1</characteristic>
+                    <characteristic name="S" typeId="fcc6-35ea-38b6-f4ca">5</characteristic>
+                    <characteristic name="AP" typeId="fc0e-2874-184d-9f64">0</characteristic>
+                    <characteristic name="D" typeId="cc1f-e463-c014-2251">1</characteristic>
+                    <characteristic name="Abilities" typeId="72cf-5b8f-5b71-79b2">-</characteristic>
+                  </characteristics>
+                </profile>
+              </profiles>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+            <selection id="ec82-79d4-d6cb-5a65" name="Sa&apos;cea Sept" entryId="9239-e2cf-56b2-72f9::877b-bbda-648b-64f2::4632-f834-c51a-e265" entryGroupId="9239-e2cf-56b2-72f9::877b-bbda-648b-64f2::b174-5a4a-deb1-047f" number="1" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+              <categories>
+                <category id="79e0-9127-82b5-6e7b" name="Sa&apos;cea Sept" entryId="68d1-4795-69e2-2300" primary="false"/>
+              </categories>
+            </selection>
+            <selection id="26f4-d59d-5d09-3850" name="Leader" entryId="9239-e2cf-56b2-72f9::bc8b-0f49-f8d2-ec2e::9b7f-4fe5-420a-a874::2abd-70f4-e7e8-4d18" entryGroupId="9239-e2cf-56b2-72f9::bc8b-0f49-f8d2-ec2e::a33d-4f89-1be1-c88b" number="1" type="upgrade">
+              <selections>
+                <selection id="bcbf-0655-8658-c540" name="Level 1: Resourceful" entryId="9239-e2cf-56b2-72f9::bc8b-0f49-f8d2-ec2e::9b7f-4fe5-420a-a874::49c6-1aa8-c120-1cf1" number="1" type="upgrade">
+                  <profiles>
+                    <profile id="9239-e2cf-56b2-72f9::bc8b-0f49-f8d2-ec2e::9b7f-4fe5-420a-a874::0827-f431-3c0e-66c0::b8d6-5870-939e-3cdf" name="Resourceful" publicationId="a467-5f42-pubN89361" page="68" hidden="false" typeId="1015-f0b1-9137-0060" typeName="Ability">
+                      <characteristics>
+                        <characteristic name="Description" typeId="b373-019d-503a-1124">As long as this model is on the battlefield and not shaken, you gain an additional Command Point at the beginning of the battle round.</characteristic>
+                      </characteristics>
+                    </profile>
+                  </profiles>
+                  <costs>
+                    <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+                  </costs>
+                  <categories>
+                    <category id="29c3-0322-4913-cbcf" name="Level 1" entryId="6e29-5d9a-98f5-ad2a" primary="false"/>
+                  </categories>
+                </selection>
+              </selections>
+              <costs>
+                <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="0.0"/>
+              </costs>
+            </selection>
+          </selections>
+          <costs>
+            <cost name="pts" typeId="5291-dc2c-cfa5-a77f" value="7.0"/>
+          </costs>
+          <categories>
+            <category id="2ab5-d504-aec3-edd0" name="Faction: T&apos;au Empire" entryId="7b37-ac1c-f776-37a2" primary="false"/>
+            <category id="9bfa-dd1c-984f-f9aa" name="Infantry" entryId="96c1-32dc-d9dc-4678" primary="false"/>
+            <category id="9b7e-97df-1884-f6fa" name="Pathfinder" entryId="68ce-4791-39e0-d5e2" primary="false"/>
+            <category id="f846-60e2-5450-3ad3" name="Model" entryId="50dd-a755-e02d-1c30" primary="false"/>
+            <category id="17c2-2f83-6208-c5e1" name="Leader" entryId="ade4-0710-e40e-be3f" primary="true"/>
+          </categories>
+        </selection>
+      </selections>
+      <publications>
+        <publication id="a467-5f42-pubN89361" name="Core Manual"/>
+        <publication id="a467-5f42-pubN90767" name="Rogue Trader"/>
+        <publication id="69e0-b697-c118-d32d" name="Kill Team Annual 2019"/>
+        <publication id="701a-4a21-90a2-7618" name="Elites"/>
+        <publication id="27d3-34b5-e6cf-69e3" name="Commanders"/>
+      </publications>
+      <categories>
+        <category id="5e40-89cc-eed2-ddfe" name="Uncategorised" entryId="(No Category)" primary="false"/>
+        <category id="4a48-3a5f-ba46-2498" name="Configuration" entryId="f868-bdfd-567c-3eac" primary="false"/>
+        <category id="8883-deed-73c7-615a" name="Commander" entryId="6c25-5825-9054-44a7" primary="false"/>
+        <category id="4506-02c6-61fa-b13a" name="Leader" entryId="ade4-0710-e40e-be3f" primary="false"/>
+        <category id="d054-ced7-5877-03a2" name="Specialists" entryId="29e7-d60f-5acd-4d99" primary="false"/>
+        <category id="119f-03d9-239e-8857" name="Specialist Retainers" entryId="181f-e47f-6ec3-2e9b" primary="false"/>
+        <category id="67fc-b07d-4824-2976" name="Non-specialists" entryId="79c6-76fc-47ee-c005" primary="false"/>
+      </categories>
+    </force>
+  </forces>
+</roster>
