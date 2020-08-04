@@ -2,10 +2,13 @@
     "name": "battlebuddy",
     "version": "1.0.0",
     "description": "",
-    "main": "dist/main/main.js",
+    "main": "dist/main.js",
+    "author": "Devin T. Currie <devintcurrie@gmail.com> (https://devintcurrie.com/)",
+    "homepage": "https://devintcurrie.com",
+    "license": "ISC",
     "scripts": {
-        "build-main": "cross-env NODE_ENV=production webpack -p --config webpack.main.prod.config.js",
-        "build-renderer": "cross-env NODE_ENV=production webpack -p --config webpack.renderer.prod.config.js",
+        "build-main": "cross-env NODE_ENV=production webpack -p --config webpack.main.js",
+        "build-renderer": "cross-env NODE_ENV=production webpack -p --config webpack.renderer.js",
         "build": "npm run build-main && npm run build-renderer",
         "start-renderer-dev": "webpack-dev-server --config webpack.renderer-dev.js",
         "start-main-dev": "webpack --config webpack.main.js && electron ./dist/main.js",
@@ -72,8 +75,6 @@
             "target": "nsis"
         }
     },
-    "author": "",
-    "license": "ISC",
     "devDependencies": {
         "@babel/core": "^7.11.0",
         "@babel/plugin-proposal-class-properties": "^7.10.4",
