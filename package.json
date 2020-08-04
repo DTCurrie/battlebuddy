@@ -4,8 +4,9 @@
     "description": "",
     "main": "dist/main.js",
     "author": "Devin T. Currie <devintcurrie@gmail.com> (https://devintcurrie.com/)",
-    "homepage": "https://devintcurrie.com",
+    "homepage": "https://github.com/DTCurrie/battlebuddy.git",
     "license": "ISC",
+    "repository": "https://github.com/DTCurrie/battlebuddy.git",
     "scripts": {
         "build-main": "cross-env NODE_ENV=production webpack -p --config webpack.main.js",
         "build-renderer": "cross-env NODE_ENV=production webpack -p --config webpack.renderer.js",
