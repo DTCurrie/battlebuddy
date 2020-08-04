@@ -3,7 +3,8 @@ import * as fs from 'fs';
 
 import { Parser } from 'xml2js';
 
-import { logInfo, logError } from '../utils/logger';
+import { logInfo, logError } from './logger';
+import { RosterData } from './shapes';
 
 const { readdir, readFile } = fs.promises;
 
@@ -31,8 +32,6 @@ export async function parseXml(): Promise<RosterData[]> {
                         const { $ } = roster;
 
                         logInfo(`Parsed roster ${$.name}`);
-
-                        console.dir(roster);
 
                         data.push(result);
                     } catch (error) {

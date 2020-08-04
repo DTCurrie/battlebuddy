@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,700');
+$headings-font-family: 'Open Sans';
+
+$enable-grid-classes: true;
+$enable-rounded: false;
+$primary: #c2364b;
+$secondary: #cacaca;
+$success: #015668;
+$danger: #06648c;
+$info: #0f81c7;
+$warning: #0de2ea;
+$light: #ececec;
+$dark: #222222;
+$enable-gradients: true;
+$spacer: 0.7rem;
+$border-width: 0;
+$border-radius: 0;
+$custom-control-indicator-size: 2rem;
+$custom-control-indicator-bg: $secondary;
+
+@import '~bootstrap/scss/bootstrap';
