@@ -43,7 +43,9 @@ const App = () => {
                 <NavbarBrand>Battlebuddy</NavbarBrand>
             </Navbar>
             <RosterHeader $={roster} costs={costs} />
-            <Container tag="main">{forces && <ForceDetails forces={forces} />}</Container>
+            <Container tag="main" fluid="sm">
+                {forces && <ForceDetails forces={forces} />}
+            </Container>
         </div>
     );
 };

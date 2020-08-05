@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const spawn = require('child_process').spawn;
 
-const baseConfig = require('./webpack.renderer-base');
+const baseConfig = require('./webpack.renderer');
 
 module.exports = merge(baseConfig, {
     resolve: {

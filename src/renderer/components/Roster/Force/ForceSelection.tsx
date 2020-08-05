@@ -1,6 +1,13 @@
-import React, { ComponentPropsWithoutRef, FunctionComponent } from 'react';
+import React, { ComponentPropsWithoutRef, FunctionComponent, useState } from 'react';
 
-import { ListGroupItem, ListGroup, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
+import {
+    ListGroupItem,
+    ListGroup,
+    ListGroupItemHeading,
+    ListGroupItemText,
+    Button,
+    Collapse,
+} from 'reactstrap';
 import {
     Selection,
     CostAttributes,
@@ -28,12 +35,16 @@ const ForceSelection: FunctionComponent<ForceSelectionProps> = ({
     profiles,
     selections,
 }) => {
+    const [collapse, setCollapse] = useState(!!nested);
+
     if (nested && !profiles && !selections) {
         return null;
     }
 
     const { $: cost } = flattenShape<Costs, Cost>(costs)[0];
     const HeadingTag = nested ? 'h5' : 'h4';
+
+    const toggle = () => setCollapse(!collapse);
 
     return (
         <ListGroupItem className="force-selection">
@@ -46,17 +57,21 @@ const ForceSelection: FunctionComponent<ForceSelectionProps> = ({
                         {cost.name}]
                     </span>
                 )}
+
+                <Button size="sm" onClick={toggle}>
+                    Collapse
+                </Button>
             </ListGroupItemHeading>
-            <ListGroupItemText>
+            <Collapse isOpen={collapse}>
                 {categories && (
-                    <div className="force-selection__categories">
+                    <ListGroupItemText className="force-selection__categories">
                         <strong>Categories: </strong>
                         <em>
                             {flattenShape<Categories, Category>(categories)
                                 .map((c) => c.$.name)
                                 .join(', ')}
                         </em>
-                    </div>
+                    </ListGroupItemText>
                 )}
                 {profiles &&
                     flattenShape<Profiles, Profile>(
@@ -76,7 +91,7 @@ const ForceSelection: FunctionComponent<ForceSelectionProps> = ({
                         ))}
                     </ListGroup>
                 )}
-            </ListGroupItemText>
+            </Collapse>
         </ListGroupItem>
     );
 };
