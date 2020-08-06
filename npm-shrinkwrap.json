@@ -1,0 +1,469 @@
+{
+  "name": "battlebuddy",
+  "version": "1.0.0",
+  "lockfileVersion": 1,
+  "requires": true,
+  "dependencies": {
+    "@babel/core": {
+      "version": "7.11.0",
+      "dev": true
+    },
+    "@babel/plugin-proposal-class-properties": {
+      "version": "7.10.4",
+      "dev": true
+    },
+    "@babel/polyfill": {
+      "version": "7.10.4",
+      "dev": true
+    },
+    "@babel/preset-env": {
+      "version": "7.11.0",
+      "dev": true,
+      "requires": {
+        "@babel/plugin-proposal-class-properties": "^7.10.4"
+      }
+    },
+    "@babel/preset-react": {
+      "version": "7.10.4",
+      "dev": true
+    },
+    "@babel/preset-typescript": {
+      "version": "7.10.4",
+      "dev": true
+    },
+    "@hookform/resolvers": {
+      "version": "0.1.0"
+    },
+    "@hot-loader/react-dom": {
+      "version": "16.13.0",
+      "dev": true
+    },
+    "@reach/router": {
+      "version": "1.3.4"
+    },
+    "@types/anymatch": {
+      "version": "1.3.1",
+      "dev": true
+    },
+    "@types/babel__core": {
+      "requires": {
+        "@types/babel__generator": "*",
+        "@types/babel__template": "*",
+        "@types/babel__traverse": "*"
+      }
+    },
+    "@types/babel__generator": {
+      "version": "7.6.1"
+    },
+    "@types/babel__template": {
+      "version": "7.0.2"
+    },
+    "@types/babel__traverse": {
+      "version": "7.0.13"
+    },
+    "@types/cacheable-request": {
+      "requires": {
+        "@types/http-cache-semantics": "*",
+        "@types/keyv": "*",
+        "@types/node": "*",
+        "@types/responselike": "*"
+      }
+    },
+    "@types/classnames": {
+      "version": "2.2.10",
+      "dev": true
+    },
+    "@types/color-name": {},
+    "@types/debug": {},
+    "@types/electron-devtools-installer": {
+      "version": "2.2.0",
+      "dev": true
+    },
+    "@types/eslint-visitor-keys": {
+      "version": "1.0.0",
+      "dev": true
+    },
+    "@types/fs-extra": {
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/glob": {
+      "requires": {
+        "@types/minimatch": "*",
+        "@types/node": "*"
+      }
+    },
+    "@types/graceful-fs": {
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/history": {
+      "version": "4.7.7",
+      "dev": true
+    },
+    "@types/html-minifier-terser": {
+      "version": "5.1.0",
+      "dev": true
+    },
+    "@types/http-cache-semantics": {
+      "version": "4.0.0"
+    },
+    "@types/istanbul-lib-coverage": {
+      "version": "2.0.3"
+    },
+    "@types/istanbul-lib-report": {
+      "version": "3.0.0",
+      "requires": {
+        "@types/istanbul-lib-coverage": "*"
+      }
+    },
+    "@types/istanbul-reports": {
+      "requires": {
+        "@types/istanbul-lib-coverage": "*",
+        "@types/istanbul-lib-report": "*"
+      }
+    },
+    "@types/jest": {
+      "version": "26.0.8",
+      "dev": true
+    },
+    "@types/json-schema": {
+      "version": "7.0.5",
+      "dev": true
+    },
+    "@types/json5": {},
+    "@types/keyv": {
+      "version": "3.1.1",
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/minimatch": {
+      "version": "3.0.3"
+    },
+    "@types/node": {
+      "version": "14.0.27"
+    },
+    "@types/normalize-package-data": {},
+    "@types/parse-json": {},
+    "@types/prettier": {},
+    "@types/prop-types": {
+      "version": "15.7.3",
+      "dev": true
+    },
+    "@types/puppeteer": {
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/q": {},
+    "@types/reach__router": {
+      "version": "1.3.5",
+      "dev": true,
+      "requires": {
+        "@types/history": "*",
+        "@types/react": "*"
+      }
+    },
+    "@types/react": {
+      "version": "16.9.44",
+      "dev": true,
+      "requires": {
+        "@types/prop-types": "*"
+      }
+    },
+    "@types/react-dom": {
+      "version": "16.9.8",
+      "dev": true,
+      "requires": {
+        "@types/react": "*"
+      }
+    },
+    "@types/react-test-renderer": {
+      "version": "16.9.2",
+      "dev": true,
+      "requires": {
+        "@types/react": "*"
+      }
+    },
+    "@types/reactstrap": {
+      "version": "8.5.0",
+      "dev": true,
+      "requires": {
+        "@types/react": "*"
+      }
+    },
+    "@types/responselike": {
+      "version": "1.0.0",
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/source-list-map": {
+      "version": "0.1.2",
+      "dev": true
+    },
+    "@types/stack-utils": {},
+    "@types/tapable": {
+      "version": "1.0.6",
+      "dev": true
+    },
+    "@types/uglify-js": {
+      "version": "3.9.3",
+      "dev": true
+    },
+    "@types/webpack": {
+      "version": "4.41.21",
+      "dev": true,
+      "requires": {
+        "@types/anymatch": "*",
+        "@types/node": "*",
+        "@types/tapable": "*",
+        "@types/uglify-js": "*",
+        "@types/webpack-sources": "*"
+      }
+    },
+    "@types/webpack-env": {
+      "version": "1.15.2",
+      "dev": true
+    },
+    "@types/webpack-sources": {
+      "version": "1.4.2",
+      "dev": true,
+      "requires": {
+        "@types/node": "*",
+        "@types/source-list-map": "*"
+      }
+    },
+    "@types/xml2js": {
+      "version": "0.4.5",
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/yargs": {
+      "version": "15.0.5",
+      "dev": true,
+      "requires": {
+        "@types/yargs-parser": "*"
+      }
+    },
+    "@types/yargs-parser": {
+      "version": "15.0.0",
+      "dev": true
+    },
+    "@types/yauzl": {
+      "requires": {
+        "@types/node": "*"
+      }
+    },
+    "@types/yup": {
+      "version": "0.29.4",
+      "dev": true
+    },
+    "@typescript-eslint/eslint-plugin": {
+      "version": "3.7.1",
+      "dev": true
+    },
+    "@typescript-eslint/parser": {
+      "version": "3.7.1",
+      "dev": true,
+      "requires": {
+        "@types/eslint-visitor-keys": "^1.0.0"
+      }
+    },
+    "babel-loader": {
+      "version": "8.1.0",
+      "dev": true
+    },
+    "bootstrap": {
+      "version": "4.5.0"
+    },
+    "classnames": {
+      "version": "2.2.6"
+    },
+    "cross-env": {
+      "version": "7.0.2",
+      "dev": true
+    },
+    "css-loader": {
+      "version": "4.2.0",
+      "dev": true
+    },
+    "electron": {
+      "version": "9.1.2",
+      "dev": true
+    },
+    "electron-builder": {
+      "version": "22.8.0",
+      "dev": true,
+      "requires": {
+        "@types/yargs": "^15.0.5"
+      }
+    },
+    "electron-devtools-installer": {
+      "version": "3.1.1",
+      "dev": true
+    },
+    "electron-store": {
+      "version": "6.0.0"
+    },
+    "eslint": {
+      "version": "7.6.0",
+      "dev": true
+    },
+    "eslint-config-airbnb": {
+      "version": "18.2.0",
+      "dev": true
+    },
+    "eslint-config-prettier": {
+      "version": "6.11.0",
+      "dev": true
+    },
+    "eslint-plugin-import": {
+      "version": "2.22.0",
+      "dev": true
+    },
+    "eslint-plugin-jsx-a11y": {
+      "version": "6.3.1",
+      "dev": true
+    },
+    "eslint-plugin-prettier": {
+      "version": "3.1.4",
+      "dev": true
+    },
+    "eslint-plugin-react": {
+      "version": "7.20.5",
+      "dev": true
+    },
+    "eslint-plugin-react-hooks": {
+      "version": "4.0.8",
+      "dev": true
+    },
+    "file-loader": {
+      "version": "6.0.0",
+      "dev": true
+    },
+    "fork-ts-checker-webpack-plugin": {
+      "version": "5.0.13",
+      "dev": true,
+      "requires": {
+        "@types/json-schema": "^7.0.5"
+      }
+    },
+    "html-webpack-plugin": {
+      "version": "4.3.0",
+      "dev": true,
+      "requires": {
+        "@types/html-minifier-terser": "^5.0.0",
+        "@types/tapable": "^1.0.5",
+        "@types/webpack": "^4.41.8"
+      }
+    },
+    "husky": {
+      "version": "4.2.5",
+      "dev": true
+    },
+    "image-webpack-loader": {
+      "version": "6.0.0",
+      "dev": true
+    },
+    "jest": {
+      "version": "26.2.2",
+      "dev": true
+    },
+    "jquery": {
+      "version": "3.5.1"
+    },
+    "lint-staged": {
+      "version": "10.2.11",
+      "dev": true
+    },
+    "node-sass": {
+      "version": "4.14.1",
+      "dev": true
+    },
+    "popper.js": {
+      "version": "1.16.1-lts"
+    },
+    "prettier": {
+      "version": "2.0.5",
+      "dev": true
+    },
+    "react": {
+      "version": "16.13.1"
+    },
+    "react-dom": {
+      "version": "16.13.1"
+    },
+    "react-hook-form": {
+      "version": "6.3.0"
+    },
+    "react-hot-loader": {
+      "version": "4.12.21",
+      "dev": true
+    },
+    "react-test-renderer": {
+      "version": "16.13.1",
+      "dev": true
+    },
+    "react-transition-group": {
+      "version": "4.4.1"
+    },
+    "reactstrap": {
+      "version": "8.5.1",
+      "requires": {
+        "classnames": "^2.2.3",
+        "react-transition-group": "^4.4.1"
+      }
+    },
+    "sass-loader": {
+      "version": "9.0.2",
+      "dev": true
+    },
+    "source-map-loader": {
+      "version": "1.0.1",
+      "dev": true
+    },
+    "spectron": {
+      "version": "11.1.0",
+      "dev": true
+    },
+    "style-loader": {
+      "version": "1.2.1",
+      "dev": true
+    },
+    "ts-jest": {
+      "version": "26.1.4",
+      "dev": true
+    },
+    "typescript": {
+      "version": "3.9.7",
+      "dev": true
+    },
+    "webpack": {
+      "version": "4.44.1",
+      "dev": true
+    },
+    "webpack-cli": {
+      "version": "3.3.12",
+      "dev": true
+    },
+    "webpack-dev-server": {
+      "version": "3.11.0",
+      "dev": true
+    },
+    "webpack-merge": {
+      "version": "5.0.9",
+      "dev": true
+    },
+    "xml2js": {
+      "version": "0.4.23"
+    },
+    "yup": {
+      "version": "0.29.3"
+    }
+  }
+}

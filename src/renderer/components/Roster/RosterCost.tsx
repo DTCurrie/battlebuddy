@@ -1,13 +1,15 @@
 import React, { FunctionComponent, ComponentPropsWithoutRef } from 'react';
 
-import { Cost } from '../../../utils/shapes';
+import { CostAttributes } from '../../../utils/shapes';
 
-export interface RosterCostProps extends Cost, ComponentPropsWithoutRef<'p'> {}
+export interface RosterCostProps extends ComponentPropsWithoutRef<'p'> {
+  cost: CostAttributes;
+}
 
-const RosterCost: FunctionComponent<RosterCostProps> = ({ $ }: RosterCostProps) => (
-    <p className="roster-cost">
-        <strong>Cost:</strong> {`${$.value}${$.name}`}
-    </p>
+const RosterCost: FunctionComponent<RosterCostProps> = ({ cost }: RosterCostProps) => (
+  <p className="roster-cost">
+    <strong>Cost:</strong> {`${cost.value}${cost.name}`}
+  </p>
 );
 
 export default RosterCost;

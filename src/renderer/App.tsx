@@ -1,60 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
 
-import { Navbar, NavbarBrand, Container } from 'reactstrap';
+import { Router, Link } from '@reach/router';
+import { Navbar, NavbarBrand } from 'reactstrap';
 
-import { parseXml } from '../utils/xml-parser';
-import { RosterAttributes, Costs, Forces } from '../utils/shapes';
+import Dashboard from './views/Dashboard/Dashboard';
 
-import ForceDetails from './components/Roster/Force/ForceDetails';
-import RosterHeader from './components/Roster/RosterHeader';
+import RosterDetails from './views/Roster/RosterDetails';
+import RosterForce from './views/Roster/RosterForce/RosterForce';
+import RosterImport from './views/Roster/RosterImport/RosterImport';
 
 import './App.scss';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
 document.body.appendChild(rootElement);
 
-const App = () => {
-    const [roster, setRoster] = useState<RosterAttributes>();
-    const [costs, setCosts] = useState<Costs[]>();
-    const [forces, setForces] = useState<Forces[]>();
+const App = () => (
+  <div className="app">
+    <Navbar light>
+      <NavbarBrand to="/" tag={Link}>
+        Battlebuddy
+      </NavbarBrand>
+    </Navbar>
+    <main className="app__content">
+      <ErrorBoundary>
+        <Router className="app__router">
+          <Dashboard path="/" />
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await parseXml();
-            setRoster(data[0]?.roster.$);
-            setCosts(data[0]?.roster.costs || []);
-            setForces(data[0]?.roster.forces || []);
-        };
-
-        fetchData().then();
-    }, []);
-
-    if (!roster || !costs || !forces) {
-        return null;
-    }
-
-    return (
-        <div className="app">
-            <Navbar light>
-                <NavbarBrand>Battlebuddy</NavbarBrand>
-            </Navbar>
-            <RosterHeader $={roster} costs={costs} />
-            <Container tag="main" fluid="sm">
-                {forces && <ForceDetails forces={forces} />}
-            </Container>
-        </div>
-    );
-};
+          <RosterImport path="/rosters/import" />
+          <RosterDetails path="/rosters/:rosterId" />
+          <RosterForce path="/rosters/:rosterId/forces/:forceId" />
+        </Router>
+      </ErrorBoundary>
+    </main>
+  </div>
+);
 
 ReactDOM.render(
-    <React.StrictMode>
-        <AppContainer>
-            <App />
-        </AppContainer>
-    </React.StrictMode>,
-    rootElement
+  <React.StrictMode>
+    <AppContainer>
+      <App />
+    </AppContainer>
+  </React.StrictMode>,
+  rootElement
 );
