@@ -3,6 +3,8 @@ import * as ReactDOM from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
 
+import { Navbar, NavbarBrand, Container } from 'reactstrap';
+
 import { parseXml } from '../utils/xml-parser';
 import { RosterAttributes, Costs, Forces } from '../utils/shapes';
 
@@ -36,13 +38,13 @@ const App = () => {
     }
 
     return (
-        <>
-            <nav className="navbar navbar-light bg-light">
-                <a href="/">Battlebuddy</a>
-            </nav>
+        <div className="app">
+            <Navbar light>
+                <NavbarBrand>Battlebuddy</NavbarBrand>
+            </Navbar>
             <RosterHeader $={roster} costs={costs} />
-            <main className="container">{forces && <ForceDetails forces={forces} />}</main>
-        </>
+            <Container tag="main">{forces && <ForceDetails forces={forces} />}</Container>
+        </div>
     );
 };
 

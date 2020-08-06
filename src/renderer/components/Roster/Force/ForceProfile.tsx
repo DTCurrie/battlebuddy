@@ -1,4 +1,5 @@
 import React, { ComponentPropsWithoutRef, FunctionComponent, useState } from 'react';
+import { Table, ListGroup, ListGroupItem, CustomInput, Button } from 'reactstrap';
 
 import { Profile, flattenShape, Characteristics, Characteristic } from '../../../../utils/shapes';
 
@@ -33,18 +34,15 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ $, characteristics
     }
 
     return (
-        <div className="force-profile w-100 d-flex">
+        <div className="force-profile">
             {isDescription ? (
-                <div className="force-profile__description d-flex flex-column">
-                    <HeadingTag>{name}</HeadingTag>
-                    <p className="text-muted">{profileCharacteristics[0]._}</p>
+                <div className="force-profile__description">
+                    <HeadingTag className="force-profile__description-heading">{name}</HeadingTag>
+                    <p className="force-profile__description-text">{profileCharacteristics[0]._}</p>
                 </div>
             ) : (
-                <div className="force-profile__stats w-100 d-flex flex-column">
-                    <table
-                        className={`table table-striped table-hover table-sm d-flex flex-column py-${
-                            nested ? '1' : '3'
-                        }`}>
+                <div className="force-profile__stats">
+                    <Table striped hover size="sm" className="w-100 d-flex flex-column">
                         <thead className={nested ? 'thead-light' : 'thead-dark'}>
                             <tr className="w-100 h-100 d-flex ">
                                 <th
@@ -78,46 +76,43 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ $, characteristics
                                 </tr>
                             </tfoot>
                         )}
-                    </table>
+                    </Table>
                     {hasWounds && (
-                        <div className="force-profile__wounds mb-5">
-                            <div className="d-flex flex-row align-items-center">
+                        <div className="force-profile__wounds">
+                            <div className="force-profile__wounds-header d-flex flex-row align-items-center">
                                 <strong>Wounds </strong>
-                                <button
-                                    onClick={() => setCurrentWound(0)}
-                                    type="button"
-                                    className="btn btn-danger btn-sm py-0 ml-2 mr-auto">
+                                <Button
+                                    color="danger"
+                                    size="sm"
+                                    className="force-profile__wounds-clear mr-auto"
+                                    onClick={() => setCurrentWound(0)}>
                                     clear
-                                </button>
+                                </Button>
                             </div>
-                            <ul className="list-inline mt-3">
+                            <ListGroup flush horizontal className="force-profile__wounds-list">
                                 {Array.from({ length: parseInt(wounds || '0', 10) }).map((_, i) => {
                                     const woundKey = `${$.id}::wound::${i.toString()}`;
                                     return (
-                                        <li
-                                            key={woundKey}
-                                            className="custom-control custom-checkbox list-inline-item d-inline-block">
-                                            <input
-                                                type="checkbox"
-                                                className="custom-control-input"
+                                        <ListGroupItem key={woundKey}>
+                                            <CustomInput
+                                                id={woundKey}
+                                                className="force-profile__wounds-list-item"
                                                 checked={currentWound >= i + 1}
+                                                defaultValue={i}
+                                                label={
+                                                    <span className="sr-only">{`${i} Wound`}</span>
+                                                }
+                                                type="checkbox"
                                                 onChange={() =>
                                                     currentWound >= i + 1
                                                         ? setCurrentWound(0)
                                                         : setCurrentWound(i + 1)
                                                 }
-                                                id={woundKey}
-                                                defaultValue={i}
                                             />
-                                            <label
-                                                className="custom-control-label"
-                                                htmlFor={woundKey}>
-                                                <span className="sr-only">{`${i} Wound`}</span>
-                                            </label>
-                                        </li>
+                                        </ListGroupItem>
                                     );
                                 })}
-                            </ul>
+                            </ListGroup>
                         </div>
                     )}
                 </div>

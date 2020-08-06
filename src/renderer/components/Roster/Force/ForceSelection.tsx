@@ -1,5 +1,6 @@
 import React, { ComponentPropsWithoutRef, FunctionComponent } from 'react';
 
+import { ListGroupItem, ListGroup, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
 import {
     Selection,
     CostAttributes,
@@ -35,8 +36,8 @@ const ForceSelection: FunctionComponent<ForceSelectionProps> = ({
     const HeadingTag = nested ? 'h5' : 'h4';
 
     return (
-        <li className={`force-selection list-unstyled py-${nested ? '1' : '3'}`}>
-            <HeadingTag>
+        <ListGroupItem className="force-selection">
+            <ListGroupItemHeading tag={HeadingTag}>
                 <strong>{$.name} </strong>
 
                 {parseInt(cost.value, 10) > 0 && (
@@ -45,36 +46,38 @@ const ForceSelection: FunctionComponent<ForceSelectionProps> = ({
                         {cost.name}]
                     </span>
                 )}
-            </HeadingTag>
-            {categories && (
-                <div className="force-selection__categories">
-                    <strong>Categories: </strong>
-                    <em>
-                        {flattenShape<Categories, Category>(categories)
-                            .map((c) => c.$.name)
-                            .join(', ')}
-                    </em>
-                </div>
-            )}
-            {profiles &&
-                flattenShape<Profiles, Profile>(
-                    profiles
-                ).map(({ $: $profile, characteristics }) => (
-                    <ForceProfile
-                        key={$profile.id}
-                        $={$profile}
-                        characteristics={characteristics}
-                        nested={nested}
-                    />
-                ))}
-            {selections && (
-                <ul className="force-selection__selections list-unstyled">
-                    {flattenShape<Selections, Selection>(selections).map((s) => (
-                        <ForceSelection key={s.$.id} {...s} nested />
+            </ListGroupItemHeading>
+            <ListGroupItemText>
+                {categories && (
+                    <div className="force-selection__categories">
+                        <strong>Categories: </strong>
+                        <em>
+                            {flattenShape<Categories, Category>(categories)
+                                .map((c) => c.$.name)
+                                .join(', ')}
+                        </em>
+                    </div>
+                )}
+                {profiles &&
+                    flattenShape<Profiles, Profile>(
+                        profiles
+                    ).map(({ $: $profile, characteristics }) => (
+                        <ForceProfile
+                            key={$profile.id}
+                            $={$profile}
+                            characteristics={characteristics}
+                            nested={nested}
+                        />
                     ))}
-                </ul>
-            )}
-        </li>
+                {selections && (
+                    <ListGroup flush className="force-selection__selections">
+                        {flattenShape<Selections, Selection>(selections).map((s) => (
+                            <ForceSelection key={s.$.id} {...s} nested />
+                        ))}
+                    </ListGroup>
+                )}
+            </ListGroupItemText>
+        </ListGroupItem>
     );
 };
 

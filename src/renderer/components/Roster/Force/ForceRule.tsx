@@ -1,4 +1,5 @@
 import React, { ComponentPropsWithoutRef, FunctionComponent } from 'react';
+import { ListGroupItem } from 'reactstrap';
 
 import { Rule } from '../../../../utils/shapes';
 
@@ -12,10 +13,10 @@ const ForceRule: FunctionComponent<ForceRuleProps> = ({ $, description }) => {
     }
 
     return (
-        <li key={id} className="force__rule">
+        <ListGroupItem key={id} className="force__rule">
             <strong>{name}: </strong>
             <span>{description.flatMap((d) => `${d}`)}</span>
-        </li>
+        </ListGroupItem>
     );
 };
 

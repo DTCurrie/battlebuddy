@@ -1,4 +1,5 @@
 import React, { ComponentPropsWithoutRef, FunctionComponent } from 'react';
+import { ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap';
 
 import { logInfo } from '../../../../utils/logger';
 import {
@@ -84,13 +85,13 @@ const ForceDetails: FunctionComponent<ForceDetailsProps> = ({ forces }) => {
                             </em>
                         </h2>
 
-                        <ul className="force-details__rules list-unstyled py-3">
+                        <ListGroup flush className="force-details__rules">
                             {flattenShape<Rules, Rule>(rules).map((rule) => (
                                 <ForceRule key={rule.$.id} {...rule} />
                             ))}
-                        </ul>
+                        </ListGroup>
 
-                        <ul className="force-details__selections list-unstyled">
+                        <ListGroup flush className="force-details__selections list-unstyled">
                             {forceCategoryEntryIds.map((entryId) => {
                                 const categoryData = mapData[entryId];
 
@@ -117,20 +118,23 @@ const ForceDetails: FunctionComponent<ForceDetailsProps> = ({ forces }) => {
                                 const { $ } = currentCategory;
 
                                 return (
-                                    <li key={$.id}>
-                                        <h3>{$.name}</h3>
-                                        <ul className="force-details__selections">
+                                    <ListGroupItem key={$.id}>
+                                        <ListGroupItemHeading>
+                                            <h3>{$.name}</h3>
+                                        </ListGroupItemHeading>
+
+                                        <ListGroup flush className="force-details__selections">
                                             {categoryData.map((selection) => (
                                                 <ForceSelection
                                                     key={selection.$.id}
                                                     {...selection}
                                                 />
                                             ))}
-                                        </ul>
-                                    </li>
+                                        </ListGroup>
+                                    </ListGroupItem>
                                 );
                             })}
-                        </ul>
+                        </ListGroup>
                     </div>
                 );
             })}
