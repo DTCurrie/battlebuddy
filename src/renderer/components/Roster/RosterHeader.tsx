@@ -1,11 +1,12 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, ComponentPropsWithoutRef } from 'react';
 import { Jumbotron } from 'reactstrap';
 
+import { Link } from '@reach/router';
 import { ListRoster } from '../../../utils/shapes';
 
 import RosterCost from './RosterCost';
 
-export interface RosterHeaderProps {
+export interface RosterHeaderProps extends ComponentPropsWithoutRef<'div'> {
   roster: ListRoster;
 }
 
@@ -14,7 +15,9 @@ const RosterHeader: FunctionComponent<RosterHeaderProps> = ({ roster }: RosterHe
 
   return (
     <Jumbotron tag="header" className="roster-header">
-      <h1 className="roster-header__heading">{name}</h1>
+      <h1 className="roster-header__heading">
+        <Link to={`/rosters/${id}`}>{name}</Link>
+      </h1>
       {costs.map((cost) => (
         <RosterCost key={`${id}::${cost.typeId}::${cost.value}`} cost={cost} />
       ))}

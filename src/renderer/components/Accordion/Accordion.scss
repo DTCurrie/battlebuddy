@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+
+  &__section {
+    box-shadow: 0 0.125rem 0.25rem rgba($black, 0.075);
+    margin-bottom: 1rem;
+
+    &-heading.card-header {
+      text-align: left;
+      @include button-variant($primary, $primary);
+    }
+  }
+}

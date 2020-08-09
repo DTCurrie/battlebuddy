@@ -3,7 +3,9 @@ import { Table, ListGroup, ListGroupItem, CustomInput, Button } from 'reactstrap
 
 import classNames from 'classnames';
 
-import { ListProfile, ListCharacteristic } from '../../../../utils/shapes';
+import { ListProfile, ListCharacteristic } from '../../../../../utils/shapes';
+
+import './ForceProfile.scss';
 
 export interface ForceProfileProps extends ComponentPropsWithoutRef<'div'> {
   nested?: boolean;
@@ -90,32 +92,30 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ nested, profile })
               <div className="force-profile__wounds-header d-flex flex-row align-items-center">
                 <strong>Wounds </strong>
                 <Button
+                  aria-label="clear wounds"
+                  className="force-profile__wounds-clear pl-2 mr-auto"
+                  close
                   size="sm"
-                  className="force-profile__wounds-clear mr-auto"
-                  onClick={() => setCurrentWound(0)}>
-                  clear
-                </Button>
+                  onClick={() => setCurrentWound(0)}
+                />
               </div>
-              <ListGroup horizontal="lg" className="force-profile__wounds-list">
+              <div className="force-profile__wounds w-100 d-flex flex-row align-items-center justify-content-between">
                 {Array.from({ length: parseInt(wounds || '0', 10) }).map((_, i) => {
                   const woundKey = `${id}::wound::${i.toString()}`;
                   return (
-                    <ListGroupItem
+                    <CustomInput
+                      id={woundKey}
+                      className="force-profile__wounds-list-item"
+                      checked={currentWound >= i + 1}
+                      defaultValue={i}
                       key={woundKey}
-                      className="d-flex flex-row align-items-center justify-content-center">
-                      <CustomInput
-                        id={woundKey}
-                        className="force-profile__wounds-list-item"
-                        checked={currentWound >= i + 1}
-                        defaultValue={i}
-                        label={<span className="sr-only">{`${i} Wound`}</span>}
-                        type="checkbox"
-                        onChange={() => onChange(i)}
-                      />
-                    </ListGroupItem>
+                      label={<span className="sr-only">{`${i} Wound`}</span>}
+                      type="checkbox"
+                      onChange={() => onChange(i)}
+                    />
                   );
                 })}
-              </ListGroup>
+              </div>
             </div>
           )}
         </div>

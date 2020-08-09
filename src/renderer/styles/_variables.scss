@@ -1,0 +1,19 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+$body-bg: $gray-100;
+
+$headings-font-family: 'Open Sans';
+
+$enable-grid-classes: true;
+$enable-rounded: false;
+$enable-shadows: true;
+$enable-gradients: false;
+
+$spacer: 0.5rem;
+
+$border-width: 0;
+$border-radius: 0;
+
+$custom-control-indicator-size: 2rem;

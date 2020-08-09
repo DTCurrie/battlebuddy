@@ -20,7 +20,7 @@
       "version": "7.11.0",
       "dev": true,
       "requires": {
-        "@babel/plugin-proposal-class-properties": "^7.10.4"
+        "@babel/plugin-proposal-class-properties": "7.10.4"
       }
     },
     "@babel/preset-react": {
@@ -271,7 +271,7 @@
       "version": "3.7.1",
       "dev": true,
       "requires": {
-        "@types/eslint-visitor-keys": "^1.0.0"
+        "@types/eslint-visitor-keys": "1.0.0"
       }
     },
     "babel-loader": {
@@ -300,7 +300,7 @@
       "version": "22.8.0",
       "dev": true,
       "requires": {
-        "@types/yargs": "^15.0.5"
+        "@types/yargs": "15.0.5"
       }
     },
     "electron-devtools-installer": {
@@ -350,16 +350,16 @@
       "version": "5.0.13",
       "dev": true,
       "requires": {
-        "@types/json-schema": "^7.0.5"
+        "@types/json-schema": "7.0.5"
       }
     },
     "html-webpack-plugin": {
       "version": "4.3.0",
       "dev": true,
       "requires": {
-        "@types/html-minifier-terser": "^5.0.0",
-        "@types/tapable": "^1.0.5",
-        "@types/webpack": "^4.41.8"
+        "@types/html-minifier-terser": "5.0.0",
+        "@types/tapable": "1.0.5",
+        "@types/webpack": "4.41.8"
       }
     },
     "husky": {
@@ -415,8 +415,8 @@
     "reactstrap": {
       "version": "8.5.1",
       "requires": {
-        "classnames": "^2.2.3",
-        "react-transition-group": "^4.4.1"
+        "classnames": "2.2.3",
+        "react-transition-group": "4.4.1"
       }
     },
     "sass-loader": {

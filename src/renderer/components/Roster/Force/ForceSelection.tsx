@@ -1,72 +1,53 @@
-import React, { ComponentPropsWithoutRef, FunctionComponent, useState } from 'react';
+import React, { ComponentPropsWithoutRef, FunctionComponent, ElementType } from 'react';
 
-import {
-  ListGroupItem,
-  ListGroup,
-  ListGroupItemHeading,
-  ListGroupItemText,
-  Button,
-  Collapse,
-} from 'reactstrap';
+import { ListGroup, ListGroupItemText } from 'reactstrap';
 
 import { ListSelection } from '../../../../utils/shapes';
 
-import ForceProfile from './ForceProfile';
+import Accordion from '../../Accordion/Accordion';
+import ForceProfile from './ForceProfile/ForceProfile';
 
-export interface ForceSelectionProps extends ComponentPropsWithoutRef<'li'> {
+export interface ForceSelectionProps extends ComponentPropsWithoutRef<'div'> {
   nested?: boolean;
   selection: ListSelection;
 }
 
 const ForceSelection: FunctionComponent<ForceSelectionProps> = ({ nested, selection }) => {
   const { categories, costs, name, profiles, selections } = selection;
-  const [collapse, setCollapse] = useState(!!nested);
 
   if (nested && !profiles && !selections) {
     return null;
   }
 
   const cost = costs[0];
-  const HeadingTag = nested ? 'h5' : 'h4';
-
-  const toggle = () => setCollapse(!collapse);
+  const headingTag: ElementType = nested ? 'h5' : 'h4';
 
   return (
-    <ListGroupItem className="force-selection">
-      <ListGroupItemHeading tag={HeadingTag}>
-        <strong>{name} </strong>
-
-        {parseInt(cost.value, 10) > 0 && (
-          <span className="force-selection__cost">
-            [{cost.value}
-            {cost.name}]
-          </span>
-        )}
-
-        <Button size="sm" onClick={toggle}>
-          Collapse
-        </Button>
-      </ListGroupItemHeading>
-      <Collapse isOpen={collapse}>
-        {categories && (
-          <ListGroupItemText className="force-selection__categories">
-            <strong>Categories: </strong>
-            <em>{categories.map((c) => c.name).join(', ')}</em>
-          </ListGroupItemText>
-        )}
-        {profiles &&
-          profiles.map((profile) => (
-            <ForceProfile key={profile.id} profile={profile} nested={nested} />
-          ))}
-        {selections && (
-          <ListGroup flush className="force-selection__selections">
-            {selections.map((s) => (
-              <ForceSelection key={s.id} selection={s} nested />
-            ))}
-          </ListGroup>
-        )}
-      </Collapse>
-    </ListGroupItem>
+    <Accordion
+      className="force-selection"
+      headingTag={headingTag}
+      sections={[
+        {
+          heading: `${name} ${parseInt(cost.value, 10) > 0 ? `[${cost.value} ${cost.name}]` : ''}`,
+          content: (
+            <>
+              {categories && (
+                <p className="force-selection__categories">
+                  <strong>Categories: </strong>
+                  <em>{categories.map((c) => c.name).join(', ')}</em>
+                </p>
+              )}
+              {profiles &&
+                profiles.map((profile) => (
+                  <ForceProfile key={profile.id} profile={profile} nested={nested} />
+                ))}
+              {selections &&
+                selections.map((s) => <ForceSelection key={s.id} selection={s} nested />)}
+            </>
+          ),
+        },
+      ]}
+    />
   );
 };
 

@@ -1,14 +1,17 @@
 import React, { FunctionComponent, useState, useEffect } from 'react';
-import { RouteComponentProps } from '@reach/router';
-import { Container, ListGroup, ListGroupItem, ListGroupItemHeading } from 'reactstrap';
+import { RouteComponentProps, Link } from '@reach/router';
+import { Container, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 
 import { useRosters } from '../../../behaviors/use-rosters/use-rosters';
+
+import ForceRule from '../../../components/Roster/Force/ForceRule';
+import ForceSelectionList from '../../../components/Roster/Force/ForceSelectionList';
+
+import Accordion from '../../../components/Accordion/Accordion';
 
 import RosterHeader from '../../../components/Roster/RosterHeader';
 
 import { ListForce, ListRoster } from '../../../../utils/shapes';
-import ForceRule from '../../../components/Roster/Force/ForceRule';
-import ForceSelection from '../../../components/Roster/Force/ForceSelection';
 
 export type RosterForceProps = RouteComponentProps<{
   forceId: string;
@@ -42,22 +45,23 @@ const RosterForce: FunctionComponent<RosterForceProps> = ({ forceId, rosterId })
     <div className="roster-force">
       <RosterHeader roster={roster} />
       <Container fluid="lg">
-        <h2>
-          {force.name} {force.catalogueName}{' '}
-          <em>
-            (rev
-            {force.catalogueRevision})
-          </em>
-        </h2>
-
-        <ListGroup flush className="force-details__rules">
-          <ListGroupItem>
-            <ListGroupItemHeading tag="h3">Rules</ListGroupItemHeading>
-          </ListGroupItem>
-          {force.rules.map((rule) => (
-            <ForceRule key={rule.id} rule={rule} />
-          ))}
-        </ListGroup>
+        <Accordion
+          headingTag="h3"
+          sections={[
+            {
+              heading: (
+                <>
+                  {force.name} {force.catalogueName}{' '}
+                  <em>
+                    (rev
+                    {force.catalogueRevision})
+                  </em>
+                </>
+              ),
+              content: force.rules.map((rule) => <ForceRule key={rule.id} rule={rule} />),
+            },
+          ]}
+        />
 
         {Object.keys(force.map).map((entryId) => {
           const categoryData = force.map[entryId];
@@ -77,14 +81,11 @@ const RosterForce: FunctionComponent<RosterForceProps> = ({ forceId, rosterId })
           }
 
           return (
-            <ListGroup key={currentCategory.id} flush className="force-details__selections">
-              <ListGroupItem>
-                <ListGroupItemHeading tag="h3">{currentCategory.name}</ListGroupItemHeading>
-              </ListGroupItem>
-              {categoryData.map((selection) => (
-                <ForceSelection key={selection.id} selection={selection} />
-              ))}
-            </ListGroup>
+            <ForceSelectionList
+              key={currentCategory.id}
+              name={currentCategory.name}
+              selections={categoryData}
+            />
           );
         })}
       </Container>
