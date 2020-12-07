@@ -1,74 +1,72 @@
-import React, { useContext, useState } from 'react';
+import React, { StrictMode, useContext, useState } from 'react';
 import { render } from 'react-dom';
+import { createHistory, createMemorySource, Link, LocationProvider, Router } from '@reach/router';
 
 import { AppContainer } from 'react-hot-loader';
 
-import {
-    Navbar,
-    NavbarBrand,
-    Container,
-    Collapse,
-    Nav,
-    NavbarToggler,
-    NavItem,
-    Button,
-} from 'reactstrap';
+import { Navbar, NavbarBrand, Collapse, Nav, NavbarToggler, NavItem, Button } from 'reactstrap';
 
-import NoRostersSplash from './components/NoRostersSplash';
-import { syncRosters, RostersContext, RostersProvider } from './providers/RostersProvider';
+import ErrorBoundary from './components/ErrorBoundary';
 
-import { Roster } from '../utils/shapes';
+import { ConfigProvider } from './providers/ConfigProvider';
+import { RostersContext, RostersProvider } from './providers/RostersProvider';
+
+import Dashboard from './views/Dashboard/Dashboard';
 
 import './App.scss';
-import { ConfigProvider } from './providers/ConfigProvider';
 
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
 document.body.appendChild(rootElement);
 
 const App = () => {
-    const rosters: Roster[] = useContext(RostersContext);
+  const source = createMemorySource('/');
+  const history = createHistory(source);
 
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+  const { sync } = useContext(RostersContext);
 
-    return (
-        <>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand>Battlebuddy</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
-                <Collapse isOpen={isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <Button color="info" onClick={() => syncRosters().then()}>
-                                Sync
-                            </Button>
-                        </NavItem>
-                    </Nav>
-                </Collapse>
-            </Navbar>
-            <Container tag="main">
-                {rosters.length ? (
-                    rosters.map((roster: Roster) => (
-                        <div key={roster.$.id} className="roster-card">
-                            {roster.$.name}
-                        </div>
-                    ))
-                ) : (
-                    <NoRostersSplash />
-                )}
-            </Container>
-        </>
-    );
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <>
+      <Navbar className="bb-navbar" color="light" light expand="md">
+        <NavbarBrand to="/" tag={Link}>
+          Battlebuddy
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <Button color="info" onClick={() => sync().then()}>
+                Sync
+              </Button>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
+      <main className="bb-app">
+        <LocationProvider history={history}>
+          <ErrorBoundary>
+            <Router className="bb-app__router">
+              <Dashboard path="/" />
+            </Router>
+          </ErrorBoundary>
+        </LocationProvider>
+      </main>
+    </>
+  );
 };
 
 render(
+  <StrictMode>
     <AppContainer>
-        <ConfigProvider>
-            <RostersProvider>
-                <App />
-            </RostersProvider>
-        </ConfigProvider>
-    </AppContainer>,
-    rootElement
+      <ConfigProvider>
+        <RostersProvider>
+          <App />
+        </RostersProvider>
+      </ConfigProvider>
+    </AppContainer>
+  </StrictMode>,
+  rootElement
 );

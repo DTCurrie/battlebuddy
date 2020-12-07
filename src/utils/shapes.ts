@@ -1,167 +1,228 @@
+import { remote } from 'electron';
+import { Schema } from 'electron-store';
+
 interface Index {
-    [key: string]: unknown;
+  [key: string]: unknown;
 }
 
 interface TypedIndex<T> {
-    [key: string]: T[];
+  [key: string]: T[];
 }
 
-export interface RosterData extends Index {
-    roster: Roster;
+//
+// Battlescribe data shapes
+//
+
+export interface BattlescribeRosterData extends Index {
+  roster: BattlescribeRoster;
 }
 
-export type RosterAttributes = {
-    id: string;
-    name: string;
-    battleScribeVersion: string;
-    gameSystemId: string;
-    gameSystemName: string;
-    gameSystemRevision: string;
-    xmlns: string;
+export type BattlescribeRosterAttributes = {
+  id: string;
+  name: string;
+  battleScribeVersion: string;
+  gameSystemId: string;
+  gameSystemName: string;
+  gameSystemRevision: string;
+  xmlns: string;
 };
 
-export interface Roster extends Index {
-    $: RosterAttributes;
-    costs: Costs[];
-    forces: Forces[];
+export interface BattlescribeRoster extends Index {
+  $: BattlescribeRosterAttributes;
+  costs: BattlescribeCosts[];
+  forces: BattlescribeForces[];
 }
 
-export interface Forces extends TypedIndex<Force> {
-    force: Force[];
+export interface BattlescribeForces extends TypedIndex<BattlescribeForce> {
+  force: BattlescribeForce[];
 }
 
-export type ForceAttributes = {
-    id: string;
-    name: string;
-    entryId: string;
-    catalogueId: string;
-    catalogueRevision: string;
-    catalogueName: string;
+export type BattlescribeForceAttributes = {
+  id: string;
+  name: string;
+  entryId: string;
+  catalogueId: string;
+  catalogueRevision: string;
+  catalogueName: string;
 };
 
-export interface Force extends Index {
-    $: ForceAttributes;
-    rules: Rules[];
-    selections: Selections[];
-    publications: Publications[];
-    categories: Categories[];
+export interface BattlescribeForce extends Index {
+  $: BattlescribeForceAttributes;
+  rules: BattlescribeRules[];
+  selections: BattlescribeSelections[];
+  publications: BattlescribePublications[];
+  categories: BattlescribeCategories[];
 }
 
-export interface Publications extends TypedIndex<Publication> {
-    publication: Publication[];
+export interface BattlescribePublications extends TypedIndex<BattlescribePublication> {
+  publication: BattlescribePublication[];
 }
 
-export type PublicationAttributes = {
-    id: string;
-    name: string;
+export type BattlescribePublicationAttributes = {
+  id: string;
+  name: string;
 };
 
-export interface Publication extends Index {
-    $: PublicationAttributes;
+export interface BattlescribePublication extends Index {
+  $: BattlescribePublicationAttributes;
 }
 
-export interface Selections extends TypedIndex<Selection> {
-    selection: Selection[];
+export interface BattlescribeSelections extends TypedIndex<BattlescribeSelection> {
+  selection: BattlescribeSelection[];
 }
 
-export type SelectionAttributes = {
-    id: string;
-    name: string;
-    entryId: string;
-    entryGroupId?: string;
-    number: string;
-    type: string;
+export type BattlescribeSelectionAttributes = {
+  id: string;
+  name: string;
+  entryId: string;
+  entryGroupId?: string;
+  number: string;
+  type: string;
 };
 
-export interface Selection extends Index {
-    $: SelectionAttributes;
-    costs: Costs[];
-    categories?: Categories[];
-    profiles?: Profiles[];
-    rules?: Rules[];
-    selections?: Selections[];
+export interface BattlescribeSelection extends Index {
+  $: BattlescribeSelectionAttributes;
+  costs: BattlescribeCosts[];
+  categories?: BattlescribeCategories[];
+  profiles?: BattlescribeProfiles[];
+  rules?: BattlescribeRules[];
+  selections?: BattlescribeSelections[];
 }
 
-export interface Costs extends TypedIndex<Cost> {
-    cost: Cost[];
+export interface BattlescribeCosts extends TypedIndex<BattlescribeCost> {
+  cost: BattlescribeCost[];
 }
 
-export type CostAttributes = {
-    name: string;
-    typeId: string;
-    value: string;
+export type BattlescribeCostAttributes = {
+  name: string;
+  typeId: string;
+  value: string;
 };
 
-export interface Cost extends Index {
-    $: CostAttributes;
+export interface BattlescribeCost extends Index {
+  $: BattlescribeCostAttributes;
 }
 
-export interface Categories extends TypedIndex<Category> {
-    category: Category[];
+export interface BattlescribeCategories extends TypedIndex<BattlescribeCategory> {
+  category: BattlescribeCategory[];
 }
 
-export type CategoryAttributes = {
-    id: string;
-    name: string;
-    entryId: string;
-    primary: string;
+export type BattlescribeCategoryAttributes = {
+  id: string;
+  name: string;
+  entryId: string;
+  primary: string;
 };
 
-export interface Category extends Index {
-    $: CategoryAttributes;
+export interface BattlescribeCategory extends Index {
+  $: BattlescribeCategoryAttributes;
 }
 
-export interface Profiles extends TypedIndex<Profile> {
-    profile: Profile[];
+export interface BattlescribeProfiles extends TypedIndex<BattlescribeProfile> {
+  profile: BattlescribeProfile[];
 }
 
-export type ProfileAttributes = {
-    id: string;
-    name: string;
-    publicationId?: string;
-    page?: string;
-    hidden: string;
-    typeId: string;
-    typeName: string;
+export type BattlescribeProfileAttributes = {
+  id: string;
+  name: string;
+  publicationId?: string;
+  page?: string;
+  hidden: string;
+  typeId: string;
+  typeName: string;
 };
 
-export interface Profile extends Index {
-    $: ProfileAttributes;
-    characteristics: Characteristics[];
+export interface BattlescribeProfile extends Index {
+  $: BattlescribeProfileAttributes;
+  characteristics: BattlescribeCharacteristics[];
 }
 
-export interface Characteristics extends TypedIndex<Characteristic> {
-    characteristic: Characteristic[];
+export interface BattlescribeCharacteristics extends TypedIndex<BattlescribeCharacteristic> {
+  characteristic: BattlescribeCharacteristic[];
 }
 
-export type CharacteristicAttributes = {
-    name: string;
-    typeId: string;
+export type BattlescribeCharacteristicAttributes = {
+  name: string;
+  typeId: string;
 };
 
-export interface Characteristic extends Index {
-    $: CharacteristicAttributes;
-    _: string;
+export interface BattlescribeCharacteristic extends Index {
+  $: BattlescribeCharacteristicAttributes;
+  _: string;
 }
 
-export interface Rules extends TypedIndex<Rule> {
-    rule: Rule[];
+export interface BattlescribeRules extends TypedIndex<BattlescribeRule> {
+  rule: BattlescribeRule[];
 }
 
-export type RuleAttributes = {
-    id: string;
-    name: string;
-    hidden: 'true' | 'false';
+export type BattlescribeRuleAttributes = {
+  id: string;
+  name: string;
+  hidden: 'true' | 'false';
 };
 
-export interface Rule extends Index {
-    $: RuleAttributes;
-    description: string[];
+export interface BattlescribeRule extends Index {
+  $: BattlescribeRuleAttributes;
+  description: string[];
+}
+
+//
+// Battlebuddy data shapes
+//
+
+export interface BattlebuddyConfig {
+  rosterPath: string;
+}
+
+export interface RosterData {
+  roster: Roster;
+}
+
+export interface Roster extends BattlescribeRosterAttributes {
+  costs: BattlescribeCostAttributes[];
+  forces: Force[];
+  forceMap: ForceMap;
+}
+
+export interface ForceMap {
+  [id: string]: Force;
+}
+
+export interface Force extends BattlescribeForceAttributes {
+  categories: BattlescribeCategoryAttributes[];
+  publications: BattlescribePublicationAttributes[];
+  rules: Rule[];
+  selections: Selection[];
+  map: ForceSelectionMap;
+}
+
+export interface ForceSelectionMap {
+  [category: string]: Selection[];
+}
+
+export interface Rule extends BattlescribeRuleAttributes {
+  description: string[];
+}
+
+export interface Selection extends BattlescribeSelectionAttributes {
+  costs: BattlescribeCostAttributes[];
+  categories?: BattlescribeCategoryAttributes[];
+  profiles?: Profile[];
+  rules?: Rule[];
+  selections?: Selection[];
+}
+
+export interface Profile extends BattlescribeProfileAttributes {
+  characteristics: Characteristic[];
+}
+
+export interface Characteristic extends BattlescribeCharacteristicAttributes {
+  value: string;
 }
 
 export const flattenShape = <T extends TypedIndex<U>, U>(
-    source: T[],
-    callback?: (value: U) => U
+  source: T[],
+  callback?: (value: U) => U
 ): U[] => {
-    return source.flatMap((t: T) => t[Object.keys(t)[0]].flatMap(callback || ((u: U) => u)));
+  return source.flatMap((t: T) => t[Object.keys(t)[0]].flatMap(callback || ((u: U) => u)));
 };

@@ -1,27 +1,14 @@
-import React, {
-    ComponentPropsWithoutRef,
-    FunctionComponent,
-    createContext,
-    useState,
-    useEffect,
-} from 'react';
-import { BattlebuddyConfig, getConfig } from '../../utils/config';
+import React, { ComponentPropsWithoutRef, createContext, FunctionComponent } from 'react';
+
+import { BattlebuddyConfig } from '../../utils/shapes';
+
+import { useConfig } from '../behaviors/use-config/use-config';
 
 export const ConfigContext = createContext<BattlebuddyConfig | undefined>(undefined);
 
 export const ConfigProvider: FunctionComponent<ComponentPropsWithoutRef<'div'>> = ({
-    children,
+  children,
 }: ComponentPropsWithoutRef<'div'>) => {
-    const [config, setConfig] = useState<BattlebuddyConfig | undefined>(undefined);
-
-    useEffect(() => {
-        async function fetchConfig() {
-            const fetchedConfig = await getConfig();
-            setConfig(fetchedConfig);
-        }
-
-        fetchConfig().then();
-    }, []);
-
-    return <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>;
+  const [config] = useConfig();
+  return <ConfigContext.Provider value={config}>{children}</ConfigContext.Provider>;
 };

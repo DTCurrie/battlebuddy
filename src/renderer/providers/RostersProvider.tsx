@@ -1,62 +1,43 @@
-import React, {
-    ComponentPropsWithoutRef,
-    FunctionComponent,
-    createContext,
-    useState,
-    useEffect,
-} from 'react';
+import React, { ComponentPropsWithoutRef, createContext, FunctionComponent } from 'react';
 
-import createTrigger from 'react-use-trigger';
-import useTriggerEffect from 'react-use-trigger/useTriggerEffect';
-
-import { getConfig } from '../../utils/config';
+import { mapRosterData } from '../../utils/data-mapper';
 import { logError } from '../../utils/logger';
-import { Roster, RosterData } from '../../utils/shapes';
-import { getRosters, setRosters } from '../../utils/storage';
+import { noop } from '../../utils/noop';
+import { Roster } from '../../utils/shapes';
 import { parseXml } from '../../utils/xml-parser';
 
-export const RostersContext = createContext<Roster[]>([]);
+import { useConfig } from '../behaviors/use-config/use-config';
+import { RostersStorage, useRosters } from '../behaviors/use-rosters/use-rosters';
 
-export const rostersTrigger = createTrigger();
+export interface RostersProviderProps extends RostersStorage {
+  sync: () => Promise<Roster[]>;
+}
+
+export const RostersContext = createContext<RostersProviderProps>({
+  rosters: [],
+  sync: () => new Promise(noop),
+});
 
 export const RostersProvider: FunctionComponent<ComponentPropsWithoutRef<'div'>> = ({
-    children,
+  children,
 }: ComponentPropsWithoutRef<'div'>) => {
-    const [appRosters, setAppRosters] = useState<Roster[]>([]);
+  const [{ rosters }, storage] = useRosters();
+  const [{ rosterPath }] = useConfig();
 
-    useTriggerEffect(() => {
-        async function fetchRosters() {
-            const fetchedRosters = await getRosters();
-            setAppRosters(fetchedRosters);
-        }
+  const sync = async (): Promise<Roster[]> => {
+    try {
+      const data = await parseXml(rosterPath);
+      const mappedData = data.map((value) => mapRosterData(value).roster);
 
-        fetchRosters().then();
-    }, rostersTrigger);
+      storage.set('rosters', mappedData);
 
-    return <RostersContext.Provider value={appRosters}>{children}</RostersContext.Provider>;
-};
-
-export const syncRosters = async (): Promise<Roster[]> => {
-    const config = await getConfig();
-
-    if (config && config.rosterPath) {
-        try {
-            const data = await parseXml(config.rosterPath);
-            const rosters = data.map(({ roster }: RosterData) => roster);
-
-            await setRosters(rosters);
-
-            rostersTrigger();
-
-            console.log(rosters);
-
-            return rosters;
-        } catch (error) {
-            logError(`Error gathering rosters: ${error}`);
-        }
-    } else {
-        logError('Error gathering rosters: Invalid configuration for roster path');
+      return mappedData;
+    } catch (error) {
+      logError(`Error gathering rosters: ${error}`);
     }
 
     return [];
+  };
+
+  return <RostersContext.Provider value={{ rosters, sync }}>{children}</RostersContext.Provider>;
 };
