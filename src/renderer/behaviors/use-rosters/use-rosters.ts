@@ -1,10 +1,10 @@
 import ElectronStore, { Schema } from 'electron-store';
 
-import { Roster } from '../../../utils/shapes';
+import { RosterData } from '../../../utils/shapes';
 import { useStorage } from '../use-storage/use-storage';
 
 export interface RostersStorage {
-  rosters: Roster[];
+  rosters: RosterData[];
 }
 
 export const RostersSchema: Schema<RostersStorage> = {

@@ -1,5 +1,6 @@
 import ElectronStore, { Schema } from 'electron-store';
 import { useEffect, useState } from 'react';
+import equal from 'fast-deep-equal/react';
 
 export const useStorage = <T>(
   name: string,
@@ -14,7 +15,11 @@ export const useStorage = <T>(
     }, {} as Record<string, unknown>) as T
   );
 
-  const unsubscribe = storage.onDidAnyChange((newValue) => newValue && setValue(newValue));
+  const unsubscribe = storage.onDidAnyChange((newValue, oldValue) => {
+    if (!!newValue && !!oldValue && !equal(newValue, oldValue)) {
+      setValue(newValue);
+    }
+  });
 
   useEffect(() => () => {
     unsubscribe();

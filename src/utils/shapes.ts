@@ -14,6 +14,7 @@ interface TypedIndex<T> {
 //
 
 export interface BattlescribeRosterData extends Index {
+  fileName: string;
   roster: BattlescribeRoster;
 }
 
@@ -48,10 +49,10 @@ export type BattlescribeForceAttributes = {
 
 export interface BattlescribeForce extends Index {
   $: BattlescribeForceAttributes;
-  rules: BattlescribeRules[];
   selections: BattlescribeSelections[];
   publications: BattlescribePublications[];
   categories: BattlescribeCategories[];
+  rules?: BattlescribeRules[];
 }
 
 export interface BattlescribePublications extends TypedIndex<BattlescribePublication> {
@@ -175,23 +176,19 @@ export interface BattlebuddyConfig {
 }
 
 export interface RosterData {
+  fileName: string;
   roster: Roster;
 }
 
 export interface Roster extends BattlescribeRosterAttributes {
   costs: BattlescribeCostAttributes[];
   forces: Force[];
-  forceMap: ForceMap;
-}
-
-export interface ForceMap {
-  [id: string]: Force;
 }
 
 export interface Force extends BattlescribeForceAttributes {
   categories: BattlescribeCategoryAttributes[];
   publications: BattlescribePublicationAttributes[];
-  rules: Rule[];
+  rules?: Rule[];
   selections: Selection[];
   map: ForceSelectionMap;
 }
@@ -223,6 +220,4 @@ export interface Characteristic extends BattlescribeCharacteristicAttributes {
 export const flattenShape = <T extends TypedIndex<U>, U>(
   source: T[],
   callback?: (value: U) => U
-): U[] => {
-  return source.flatMap((t: T) => t[Object.keys(t)[0]].flatMap(callback || ((u: U) => u)));
-};
+): U[] => source.flatMap((t: T) => t[Object.keys(t)[0]].flatMap(callback || ((u: U) => u)));

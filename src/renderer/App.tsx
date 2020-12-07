@@ -14,6 +14,7 @@ import { RostersContext, RostersProvider } from './providers/RostersProvider';
 import Dashboard from './views/Dashboard/Dashboard';
 
 import './App.scss';
+import { logInfo } from '../utils/logger';
 
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
@@ -38,7 +39,7 @@ const App = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <Button color="info" onClick={() => sync().then()}>
+              <Button color="info" onClick={sync}>
                 Sync
               </Button>
             </NavItem>

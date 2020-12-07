@@ -3,14 +3,14 @@ import React, { ComponentPropsWithoutRef, createContext, FunctionComponent } fro
 import { mapRosterData } from '../../utils/data-mapper';
 import { logError } from '../../utils/logger';
 import { noop } from '../../utils/noop';
-import { Roster } from '../../utils/shapes';
+import { RosterData } from '../../utils/shapes';
 import { parseXml } from '../../utils/xml-parser';
 
 import { useConfig } from '../behaviors/use-config/use-config';
 import { RostersStorage, useRosters } from '../behaviors/use-rosters/use-rosters';
 
 export interface RostersProviderProps extends RostersStorage {
-  sync: () => Promise<Roster[]>;
+  sync: () => Promise<RosterData[]>;
 }
 
 export const RostersContext = createContext<RostersProviderProps>({
@@ -21,13 +21,13 @@ export const RostersContext = createContext<RostersProviderProps>({
 export const RostersProvider: FunctionComponent<ComponentPropsWithoutRef<'div'>> = ({
   children,
 }: ComponentPropsWithoutRef<'div'>) => {
-  const [{ rosters }, storage] = useRosters();
   const [{ rosterPath }] = useConfig();
+  const [{ rosters }, storage] = useRosters();
 
-  const sync = async (): Promise<Roster[]> => {
+  const sync = async (): Promise<RosterData[]> => {
     try {
       const data = await parseXml(rosterPath);
-      const mappedData = data.map((value) => mapRosterData(value).roster);
+      const mappedData = data.map((value) => mapRosterData(value));
 
       storage.set('rosters', mappedData);
 

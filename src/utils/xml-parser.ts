@@ -14,6 +14,7 @@ const tempPath = remote.app.getPath('temp');
 
 export async function parseXml(rosterPath: string): Promise<BattlescribeRosterData[]> {
   const rostersFolder = resolve(rosterPath);
+
   const data: BattlescribeRosterData[] = [];
 
   try {
@@ -32,11 +33,10 @@ export async function parseXml(rosterPath: string): Promise<BattlescribeRosterDa
           try {
             const result = await parser.parseStringPromise(file);
             const { roster } = result;
-            const { $ } = roster;
 
-            logInfo(`Parsed roster ${$.name}`);
+            logInfo(`Parsed roster from  ${fileName}`, false, { fileName, roster });
 
-            data.push(result);
+            data.push({ fileName, roster });
           } catch (error) {
             logError(
               `Error parsing roster file ${fileName}: \n\t ${error.message ? error.message : error}`
@@ -72,11 +72,10 @@ export async function parseXml(rosterPath: string): Promise<BattlescribeRosterDa
             try {
               const result = await parser.parseStringPromise(file);
               const { roster } = result;
-              const { $ } = roster;
 
-              logInfo(`Parsed roster ${$.name}`);
+              logInfo(`Parsed roster from  ${fileName}`, false, { fileName, roster });
 
-              data.push(result);
+              data.push({ fileName, roster });
             } catch (error) {
               logError(
                 `Error parsing roster file ${fileName}: \n\t ${

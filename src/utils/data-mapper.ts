@@ -18,7 +18,6 @@ import {
   BattlescribeSelections,
   flattenShape,
   Force,
-  ForceMap,
   ForceSelectionMap,
   Profile,
   RosterData,
@@ -65,9 +64,8 @@ export const mapSelection = (selection: BattlescribeSelection): Selection => ({
     ),
 });
 
-export const mapSelections = (selections: BattlescribeSelections[]): Selection[] => {
-  return flattenShape<BattlescribeSelections, BattlescribeSelection>(selections).map(mapSelection);
-};
+export const mapSelections = (selections: BattlescribeSelections[]): Selection[] =>
+  flattenShape<BattlescribeSelections, BattlescribeSelection>(selections).map(mapSelection);
 
 export const mapForceSelections = (force: BattlescribeForce): ForceSelectionMap => {
   const { categories, selections } = force;
@@ -100,46 +98,41 @@ export const mapForceSelections = (force: BattlescribeForce): ForceSelectionMap 
   return mapData;
 };
 
-export const mapForces = (forces: Force[]): ForceMap =>
-  forces.reduce<ForceMap>((previous, current) => {
-    const mapData = previous;
-    const { id } = current;
+export const mapRosterData = ({ roster, fileName }: BattlescribeRosterData): RosterData => {
+  const { $, forces, costs } = roster;
 
-    mapData[id] = current;
+  const mappedForces = flattenShape<BattlescribeForces, BattlescribeForce>(forces).map((force) => {
+    const { $: $force, categories, publications, selections } = force;
+    const forceData: Force = {
+      ...$force,
 
-    return mapData;
-  }, {} as ForceMap);
-
-export const mapRosterData = (data: BattlescribeRosterData): RosterData => {
-  const mapData: RosterData = {} as RosterData;
-
-  const forces = flattenShape<BattlescribeForces, BattlescribeForce>(data.roster.forces).map(
-    (force) => ({
-      ...force.$,
-
-      categories: flattenShape<BattlescribeCategories, BattlescribeCategory>(force.categories).map(
-        (category) => category.$
+      categories: flattenShape<BattlescribeCategories, BattlescribeCategory>(categories).map(
+        ({ $: $category }) => $category
       ),
 
       publications: flattenShape<BattlescribePublications, BattlescribePublication>(
-        force.publications
-      ).map((publication) => publication.$),
+        publications
+      ).map(({ $: $publication }) => $publication),
 
-      rules: mapRules(force.rules),
-
-      selections: mapSelections(force.selections),
+      selections: mapSelections(selections),
 
       map: mapForceSelections(force),
-    })
-  );
+    };
 
-  mapData.roster = {
-    ...data.roster.$,
-    costs: flattenShape<BattlescribeCosts, BattlescribeCost>(data.roster.costs).map(
-      (cost) => cost.$
-    ),
-    forces,
-    forceMap: mapForces(forces),
+    if (force.rules) {
+      forceData.rules = mapRules(force.rules);
+    }
+
+    return forceData;
+  });
+
+  const mapData: RosterData = {
+    fileName,
+    roster: {
+      ...$,
+      costs: flattenShape<BattlescribeCosts, BattlescribeCost>(costs).map(({ $: $cost }) => $cost),
+      forces: mappedForces,
+    },
   };
 
   return mapData;
