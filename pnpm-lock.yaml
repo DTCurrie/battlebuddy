@@ -1,10 +1,11 @@
 dependencies:
   '@reach/router': 1.3.4_react-dom@16.13.1+react@16.13.1
-  '@types/xml2js': 0.4.5
-  bootstrap: 4.5.0
+  bootstrap: 4.5.0_d97e19e94389d9d3d9225099c7f511a3
   electron-json-storage: 4.3.0
   extract-zip: 2.0.1
+  jquery: 3.5.1
   lodash: 4.17.20
+  popper.js: 1.16.1-lts
   react: 16.13.1
   react-dom: 16.13.1_react@16.13.1
   react-use-trigger: 0.3.4_react@16.13.1
@@ -19,6 +20,7 @@ devDependencies:
   '@babel/preset-react': 7.10.4_@babel+core@7.11.0
   '@babel/preset-typescript': 7.10.4_@babel+core@7.11.0
   '@hot-loader/react-dom': 16.13.0_react@16.13.1
+  '@types/classnames': 2.2.11
   '@types/electron-devtools-installer': 2.2.0
   '@types/electron-json-storage': 4.0.0
   '@types/extract-zip': 1.6.2
@@ -29,9 +31,11 @@ devDependencies:
   '@types/react-test-renderer': 16.9.2
   '@types/reactstrap': 8.5.0
   '@types/webpack-env': 1.15.2
+  '@types/xml2js': 0.4.5
   '@typescript-eslint/eslint-plugin': 3.7.1_98f5354ad0bbc327ab4925c12674a6b1
   '@typescript-eslint/parser': 3.7.1_eslint@7.6.0+typescript@3.9.7
   babel-loader: 8.1.0_eb1461431efd5a396fc2100c302053ae
+  classnames: 2.2.6
   cross-env: 7.0.2
   css-loader: 4.2.0_webpack@4.44.1
   electron: 9.1.2
@@ -1560,6 +1564,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-ykFq2zmBGOCbpIXtoVbz4SKY5QriWPh3AjyU4G74RYbtt5yOc5OfaY75ftjg7mikMOla1CTGpX3lLbuJh8DTrQ==
+  /@types/classnames/2.2.11:
+    dev: true
+    resolution:
+      integrity: sha512-2koNhpWm3DgWRp5tpkiJ8JGc1xTn2q0l+jUNUE7oMKXUf5NpI9AIdC4kbjGNFBdHtcxBD18LAksoudAVhFKCjw==
   /@types/color-name/1.1.1:
     dev: true
     resolution:
@@ -1664,6 +1672,7 @@ packages:
     resolution:
       integrity: sha512-51MYTDTyCziHb70wtGNFRwB4l+5JNvdqzFSkbDvpbftEgVUBEE+T5f7pROhWMp/fxp07oNIEQZd5bbfAH22ohQ==
   /@types/node/14.0.27:
+    dev: true
     resolution:
       integrity: sha512-kVrqXhbclHNHGu9ztnAwSncIgJv/FaxmzXJvGXNdcCpV1b8u1/Mi6z6m0vwy0LzKeXFTPLH0NzwmoJ3fNCIq0g==
   /@types/node/14.14.10:
@@ -1777,7 +1786,7 @@ packages:
   /@types/xml2js/0.4.5:
     dependencies:
       '@types/node': 14.0.27
-    dev: false
+    dev: true
     resolution:
       integrity: sha512-yohU3zMn0fkhlape1nxXG2bLEGZRc1FeqF80RoHaYXJN7uibaauXfhzhOJr1Xh36sn+/tx21QAOf07b/xYVk1w==
   /@types/yargs-parser/15.0.0:
@@ -2858,7 +2867,10 @@ packages:
     optional: true
     resolution:
       integrity: sha512-HRZPIjPcbwAVQvOTxR4YE3o8Xs98NqbbL1iEZDCz7CL8ql0Lt5iOyJFxfnAB0oFs8Oh02F/lLlg30Mexv46LjA==
-  /bootstrap/4.5.0:
+  /bootstrap/4.5.0_d97e19e94389d9d3d9225099c7f511a3:
+    dependencies:
+      jquery: 3.5.1
+      popper.js: 1.16.1-lts
     dev: false
     peerDependencies:
       jquery: 1.9.1 - 3
@@ -3375,7 +3387,6 @@ packages:
     resolution:
       integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==
   /classnames/2.2.6:
-    dev: false
     resolution:
       integrity: sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
   /clean-css/4.2.3:
@@ -7864,6 +7875,10 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-EkJNyHiAG1+A8pqSz7cXttoVa34hOEzN/MrnJhYnfp5VHxflVcf2pu3oJSrhiy6LfIutLdWo+n6q63tjcoIeig==
+  /jquery/3.5.1:
+    dev: false
+    resolution:
+      integrity: sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
   /js-base64/2.6.3:
     dev: true
     resolution:
@@ -9797,6 +9812,10 @@ packages:
     deprecated: 'You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1'
     resolution:
       integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
+  /popper.js/1.16.1-lts:
+    dev: false
+    resolution:
+      integrity: sha512-Kjw8nKRl1m+VrSFCoVGPph93W/qrSO7ZkqPpTf7F4bk/sqcfWK019dWBUpE/fBOsOQY1dks/Bmcbfn1heM/IsA==
   /portfinder/1.0.28:
     dependencies:
       async: 2.6.3
@@ -13175,6 +13194,7 @@ specifiers:
   '@babel/preset-typescript': ^7.10.4
   '@hot-loader/react-dom': ^16.13.0
   '@reach/router': ^1.3.4
+  '@types/classnames': ^2.2.10
   '@types/electron-devtools-installer': ^2.2.0
   '@types/electron-json-storage': ^4.0.0
   '@types/extract-zip': ^1.6.2
@@ -13190,6 +13210,7 @@ specifiers:
   '@typescript-eslint/parser': ^3.7.1
   babel-loader: ^8.1.0
   bootstrap: ^4.5.0
+  classnames: ^2.2.6
   cross-env: ^7.0.2
   css-loader: ^4.2.0
   electron: ^9.1.2
@@ -13211,9 +13232,11 @@ specifiers:
   husky: ^4.2.5
   image-webpack-loader: ^6.0.0
   jest: ^26.2.2
+  jquery: ^3.5.1
   lint-staged: ^10.2.11
   lodash: ^4.17.20
   node-sass: ^4.14.1
+  popper.js: 1.16.1-lts
   prettier: ^2.0.5
   react: ^16.13.1
   react-dom: ^16.13.1

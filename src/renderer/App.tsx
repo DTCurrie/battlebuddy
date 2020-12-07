@@ -1,4 +1,4 @@
-import React, { StrictMode, useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { render } from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
@@ -8,15 +8,9 @@ import {
     NavbarBrand,
     Container,
     Collapse,
-    DropdownItem,
-    DropdownMenu,
-    DropdownToggle,
     Nav,
-    NavbarText,
     NavbarToggler,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
     Button,
 } from 'reactstrap';
 

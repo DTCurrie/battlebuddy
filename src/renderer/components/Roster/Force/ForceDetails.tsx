@@ -86,55 +86,54 @@ const ForceDetails: FunctionComponent<ForceDetailsProps> = ({ forces }) => {
                         </h2>
 
                         <ListGroup flush className="force-details__rules">
+                            <ListGroupItem>
+                                <ListGroupItemHeading tag="h3">Rules</ListGroupItemHeading>
+                            </ListGroupItem>
                             {flattenShape<Rules, Rule>(rules).map((rule) => (
                                 <ForceRule key={rule.$.id} {...rule} />
                             ))}
                         </ListGroup>
 
-                        <ListGroup flush className="force-details__selections list-unstyled">
-                            {forceCategoryEntryIds.map((entryId) => {
-                                const categoryData = mapData[entryId];
+                        {forceCategoryEntryIds.map((entryId) => {
+                            const categoryData = mapData[entryId];
 
-                                if (!categoryData?.length) {
-                                    return null;
-                                }
+                            if (!categoryData?.length) {
+                                return null;
+                            }
 
-                                const flattenedCategories = flattenShape<Categories, Category>(
-                                    categories
-                                );
+                            const flattenedCategories = flattenShape<Categories, Category>(
+                                categories
+                            );
 
-                                const currentCategory = flattenedCategories.find(
-                                    (category) => category.$.entryId === entryId
-                                );
+                            const currentCategory = flattenedCategories.find(
+                                (category) => category.$.entryId === entryId
+                            );
 
-                                if (
-                                    !currentCategory ||
-                                    currentCategory.$.name === 'Uncategorised' ||
-                                    currentCategory.$.name === 'Configuration'
-                                ) {
-                                    return null;
-                                }
+                            if (
+                                !currentCategory ||
+                                currentCategory.$.name === 'Uncategorised' ||
+                                currentCategory.$.name === 'Configuration'
+                            ) {
+                                return null;
+                            }
 
-                                const { $ } = currentCategory;
+                            const { $ } = currentCategory;
 
-                                return (
-                                    <ListGroupItem key={$.id}>
+                            return (
+                                <ListGroup key={$.id} flush className="force-details__selections">
+                                    <ListGroupItem>
                                         <ListGroupItemHeading>
-                                            <h3>{$.name}</h3>
+                                            <ListGroupItemHeading tag="h3">
+                                                {$.name}
+                                            </ListGroupItemHeading>
                                         </ListGroupItemHeading>
-
-                                        <ListGroup flush className="force-details__selections">
-                                            {categoryData.map((selection) => (
-                                                <ForceSelection
-                                                    key={selection.$.id}
-                                                    {...selection}
-                                                />
-                                            ))}
-                                        </ListGroup>
                                     </ListGroupItem>
-                                );
-                            })}
-                        </ListGroup>
+                                    {categoryData.map((selection) => (
+                                        <ForceSelection key={selection.$.id} {...selection} />
+                                    ))}
+                                </ListGroup>
+                            );
+                        })}
                     </div>
                 );
             })}

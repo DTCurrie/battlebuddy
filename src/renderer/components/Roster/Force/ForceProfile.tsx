@@ -1,6 +1,8 @@
 import React, { ComponentPropsWithoutRef, FunctionComponent, useState } from 'react';
 import { Table, ListGroup, ListGroupItem, CustomInput, Button } from 'reactstrap';
 
+import classNames from 'classnames';
+
 import { Profile, flattenShape, Characteristics, Characteristic } from '../../../../utils/shapes';
 
 export interface ForceProfileProps extends Profile, ComponentPropsWithoutRef<'div'> {
@@ -33,8 +35,18 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ $, characteristics
         abilities = profileCharacteristics.pop() || null;
     }
 
+    const onChange = (index: number) => {
+        const offset = index + 1;
+
+        if (offset !== currentWound) {
+            return setCurrentWound(offset);
+        }
+
+        return setCurrentWound(0);
+    };
+
     return (
-        <div className="force-profile">
+        <div className={classNames('force-profile', nested && 'force-profile--nested')}>
             {isDescription ? (
                 <div className="force-profile__description">
                     <HeadingTag className="force-profile__description-heading">{name}</HeadingTag>
@@ -43,18 +55,14 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ $, characteristics
             ) : (
                 <div className="force-profile__stats">
                     <Table striped hover size="sm" className="w-100 d-flex flex-column">
-                        <thead className={nested ? 'thead-light' : 'thead-dark'}>
+                        <thead className="force-profile__stats-head">
                             <tr className="w-100 h-100 d-flex ">
-                                <th
-                                    scope="col"
-                                    className={`w-100 d-flex ${
-                                        nested ? '' : 'bg-success border-success'
-                                    }`}>
+                                <th scope="col" className="w-100 d-flex">
                                     {name}
                                 </th>
                             </tr>
                         </thead>
-                        <tbody className="w-100 d-flex flex-column flex-md-row">
+                        <tbody className="force-profile__stats-body w-100 d-flex flex-column flex-md-row">
                             {profileCharacteristics.map(
                                 ({ $: $characteristic, _: characteristicValue }) => (
                                     <tr
@@ -82,18 +90,19 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ $, characteristics
                             <div className="force-profile__wounds-header d-flex flex-row align-items-center">
                                 <strong>Wounds </strong>
                                 <Button
-                                    color="danger"
                                     size="sm"
                                     className="force-profile__wounds-clear mr-auto"
                                     onClick={() => setCurrentWound(0)}>
                                     clear
                                 </Button>
                             </div>
-                            <ListGroup flush horizontal className="force-profile__wounds-list">
+                            <ListGroup horizontal="lg" className="force-profile__wounds-list">
                                 {Array.from({ length: parseInt(wounds || '0', 10) }).map((_, i) => {
                                     const woundKey = `${$.id}::wound::${i.toString()}`;
                                     return (
-                                        <ListGroupItem key={woundKey}>
+                                        <ListGroupItem
+                                            key={woundKey}
+                                            className="d-flex flex-row align-items-center justify-content-center">
                                             <CustomInput
                                                 id={woundKey}
                                                 className="force-profile__wounds-list-item"
@@ -103,11 +112,7 @@ const ForceProfile: FunctionComponent<ForceProfileProps> = ({ $, characteristics
                                                     <span className="sr-only">{`${i} Wound`}</span>
                                                 }
                                                 type="checkbox"
-                                                onChange={() =>
-                                                    currentWound >= i + 1
-                                                        ? setCurrentWound(0)
-                                                        : setCurrentWound(i + 1)
-                                                }
+                                                onChange={() => onChange(i)}
                                             />
                                         </ListGroupItem>
                                     );
