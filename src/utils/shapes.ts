@@ -1,8 +1,12 @@
-interface Index<T> {
+interface Index {
+    [key: string]: unknown;
+}
+
+interface TypedIndex<T> {
     [key: string]: T[];
 }
 
-export interface RosterData {
+export interface RosterData extends Index {
     roster: Roster;
 }
 
@@ -16,13 +20,13 @@ export type RosterAttributes = {
     xmlns: string;
 };
 
-export interface Roster {
+export interface Roster extends Index {
     $: RosterAttributes;
     costs: Costs[];
     forces: Forces[];
 }
 
-export interface Forces extends Index<Force> {
+export interface Forces extends TypedIndex<Force> {
     force: Force[];
 }
 
@@ -35,7 +39,7 @@ export type ForceAttributes = {
     catalogueName: string;
 };
 
-export interface Force {
+export interface Force extends Index {
     $: ForceAttributes;
     rules: Rules[];
     selections: Selections[];
@@ -43,7 +47,7 @@ export interface Force {
     categories: Categories[];
 }
 
-export interface Publications extends Index<Publication> {
+export interface Publications extends TypedIndex<Publication> {
     publication: Publication[];
 }
 
@@ -52,11 +56,11 @@ export type PublicationAttributes = {
     name: string;
 };
 
-export interface Publication {
+export interface Publication extends Index {
     $: PublicationAttributes;
 }
 
-export interface Selections extends Index<Selection> {
+export interface Selections extends TypedIndex<Selection> {
     selection: Selection[];
 }
 
@@ -69,7 +73,7 @@ export type SelectionAttributes = {
     type: string;
 };
 
-export interface Selection {
+export interface Selection extends Index {
     $: SelectionAttributes;
     costs: Costs[];
     categories?: Categories[];
@@ -78,7 +82,7 @@ export interface Selection {
     selections?: Selections[];
 }
 
-export interface Costs extends Index<Cost> {
+export interface Costs extends TypedIndex<Cost> {
     cost: Cost[];
 }
 
@@ -88,11 +92,11 @@ export type CostAttributes = {
     value: string;
 };
 
-export interface Cost {
+export interface Cost extends Index {
     $: CostAttributes;
 }
 
-export interface Categories extends Index<Category> {
+export interface Categories extends TypedIndex<Category> {
     category: Category[];
 }
 
@@ -103,11 +107,11 @@ export type CategoryAttributes = {
     primary: string;
 };
 
-export interface Category {
+export interface Category extends Index {
     $: CategoryAttributes;
 }
 
-export interface Profiles extends Index<Profile> {
+export interface Profiles extends TypedIndex<Profile> {
     profile: Profile[];
 }
 
@@ -121,12 +125,12 @@ export type ProfileAttributes = {
     typeName: string;
 };
 
-export interface Profile {
+export interface Profile extends Index {
     $: ProfileAttributes;
     characteristics: Characteristics[];
 }
 
-export interface Characteristics extends Index<Characteristic> {
+export interface Characteristics extends TypedIndex<Characteristic> {
     characteristic: Characteristic[];
 }
 
@@ -135,12 +139,12 @@ export type CharacteristicAttributes = {
     typeId: string;
 };
 
-export interface Characteristic {
+export interface Characteristic extends Index {
     $: CharacteristicAttributes;
     _: string;
 }
 
-export interface Rules extends Index<Rule> {
+export interface Rules extends TypedIndex<Rule> {
     rule: Rule[];
 }
 
@@ -150,12 +154,12 @@ export type RuleAttributes = {
     hidden: 'true' | 'false';
 };
 
-export interface Rule {
+export interface Rule extends Index {
     $: RuleAttributes;
     description: string[];
 }
 
-export const flattenShape = <T extends Index<U>, U>(
+export const flattenShape = <T extends TypedIndex<U>, U>(
     source: T[],
     callback?: (value: U) => U
 ): U[] => {

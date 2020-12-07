@@ -2,15 +2,18 @@ import { resolve } from 'path';
 import * as fs from 'fs';
 
 import { Parser } from 'xml2js';
+import * as extract from 'extract-zip';
+
+import { remote } from 'electron';
 
 import { logInfo, logError } from './logger';
 import { RosterData } from './shapes';
 
 const { readdir, readFile } = fs.promises;
+const tempPath = remote.app.getPath('temp');
 
-const rostersFolder = resolve('rosters');
-
-export async function parseXml(): Promise<RosterData[]> {
+export async function parseXml(rosterPath: string): Promise<RosterData[]> {
+    const rostersFolder = resolve(rosterPath);
     const data: RosterData[] = [];
 
     try {
@@ -37,6 +40,57 @@ export async function parseXml(): Promise<RosterData[]> {
                     } catch (error) {
                         logError(
                             `Error parsing roster file ${fileName}: \n\t ${
+                                error.message ? error.message : error
+                            }`
+                        );
+                    }
+                } catch (error) {
+                    logError(
+                        `Error reading roster file ${fileName}: \n\t ${
+                            error.message ? error.message : error
+                        }`
+                    );
+                }
+            }
+
+            if (fileName.split('.')[1] === `rosz`) {
+                try {
+                    const filePath = resolve(rostersFolder, fileName).split(/ /).join(' ');
+
+                    logInfo(`Reading file ${filePath}`);
+
+                    const parser = new Parser({ async: true });
+
+                    try {
+                        let entryName = '';
+
+                        await extract(filePath, {
+                            dir: tempPath,
+                            onEntry: (entry) => {
+                                entryName = entry.fileName;
+                            },
+                        });
+
+                        const file = await readFile(resolve(tempPath, entryName));
+
+                        try {
+                            const result = await parser.parseStringPromise(file);
+                            const { roster } = result;
+                            const { $ } = roster;
+
+                            logInfo(`Parsed roster ${$.name}`);
+
+                            data.push(result);
+                        } catch (error) {
+                            logError(
+                                `Error parsing roster file ${fileName}: \n\t ${
+                                    error.message ? error.message : error
+                                }`
+                            );
+                        }
+                    } catch (error) {
+                        logError(
+                            `Error extracting roster from compressed file ${fileName}: \n\t ${
                                 error.message ? error.message : error
                             }`
                         );

@@ -10,6 +10,7 @@ module.exports = merge(baseConfig, {
     entry: {
         app: ['@babel/polyfill', './src/renderer/App.tsx'],
     },
+    optimization: { moduleIds: 'named' },
     module: {
         rules: [
             {
@@ -47,7 +48,6 @@ module.exports = merge(baseConfig, {
                     },
                 ],
             },
-            // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
                 enforce: 'pre',
                 test: /\.js$/,
@@ -57,7 +57,6 @@ module.exports = merge(baseConfig, {
     },
     plugins: [
         new ForkTsCheckerWebpackPlugin(),
-        new webpack.NamedModulesPlugin(),
         new HtmlWebpackPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),

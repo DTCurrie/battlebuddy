@@ -1,7 +1,8 @@
+/* eslint-disable no-console */
 const { merge } = require('webpack-merge');
-const spawn = require('child_process').spawn;
+const { spawn } = require('child_process');
 
-const baseConfig = require('./webpack.renderer-base');
+const baseConfig = require('./webpack.renderer');
 
 module.exports = merge(baseConfig, {
     resolve: {
@@ -21,7 +22,7 @@ module.exports = merge(baseConfig, {
             verbose: true,
             disableDotRule: false,
         },
-        before() {
+        before: () => {
             if (process.env.START_HOT) {
                 console.log('Starting main process');
                 spawn('npm', ['run', 'start-main-dev'], {

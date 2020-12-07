@@ -1,58 +1,80 @@
-import React, { useState, useEffect } from 'react';
-import * as ReactDOM from 'react-dom';
+import React, { StrictMode, useContext, useState } from 'react';
+import { render } from 'react-dom';
 
 import { AppContainer } from 'react-hot-loader';
 
-import { Navbar, NavbarBrand, Container } from 'reactstrap';
+import {
+    Navbar,
+    NavbarBrand,
+    Container,
+    Collapse,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
+    Nav,
+    NavbarText,
+    NavbarToggler,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    Button,
+} from 'reactstrap';
 
-import { parseXml } from '../utils/xml-parser';
-import { RosterAttributes, Costs, Forces } from '../utils/shapes';
+import NoRostersSplash from './components/NoRostersSplash';
+import { syncRosters, RostersContext, RostersProvider } from './providers/RostersProvider';
 
-import ForceDetails from './components/Roster/Force/ForceDetails';
-import RosterHeader from './components/Roster/RosterHeader';
+import { Roster } from '../utils/shapes';
 
 import './App.scss';
+import { ConfigProvider } from './providers/ConfigProvider';
 
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
 document.body.appendChild(rootElement);
 
 const App = () => {
-    const [roster, setRoster] = useState<RosterAttributes>();
-    const [costs, setCosts] = useState<Costs[]>();
-    const [forces, setForces] = useState<Forces[]>();
+    const rosters: Roster[] = useContext(RostersContext);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const data = await parseXml();
-            setRoster(data[0]?.roster.$);
-            setCosts(data[0]?.roster.costs || []);
-            setForces(data[0]?.roster.forces || []);
-        };
-
-        fetchData().then();
-    }, []);
-
-    if (!roster || !costs || !forces) {
-        return null;
-    }
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <div className="app">
-            <Navbar light>
+        <>
+            <Navbar color="light" light expand="md">
                 <NavbarBrand>Battlebuddy</NavbarBrand>
+                <NavbarToggler onClick={toggle} />
+                <Collapse isOpen={isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem>
+                            <Button color="info" onClick={() => syncRosters().then()}>
+                                Sync
+                            </Button>
+                        </NavItem>
+                    </Nav>
+                </Collapse>
             </Navbar>
-            <RosterHeader $={roster} costs={costs} />
-            <Container tag="main">{forces && <ForceDetails forces={forces} />}</Container>
-        </div>
+            <Container tag="main">
+                {rosters.length ? (
+                    rosters.map((roster: Roster) => (
+                        <div key={roster.$.id} className="roster-card">
+                            {roster.$.name}
+                        </div>
+                    ))
+                ) : (
+                    <NoRostersSplash />
+                )}
+            </Container>
+        </>
     );
 };
 
-ReactDOM.render(
-    <React.StrictMode>
-        <AppContainer>
-            <App />
-        </AppContainer>
-    </React.StrictMode>,
+render(
+    <AppContainer>
+        <ConfigProvider>
+            <RostersProvider>
+                <App />
+            </RostersProvider>
+        </ConfigProvider>
+    </AppContainer>,
     rootElement
 );

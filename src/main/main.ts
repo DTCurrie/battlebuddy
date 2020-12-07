@@ -23,7 +23,7 @@ const createWindow = async () => {
     win = new BrowserWindow({
         width: 1000,
         height: 600,
-        webPreferences: { nodeIntegration: true },
+        webPreferences: { nodeIntegration: true, enableRemoteModule: true },
     });
 
     if (process.env.NODE_ENV !== 'production') {

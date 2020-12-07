@@ -30,7 +30,7 @@
         },
         "ecmaVersion": 2018,
         "sourceType": "module",
-        "project": "./tsconfig.json"
+        "project":[ "./tsconfig.json", "./tsconfig.eslint.json"]
     },
     "plugins": ["react", "prettier", "@typescript-eslint"],
     "rules": {
@@ -95,6 +95,9 @@
         "@typescript-eslint/no-unused-vars": 0,
         "@typescript-eslint/no-explicit-any": 0,
         "@typescript-eslint/explicit-member-accessibility": 0,
-        "@typescript-eslint/no-angle-bracket-type-assertion": 0
+        "@typescript-eslint/no-angle-bracket-type-assertion": 0,
+        "no-plusplus": ["error", {
+            "allowForLoopAfterthoughts": true 
+        }]
     }
 }
