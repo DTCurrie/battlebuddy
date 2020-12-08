@@ -16,7 +16,10 @@
     "start-dev": "cross-env START_HOT=1 npm run start-renderer-dev",
     "prestart": "npm run build",
     "start": "electron .",
-    "lint": "eslint --ext=jsx,js,tsx,ts src",
+    "prettier": "prettier --config ./.prettierrc --write \"{src,test,mocks}/**/*.{css,scss,js,ts,tsx,json,md}\"",
+    "csscomb": "csscomb -c ./.csscomb.json src/renderer",
+    "lint": "eslint --ext=jsx,js,tsx,ts --fix src",
+    "format": "run-p lint csscomb prettier",
     "test": "jest '(\\/test\\/(?!e2e/)).*'",
     "pretest:e2e": "npm run build",
     "test:e2e": "jest '(\\/test\\/e2e/).*'",
@@ -30,12 +33,16 @@
     }
   },
   "lint-staged": {
-    "{src,test,mocks}/**/*.{json,css,scss,md}": [
+    "src/renderer/styles/**/*.{css,scss}": [
+      "csscomb -c ./.csscomb.json --tty-mode --",
       "prettier --config ./.prettierrc --write"
     ],
     "{src,test,mocks}/**/*.{js,ts,tsx}": [
-      "prettier --config ./.prettierrc --write",
-      "eslint --ext=jsx,js,ts,tsx --fix src"
+      "eslint --ext=jsx,js,ts,tsx --fix src",
+      "prettier --config ./.prettierrc --write"
+    ],
+    "**/*.{json,md}": [
+      "prettier --config ./.prettierrc --write"
     ]
   },
   "jest": {
@@ -102,6 +109,7 @@
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
+    "csscomb": "^4.3.0",
     "electron": "^11.0.3",
     "electron-builder": "^22.9.1",
     "electron-devtools-installer": "^3.1.1",

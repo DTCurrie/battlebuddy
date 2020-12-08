@@ -4,6 +4,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, Spinner } from 'reactstrap';
 
+import { NotificationContainer } from 'react-notifications';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import SyncButton from './components/SyncButton/SyncButton';
 
@@ -43,6 +44,7 @@ const App = () => {
         </Collapse>
       </Navbar>
       <main className="bb-app">
+        <NotificationContainer />
         <ErrorBoundary>
           <Router className="bb-app__router">
             <Dashboard default />

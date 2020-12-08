@@ -1,5 +1,5 @@
 import React, { ComponentPropsWithoutRef, createContext, FunctionComponent } from 'react';
-import { NotificationContainer, NotificationManager } from 'react-notifications';
+import { NotificationManager } from 'react-notifications';
 
 export const createNotification = (
   type: 'info' | 'success' | 'warning' | 'error',
@@ -27,7 +27,6 @@ export const NotificationProvider: FunctionComponent<ComponentPropsWithoutRef<'d
   children,
 }: ComponentPropsWithoutRef<'div'>) => (
   <NotificationContext.Provider value={{ createNotification, manager: NotificationManager }}>
-    <NotificationContainer />
     {children}
   </NotificationContext.Provider>
 );
