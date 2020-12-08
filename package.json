@@ -1,157 +1,167 @@
 {
-    "name": "battlebuddy",
-    "version": "1.0.0",
-    "description": "",
-    "main": "dist/main.js",
-    "author": "Devin T. Currie <devintcurrie@gmail.com> (https://devintcurrie.com/)",
-    "homepage": "https://github.com/DTCurrie/battlebuddy.git",
-    "license": "ISC",
-    "repository": "https://github.com/DTCurrie/battlebuddy.git",
-    "scripts": {
-        "build-main": "cross-env NODE_ENV=production webpack -p --config webpack.main.js",
-        "build-renderer": "cross-env NODE_ENV=production webpack -p --config webpack.renderer.js",
-        "build": "npm run build-main && npm run build-renderer",
-        "start-renderer-dev": "webpack serve --config webpack.renderer-dev.js",
-        "start-main-dev": "webpack --config webpack.main.js && electron ./dist/main.js",
-        "start-dev": "cross-env START_HOT=1 npm run start-renderer-dev",
-        "prestart": "npm run build",
-        "start": "electron .",
-        "lint": "eslint --ext=jsx,js,tsx,ts src",
-        "test": "jest '(\\/test\\/(?!e2e/)).*'",
-        "pretest:e2e": "npm run build",
-        "test:e2e": "jest '(\\/test\\/e2e/).*'",
-        "pack": "npm run build && electron-builder --dir",
-        "dist": "npm run build && electron-builder",
-        "postinstall": "electron-builder install-app-deps"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
-    },
-    "lint-staged": {
-        "{src,test,mocks}/**/*.{json,css,scss,md}": [
-            "prettier --config ./.prettierrc --write"
-        ],
-        "{src,test,mocks}/**/*.{js,ts,tsx}": [
-            "prettier --config ./.prettierrc --write",
-            "eslint --ext=jsx,js,ts,tsx --fix src"
-        ]
-    },
-    "jest": {
-        "transform": {
-            "^.+\\.tsx?$": "ts-jest"
-        },
-        "testRegex": "(/test/.+\\.spec)\\.tsx?$",
-        "moduleFileExtensions": [
-            "ts",
-            "tsx",
-            "js",
-            "json",
-            "node"
-        ],
-        "moduleNameMapper": {
-            "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
-            "\\.(s?css|sass)$": "<rootDir>/mocks/styleMock.js"
-        }
-    },
-    "build": {
-        "productName": "Battlebuddy",
-        "appId": "dtcurrie.battlebuddy",
-        "mac": {
-            "category": "public.app-category.games"
-        },
-        "directories": {
-            "output": "release"
-        },
-        "files": [
-            "dist/",
-            "node_modules/",
-            "package.json"
-        ],
-        "linux": {
-            "target": "deb"
-        },
-        "win": {
-            "target": "nsis"
-        }
-    },
-    "devDependencies": {
-        "@babel/core": "^7.12.9",
-        "@babel/plugin-proposal-class-properties": "^7.12.1",
-        "@babel/polyfill": "^7.12.1",
-        "@babel/preset-env": "^7.12.7",
-        "@babel/preset-react": "^7.12.7",
-        "@babel/preset-typescript": "^7.12.7",
-        "@hot-loader/react-dom": "^17.0.1",
-        "@types/classnames": "^2.2.11",
-        "@types/electron-devtools-installer": "^2.2.0",
-        "@types/electron-json-storage": "^4.0.0",
-        "@types/extract-zip": "^1.6.2",
-        "@types/jest": "^26.0.16",
-        "@types/lodash": "^4.14.165",
-        "@types/reach__router": "^1.3.6",
-        "@types/react": "^17.0.0",
-        "@types/react-dom": "^17.0.0",
-        "@types/react-test-renderer": "^17.0.0",
-        "@types/webpack-env": "^1.16.0",
-        "@types/xml2js": "^0.4.7",
-        "@typescript-eslint/eslint-plugin": "^4.9.1",
-        "@typescript-eslint/parser": "^4.9.1",
-        "babel-loader": "^8.2.2",
-        "cross-env": "^7.0.3",
-        "css-loader": "^5.0.1",
-        "electron": "^11.0.3",
-        "electron-builder": "^22.9.1",
-        "electron-devtools-installer": "^3.1.1",
-        "eslint": "^7.15.0",
-        "eslint-config-airbnb": "^18.2.1",
-        "eslint-config-prettier": "^7.0.0",
-        "eslint-plugin-import": "^2.22.1",
-        "eslint-plugin-jsx-a11y": "^6.4.1",
-        "eslint-plugin-prettier": "^3.2.0",
-        "eslint-plugin-react": "^7.21.5",
-        "eslint-plugin-react-hooks": "^4.2.0",
-        "file-loader": "^6.2.0",
-        "fork-ts-checker-webpack-plugin": "^6.0.5",
-        "html-webpack-plugin": "^4.5.0",
-        "husky": "^4.3.5",
-        "image-webpack-loader": "^7.0.1",
-        "jest": "^26.6.3",
-        "lint-staged": "^10.5.3",
-        "node-sass": "^5.0.0",
-        "npm-run-all": "^4.1.5",
-        "prettier": "^2.2.1",
-        "react-hot-loader": "^4.13.0",
-        "react-test-renderer": "^17.0.1",
-        "sass-loader": "^10.1.0",
-        "source-map-loader": "^1.1.3",
-        "spectron": "^13.0.0",
-        "style-loader": "^2.0.0",
-        "ts-jest": "^26.4.4",
-        "typescript": "^4.1.2",
-        "webpack": "^5.10.0",
-        "webpack-cli": "^4.2.0",
-        "webpack-dev-server": "^3.11.0",
-        "webpack-merge": "^5.4.0"
-    },
-    "dependencies": {
-        "@reach/router": "^1.3.4",
-        "bootstrap": "^4.5.3",
-        "classnames": "^2.2.6",
-        "electron-json-storage": "^4.3.0",
-        "electron-store": "^6.0.1",
-        "extract-zip": "^2.0.1",
-        "fast-deep-equal": "^3.1.3",
-        "jquery": "^3.5.1",
-        "lodash": "^4.17.20",
-        "popper.js": "1.16.1-lts",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1",
-        "react-transition-group": "^4.4.1",
-        "react-use-trigger": "^0.3.4",
-        "reactstrap": "^8.7.1",
-        "rxjs": "^6.6.3",
-        "xml2js": "^0.4.23"
+  "name": "battlebuddy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "author": "Devin T. Currie <devintcurrie@gmail.com> (https://devintcurrie.com/)",
+  "homepage": "https://github.com/DTCurrie/battlebuddy.git",
+  "license": "ISC",
+  "repository": "https://github.com/DTCurrie/battlebuddy.git",
+  "scripts": {
+    "build-main": "cross-env NODE_ENV=production webpack -p --config webpack.main.js",
+    "build-renderer": "cross-env NODE_ENV=production webpack -p --config webpack.renderer.js",
+    "build": "npm run build-main && npm run build-renderer",
+    "start-renderer-dev": "webpack serve --config webpack.renderer-dev.js",
+    "start-main-dev": "webpack --config webpack.main.js && electron ./dist/main.js",
+    "start-dev": "cross-env START_HOT=1 npm run start-renderer-dev",
+    "prestart": "npm run build",
+    "start": "electron .",
+    "prettier": "prettier --config ./.prettierrc --write \"{src,test,mocks}/**/*.{css,scss,js,ts,tsx,json,md}\"",
+    "csscomb": "csscomb -c ./.csscomb.json src/renderer",
+    "lint": "eslint --ext=jsx,js,tsx,ts --fix src",
+    "format": "run-p lint csscomb prettier",
+    "test": "jest '(\\/test\\/(?!e2e/)).*'",
+    "pretest:e2e": "npm run build",
+    "test:e2e": "jest '(\\/test\\/e2e/).*'",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/renderer/styles/**/*.{css,scss}": [
+      "csscomb -c ./.csscomb.json --tty-mode --",
+      "prettier --config ./.prettierrc --write"
+    ],
+    "{src,test,mocks}/**/*.{js,ts,tsx}": [
+      "eslint --ext=jsx,js,ts,tsx --fix src",
+      "prettier --config ./.prettierrc --write"
+    ],
+    "**/*.{json,md}": [
+      "prettier --config ./.prettierrc --write"
+    ]
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/test/.+\\.spec)\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "node"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
+      "\\.(s?css|sass)$": "<rootDir>/mocks/styleMock.js"
+    }
+  },
+  "build": {
+    "productName": "Battlebuddy",
+    "appId": "dtcurrie.battlebuddy",
+    "mac": {
+      "category": "public.app-category.games"
+    },
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/",
+      "node_modules/",
+      "package.json"
+    ],
+    "linux": {
+      "target": "deb"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@hot-loader/react-dom": "^17.0.1",
+    "@types/classnames": "^2.2.11",
+    "@types/electron-devtools-installer": "^2.2.0",
+    "@types/electron-json-storage": "^4.0.0",
+    "@types/extract-zip": "^1.6.2",
+    "@types/jest": "^26.0.16",
+    "@types/lodash": "^4.14.165",
+    "@types/reach__router": "^1.3.6",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-test-renderer": "^17.0.0",
+    "@types/webpack-env": "^1.16.0",
+    "@types/xml2js": "^0.4.7",
+    "@typescript-eslint/eslint-plugin": "^4.9.1",
+    "@typescript-eslint/parser": "^4.9.1",
+    "@webpack-cli/serve": "^1.1.0",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "csscomb": "^4.3.0",
+    "electron": "^11.0.3",
+    "electron-builder": "^22.9.1",
+    "electron-devtools-installer": "^3.1.1",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.5",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.5",
+    "image-webpack-loader": "^7.0.1",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.3",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.2.1",
+    "react-hot-loader": "^4.13.0",
+    "react-test-renderer": "^17.0.1",
+    "sass-loader": "^10.1.0",
+    "source-map-loader": "^1.1.3",
+    "spectron": "^13.0.0",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^26.4.4",
+    "typescript": "^4.1.2",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
+  },
+  "dependencies": {
+    "@reach/router": "^1.3.4",
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6",
+    "electron-json-storage": "^4.3.0",
+    "electron-store": "^6.0.1",
+    "extract-zip": "^2.0.1",
+    "fast-deep-equal": "^3.1.3",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.20",
+    "popper.js": "1.16.1-lts",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-notifications": "^1.7.2",
+    "react-transition-group": "^4.4.1",
+    "react-use-trigger": "^0.3.4",
+    "reactstrap": "^8.7.1",
+    "rxjs": "^6.6.3",
+    "xml2js": "^0.4.23"
+  }
 }

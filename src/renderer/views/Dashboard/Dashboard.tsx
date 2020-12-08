@@ -1,20 +1,41 @@
-import { RouteComponentProps } from '@reach/router';
+import { Link, LinkGetProps, RouteComponentProps, Router, useLocation } from '@reach/router';
 import React, { ComponentPropsWithoutRef, FunctionComponent } from 'react';
-import { Card } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Container, Jumbotron } from 'reactstrap';
 
-import { useRosters } from '../../behaviors/use-rosters/use-rosters';
+import DashboardRosters from './Rosters/DashboardRosters';
+import DashboardSync from './Sync/DashboardSync';
 
 export interface DashboardProps extends ComponentPropsWithoutRef<'div'>, RouteComponentProps {}
 
 const Dashboard: FunctionComponent<DashboardProps> = () => {
-  const [{ rosters }] = useRosters();
+  const location = useLocation();
+
+  const isActive = ({ isCurrent }: LinkGetProps) =>
+    isCurrent ? { className: 'breadcrumb-item active' } : {};
 
   return (
     <div className="bb-dashboard">
-      <h1>Dashboard</h1>
-      {rosters.map(({ fileName, roster }) => (
-        <Card key={`${roster.id}::${encodeURI(fileName)}`}>{roster.name}</Card>
-      ))}
+      <Jumbotron>
+        <h1>Dashboard</h1>
+        <Breadcrumb>
+          <BreadcrumbItem tag={Link} getProps={isActive} to="/">
+            Rosters
+          </BreadcrumbItem>
+
+          {/* sync */}
+          {location.pathname.indexOf('sync') >= 0 && (
+            <BreadcrumbItem tag={Link} getProps={isActive} to="/sync">
+              Sync
+            </BreadcrumbItem>
+          )}
+        </Breadcrumb>
+      </Jumbotron>
+      <Container>
+        <Router className="bb-dashboard__router">
+          <DashboardRosters default />
+          <DashboardSync path="sync" />
+        </Router>
+      </Container>
     </div>
   );
 };
