@@ -11,10 +11,8 @@ import { BattlescribeRosterData } from './shapes';
 
 const { readdir, readFile } = fs.promises;
 const tempPath = remote.app.getPath('temp');
-
 export async function parseXml(rosterPath: string): Promise<BattlescribeRosterData[]> {
-  const rostersFolder = resolve(rosterPath);
-
+  const rostersFolder = resolve(__dirname, rosterPath);
   const data: BattlescribeRosterData[] = [];
 
   try {
@@ -41,11 +39,13 @@ export async function parseXml(rosterPath: string): Promise<BattlescribeRosterDa
             logError(
               `Error parsing roster file ${fileName}: \n\t ${error.message ? error.message : error}`
             );
+            throw error;
           }
         } catch (error) {
           logError(
             `Error reading roster file ${fileName}: \n\t ${error.message ? error.message : error}`
           );
+          throw error;
         }
       }
 
@@ -82,6 +82,7 @@ export async function parseXml(rosterPath: string): Promise<BattlescribeRosterDa
                   error.message ? error.message : error
                 }`
               );
+              throw error;
             }
           } catch (error) {
             logError(
@@ -89,16 +90,19 @@ export async function parseXml(rosterPath: string): Promise<BattlescribeRosterDa
                 error.message ? error.message : error
               }`
             );
+            throw error;
           }
         } catch (error) {
           logError(
             `Error reading roster file ${fileName}: \n\t ${error.message ? error.message : error}`
           );
+          throw error;
         }
       }
     }
   } catch (error) {
     logError(`Error getting roster files: \n\t ${error.message ? error.message : error}`);
+    throw new Error(`Unable to locate roster folder, please update your roster path.`);
   }
 
   return Promise.all(data);

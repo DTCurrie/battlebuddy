@@ -1,31 +1,29 @@
-import React, { StrictMode, useContext, useState } from 'react';
-import { render } from 'react-dom';
 import { createHistory, createMemorySource, Link, LocationProvider, Router } from '@reach/router';
-
+import React, { useState } from 'react';
+import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, Spinner } from 'reactstrap';
 
-import { Navbar, NavbarBrand, Collapse, Nav, NavbarToggler, NavItem, Button } from 'reactstrap';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import SyncButton from './components/SyncButton/SyncButton';
 
-import ErrorBoundary from './components/ErrorBoundary';
-
-import { ConfigProvider } from './providers/ConfigProvider';
-import { RostersContext, RostersProvider } from './providers/RostersProvider';
+import { ConfigProvider } from './providers/ConfigProvider/ConfigProvider';
+import { NotificationProvider } from './providers/NotificationProvider/NotificationProvider';
+import { RostersProvider } from './providers/RostersProvider/RostersProvider';
 
 import Dashboard from './views/Dashboard/Dashboard';
 
+import 'react-notifications/lib/notifications.css';
 import './App.scss';
-import { logInfo } from '../utils/logger';
 
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
 document.body.appendChild(rootElement);
 
+const source = createMemorySource('/');
+const history = createHistory(source);
+
 const App = () => {
-  const source = createMemorySource('/');
-  const history = createHistory(source);
-
-  const { sync } = useContext(RostersContext);
-
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -39,35 +37,33 @@ const App = () => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <Button color="info" onClick={sync}>
-                Sync
-              </Button>
+              <SyncButton color="link" spinner={<Spinner color="link" size="sm" />} />
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
       <main className="bb-app">
-        <LocationProvider history={history}>
-          <ErrorBoundary>
-            <Router className="bb-app__router">
-              <Dashboard path="/" />
-            </Router>
-          </ErrorBoundary>
-        </LocationProvider>
+        <ErrorBoundary>
+          <Router className="bb-app__router">
+            <Dashboard default />
+          </Router>
+        </ErrorBoundary>
       </main>
     </>
   );
 };
 
 render(
-  <StrictMode>
-    <AppContainer>
+  <AppContainer>
+    <LocationProvider history={history}>
       <ConfigProvider>
         <RostersProvider>
-          <App />
+          <NotificationProvider>
+            <App />
+          </NotificationProvider>
         </RostersProvider>
       </ConfigProvider>
-    </AppContainer>
-  </StrictMode>,
+    </LocationProvider>
+  </AppContainer>,
   rootElement
 );

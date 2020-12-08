@@ -5,7 +5,7 @@ const reactTransitionGroupVersion = appPackage.dependencies['react-transition-gr
 function readPackage(pkg, context) {
   const updatedPkg = pkg;
 
-  if (updatedPkg.name === 'reactstrap') {
+  if (updatedPkg.name === 'reactstrap' || updatedPkg.name === 'react-notifications') {
     const old = updatedPkg.dependencies['react-transition-group'];
     updatedPkg.dependencies['react-transition-group'] = reactTransitionGroupVersion;
     context.log(
