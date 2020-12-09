@@ -9,8 +9,12 @@ export interface SpinnerButtonProps extends ButtonProps {
 const SpinnerButton: FunctionComponent<SpinnerButtonProps> = ({
   children,
   spin = false,
-  spinner = <Spinner color="light" />,
+  spinner = <Spinner className="bb-spinner-button__spinner" color="light" />,
   ...buttonProps
-}: SpinnerButtonProps) => <Button {...buttonProps}>{spin ? spinner : children}</Button>;
+}: SpinnerButtonProps) => (
+  <Button className="bb-spinner-button" {...buttonProps}>
+    {spin ? spinner : children}
+  </Button>
+);
 
 export default SpinnerButton;

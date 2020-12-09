@@ -30,22 +30,28 @@ const App = () => {
 
   return (
     <>
-      <Navbar className="bb-navbar" color="light" light expand="md">
-        <NavbarBrand to="/" tag={Link}>
+      <Navbar className="bb-navbar" color="light" light expand="md" sticky="top">
+        <NavbarBrand className="bb-navbar__logo" to="/" tag={Link}>
           Battlebuddy
         </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="ml-auto" navbar>
-            <NavItem>
-              <SyncButton color="link" spinner={<Spinner color="link" size="sm" />} />
+        <NavbarToggler className="bb-navbar__toggler" onClick={toggle} />
+        <Collapse className="bb-navbar__collapse" isOpen={isOpen} navbar>
+          <Nav className="bb-navbar__nav ml-auto" navbar>
+            <NavItem className="bb-navbar__nav-item">
+              <SyncButton
+                className="bb-navbar__sync-button"
+                color="link"
+                spinner={<Spinner color="link" size="sm" />}
+              />
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
       <main className="bb-app">
-        <NotificationContainer />
-        <ErrorBoundary>
+        <div className="bb-app__notifications">
+          <NotificationContainer />
+        </div>
+        <ErrorBoundary className="bb-app__error-boundary">
           <Router className="bb-app__router">
             <Dashboard default />
           </Router>

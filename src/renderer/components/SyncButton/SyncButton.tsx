@@ -19,15 +19,18 @@ const SyncButton: FunctionComponent<SyncButtonProps> = (props: SyncButtonProps) 
   return (
     <SpinnerButton
       {...props}
+      className="bb-sync-button"
       spin={syncing}
-      spinner={props.spinner || <Spinner color="light" size="sm" />}
+      spinner={
+        props.spinner || <Spinner className="bb-sync-button__spinner" color="light" size="sm" />
+      }
       onClick={() => {
         setSyncing(true);
 
         sync()
           .then(() => {
             createNotification('success', 'Successfully synced rosters', 'Synced!');
-            navigate('/');
+            navigate('/rosters');
           })
           .catch((error) =>
             createNotification(

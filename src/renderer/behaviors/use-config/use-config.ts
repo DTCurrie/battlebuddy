@@ -13,6 +13,6 @@ export const BattlebuddyConfigSchema: Schema<BattlebuddyConfig> = {
 };
 
 export const useConfig = (): [BattlebuddyConfig, ElectronStore<Schema<BattlebuddyConfig>>] => {
-  const config = useStorage('config', BattlebuddyConfigSchema);
+  const config = useStorage('bb-config', BattlebuddyConfigSchema);
   return config;
 };

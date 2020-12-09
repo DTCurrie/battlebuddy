@@ -50,8 +50,8 @@ export type BattlescribeForceAttributes = {
 export interface BattlescribeForce extends Index {
   $: BattlescribeForceAttributes;
   selections: BattlescribeSelections[];
-  publications: BattlescribePublications[];
   categories: BattlescribeCategories[];
+  publications?: BattlescribePublications[];
   rules?: BattlescribeRules[];
 }
 
@@ -187,10 +187,10 @@ export interface Roster extends BattlescribeRosterAttributes {
 
 export interface Force extends BattlescribeForceAttributes {
   categories: BattlescribeCategoryAttributes[];
-  publications: BattlescribePublicationAttributes[];
-  rules?: Rule[];
   selections: Selection[];
   map: ForceSelectionMap;
+  publications?: BattlescribePublicationAttributes[];
+  rules?: Rule[];
 }
 
 export interface ForceSelectionMap {

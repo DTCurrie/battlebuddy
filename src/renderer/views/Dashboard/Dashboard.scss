@@ -1,0 +1,17 @@
+.bb-dashboard {
+  display: flex;
+  flex-direction: column;
+
+  &__nav {
+    position: sticky;
+    z-index: 1020;
+
+    .breadcrumb {
+      margin-bottom: 0;
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+}
