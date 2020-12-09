@@ -1,5 +1,5 @@
-import { useNavigate } from '@reach/router';
 import React, { FunctionComponent, useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Spinner } from 'reactstrap';
 
 import { NotificationContext } from '../../providers/NotificationProvider/NotificationProvider';
@@ -11,7 +11,7 @@ export type SyncButtonProps = Omit<SpinnerButtonProps, 'spin' | 'onClick'>;
 
 const SyncButton: FunctionComponent<SyncButtonProps> = (props: SyncButtonProps) => {
   const { createNotification } = useContext(NotificationContext);
-  const { sync } = useContext(RostersContext);
+  const { sync, clearCurrentRoster } = useContext(RostersContext);
   const navigate = useNavigate();
 
   const [syncing, setSyncing] = useState(false);
@@ -30,7 +30,8 @@ const SyncButton: FunctionComponent<SyncButtonProps> = (props: SyncButtonProps) 
         sync()
           .then(() => {
             createNotification('success', 'Successfully synced rosters', 'Synced!');
-            navigate('/rosters');
+            clearCurrentRoster();
+            navigate('/');
           })
           .catch((error) =>
             createNotification(

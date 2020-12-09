@@ -1,4 +1,3 @@
-import { useNavigate } from '@reach/router';
 import React, {
   ComponentPropsWithoutRef,
   FunctionComponent,
@@ -6,15 +5,8 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  CardSubtitle,
-  CardText,
-  CardTitle,
-} from 'reactstrap';
+import { useNavigate } from 'react-router-dom';
+import { Card, CardBody, CardSubtitle, CardText, CardTitle } from 'reactstrap';
 
 import { getGameSystemColors } from '../../../utils/colors';
 import { GameSystem } from '../../../utils/game-system';

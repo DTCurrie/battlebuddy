@@ -1,17 +1,19 @@
 dependencies:
-  '@reach/router': 1.3.4_react-dom@17.0.1+react@17.0.1
   bootstrap: 4.5.3_d97e19e94389d9d3d9225099c7f511a3
   classnames: 2.2.6
   dequal: 2.0.2
   electron-json-storage: 4.3.0
   electron-store: 6.0.1
   extract-zip: 2.0.1
+  history: 5.0.0
   jquery: 3.5.1
   lodash: 4.17.20
   popper.js: 1.16.1-lts
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
   react-notifications: 1.7.2_react-dom@17.0.1+react@17.0.1
+  react-router: 6.0.0-beta.0_history@5.0.0+react@17.0.1
+  react-router-dom: 6.0.0-beta.0_53afffa7a7d3b09b28318c8dd871d9fc
   react-transition-group: 4.4.1_react-dom@17.0.1+react@17.0.1
   react-use-trigger: 0.3.4_react@17.0.1
   reactstrap: 8.7.1_react-dom@17.0.1+react@17.0.1
@@ -1450,20 +1452,6 @@ packages:
       node: '>= 8'
     resolution:
       integrity: sha512-1V9XOY4rDW0rehzbrcqAmHnz8e7SKvX27gh8Gt2WgB0+pdzdiLV83p72kZPU+jvMbS1qU5mauP2iOvO8rhmurQ==
-  /@reach/router/1.3.4_react-dom@17.0.1+react@17.0.1:
-    dependencies:
-      create-react-context: 0.3.0_prop-types@15.7.2+react@17.0.1
-      invariant: 2.2.4
-      prop-types: 15.7.2
-      react: 17.0.1
-      react-dom: 17.0.1_react@17.0.1
-      react-lifecycles-compat: 3.0.4
-    dev: false
-    peerDependencies:
-      react: 15.x || 16.x || 16.4.0-alpha.0911da3
-      react-dom: 15.x || 16.x || 16.4.0-alpha.0911da3
-    resolution:
-      integrity: sha512-+mtn9wjlB9NN2CNnnC/BRYtwdKBfSyyasPYraNAyvaV1occr/5NnB4CVzjEZipNHwYebQwcndGUmpFzxAUoqSA==
   /@sindresorhus/is/0.14.0:
     dev: true
     engines:
@@ -6286,6 +6274,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
+  /history/5.0.0:
+    dependencies:
+      '@babel/runtime': 7.12.5
+    dev: false
+    resolution:
+      integrity: sha512-3NyRMKIiFSJmIPdq7FxkNMJkQ7ZEtVblOQ38VtKaA0zZMW1Eo6Q6W8oDKEflr1kNNTItSnk4JMCO1deeSgbLLg==
   /hoist-non-react-statics/3.3.2:
     dependencies:
       react-is: 16.13.1
@@ -6770,12 +6764,6 @@ packages:
     optional: true
     resolution:
       integrity: sha1-lvsKk2wSur1v8XUqF9BWFqvQlMY=
-  /invariant/2.2.4:
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false
-    resolution:
-      integrity: sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
   /ip-regex/2.1.0:
     dev: true
     engines:
@@ -10026,6 +10014,7 @@ packages:
     resolution:
       integrity: sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
   /react-lifecycles-compat/3.0.4:
+    dev: true
     resolution:
       integrity: sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
   /react-notifications/1.7.2_react-dom@17.0.1+react@17.0.1:
@@ -10055,6 +10044,31 @@ packages:
       react: 0.14.x || ^15.0.0 || ^16.0.0
     resolution:
       integrity: sha512-nmqYTx7QVjCm3WUZLeuOomna138R1luC4EqkW3hxJUrAe+3eNz3oFCLYdnPwILfn0mX1Ew2c3wctrjlUMYYUww==
+  /react-router-dom/6.0.0-beta.0_53afffa7a7d3b09b28318c8dd871d9fc:
+    dependencies:
+      history: 5.0.0
+      prop-types: 15.7.2
+      react: 17.0.1
+      react-dom: 17.0.1_react@17.0.1
+      react-router: 6.0.0-beta.0_history@5.0.0+react@17.0.1
+    dev: false
+    peerDependencies:
+      history: '>=5'
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    resolution:
+      integrity: sha512-36yNNGMT8RB9FRPL9nKJi6HKDkgOakU+o/2hHpSzR6e37gN70MpOU6QQlmif4oAWWBwjyGc3ZNOMFCsFuHUY5w==
+  /react-router/6.0.0-beta.0_history@5.0.0+react@17.0.1:
+    dependencies:
+      history: 5.0.0
+      prop-types: 15.7.2
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      history: '>=5'
+      react: '>=16.8'
+    resolution:
+      integrity: sha512-VgMdfpVcmFQki/LZuLh8E/MNACekDetz4xqft+a6fBZvvJnVqKbLqebF7hyoawGrV1HcO5tVaUang2Og4W2j1Q==
   /react-shallow-renderer/16.14.1_react@17.0.1:
     dependencies:
       object-assign: 4.1.1
@@ -13029,7 +13043,6 @@ specifiers:
   '@babel/preset-react': ^7.12.7
   '@babel/preset-typescript': ^7.12.7
   '@hot-loader/react-dom': ^17.0.1
-  '@reach/router': ^1.3.4
   '@types/classnames': ^2.2.11
   '@types/electron-devtools-installer': ^2.2.0
   '@types/electron-json-storage': ^4.0.0
@@ -13068,6 +13081,7 @@ specifiers:
   extract-zip: ^2.0.1
   file-loader: ^6.2.0
   fork-ts-checker-webpack-plugin: ^6.0.5
+  history: ^5.0.0
   html-webpack-plugin: ^4.5.0
   husky: ^4.3.5
   image-webpack-loader: ^7.0.1
@@ -13083,6 +13097,8 @@ specifiers:
   react-dom: ^17.0.1
   react-hot-loader: ^4.13.0
   react-notifications: ^1.7.2
+  react-router: ^6.0.0-beta.0
+  react-router-dom: ^6.0.0-beta.0
   react-test-renderer: ^17.0.1
   react-transition-group: ^4.4.1
   react-use-trigger: ^0.3.4

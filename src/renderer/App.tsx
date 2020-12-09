@@ -1,10 +1,15 @@
-import { createHistory, createMemorySource, Link, LocationProvider, Router } from '@reach/router';
+import { createHashHistory } from 'history';
 import React, { useState } from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
+import { NotificationContainer } from 'react-notifications';
+import { HashRouter, Link, Routes } from 'react-router-dom';
 import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, Spinner } from 'reactstrap';
 
-import { NotificationContainer } from 'react-notifications';
+import 'react-notifications/lib/notifications.css';
+
+import './App.scss';
+
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import SyncButton from './components/SyncButton/SyncButton';
 
@@ -14,29 +19,25 @@ import { RostersProvider } from './providers/RostersProvider/RostersProvider';
 
 import Dashboard from './views/Dashboard/Dashboard';
 
-import 'react-notifications/lib/notifications.css';
-import './App.scss';
-
 const rootElement = document.createElement('div');
 rootElement.id = 'root';
 document.body.appendChild(rootElement);
 
-const source = createMemorySource('/');
-const history = createHistory(source);
+const hashHistory = createHashHistory();
 
 const App = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <>
+    <HashRouter>
       <Navbar className="bb-navbar" color="light" light expand="md" sticky="top">
         <NavbarBrand className="bb-navbar__logo" to="/" tag={Link}>
           Battlebuddy
         </NavbarBrand>
         <NavbarToggler className="bb-navbar__toggler" onClick={toggle} />
         <Collapse className="bb-navbar__collapse" isOpen={isOpen} navbar>
-          <Nav className="bb-navbar__nav ml-auto" navbar>
+          <Nav className="bb-navbar__nav" navbar>
             <NavItem className="bb-navbar__nav-item">
               <SyncButton
                 className="bb-navbar__sync-button"
@@ -52,26 +53,24 @@ const App = () => {
           <NotificationContainer />
         </div>
         <ErrorBoundary className="bb-app__error-boundary">
-          <Router className="bb-app__router">
-            <Dashboard default />
-          </Router>
+          <Routes>
+            <Dashboard path="/*" />
+          </Routes>
         </ErrorBoundary>
       </main>
-    </>
+    </HashRouter>
   );
 };
 
 render(
   <AppContainer>
-    <LocationProvider history={history}>
-      <ConfigProvider>
-        <RostersProvider>
-          <NotificationProvider>
-            <App />
-          </NotificationProvider>
-        </RostersProvider>
-      </ConfigProvider>
-    </LocationProvider>
+    <ConfigProvider>
+      <RostersProvider>
+        <NotificationProvider>
+          <App />
+        </NotificationProvider>
+      </RostersProvider>
+    </ConfigProvider>
   </AppContainer>,
   rootElement
 );
