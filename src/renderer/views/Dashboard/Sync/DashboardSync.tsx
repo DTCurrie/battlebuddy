@@ -1,13 +1,11 @@
-import { RouteComponentProps } from '@reach/router';
-import React, { ComponentPropsWithoutRef, FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
+import { RouteProps } from 'react-router';
 
 import { useConfig } from '../../../behaviors/use-config/use-config';
 
 import SyncButton from '../../../components/SyncButton/SyncButton';
 
-export interface DashboardSyncProps extends ComponentPropsWithoutRef<'div'>, RouteComponentProps {}
-
-const DashboardSync: FunctionComponent<DashboardSyncProps> = () => {
+const DashboardSync: FunctionComponent<RouteProps> = () => {
   const [{ rosterPath }] = useConfig();
 
   return (

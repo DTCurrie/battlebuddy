@@ -5,6 +5,8 @@ import { app, BrowserWindow } from 'electron';
 
 let win: BrowserWindow | null;
 
+app.disableHardwareAcceleration();
+
 const installExtensions = async () => {
   const installer = require('electron-devtools-installer');
   const forceDownload = !!process.env.UPGRADE_EXTENSIONS;

@@ -1,47 +1,52 @@
-import {
-  Link,
-  LinkGetProps,
-  RouteComponentProps,
-  Router,
-  useLocation,
-  useNavigate,
-} from '@reach/router';
-
 import React, {
-  ComponentPropsWithoutRef,
   FunctionComponent,
+  useCallback,
   useContext,
   useEffect,
+  useRef,
   useState,
 } from 'react';
+import { RouteProps } from 'react-router';
+import { Routes, useLocation, useNavigate } from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, Container } from 'reactstrap';
 
 import { useRosters } from '../../behaviors/use-rosters/use-rosters';
+import { useWindowSize } from '../../behaviors/use-window-size/use-window-size';
+
+import ExactMatchLink from '../../components/ExactMatchLink/ExactMatchLink';
+
 import { RostersContext } from '../../providers/RostersProvider/RostersProvider';
+
+import './Dashboard.scss';
 
 import DashboardRosterDetails from './Rosters/DashboardRosterDetails';
 import DashboardRosters from './Rosters/DashboardRosters';
 import { getRosterKey } from './Rosters/roster-key';
 import DashboardSync from './Sync/DashboardSync';
 
-import './Dashboard.scss';
-import { useWindowSize } from '../../behaviors/use-window-size/use-window-size';
+const getNavbar = () => document.querySelector<HTMLElement>('.bb-navbar');
+const FALLBACK_NAVBAR_HEIGHT = 56;
 
-export interface DashboardProps extends ComponentPropsWithoutRef<'div'>, RouteComponentProps {}
-
-const Dashboard: FunctionComponent<DashboardProps> = () => {
+const Dashboard: FunctionComponent<RouteProps> = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
   const { currentRoster } = useContext(RostersContext);
   const [{ rosters }] = useRosters();
 
-  const getNavbarHeight = () => document.querySelector<HTMLElement>('.bb-navbar')?.offsetHeight;
+  const navbarHeight = useRef(getNavbar()?.offsetHeight);
+  const getNavbarHeight = useCallback(() => {
+    if (!navbarHeight || !navbarHeight.current) {
+      navbarHeight.current = getNavbar()?.offsetHeight || FALLBACK_NAVBAR_HEIGHT;
+    }
 
-  const [top, setTop] = useState(getNavbarHeight());
+    return navbarHeight.current;
+  }, []);
 
-  useEffect(() => setTop(getNavbarHeight()), []);
-  useWindowSize(() => setTop(getNavbarHeight()));
+  const [top, setTop] = useState(navbarHeight.current);
+
+  useEffect(() => setTop(getNavbarHeight()), [getNavbarHeight]);
+  useWindowSize(() => setTop(getNavbarHeight()), [getNavbarHeight]);
 
   useEffect(() => {
     if (!rosters || !rosters.length) {
@@ -49,17 +54,10 @@ const Dashboard: FunctionComponent<DashboardProps> = () => {
     }
   }, [rosters, navigate]);
 
-  const isActive = ({ isCurrent }: LinkGetProps) =>
-    isCurrent ? { className: 'breadcrumb-item active' } : {};
-
   return (
     <div className="bb-dashboard bb-view">
       <Breadcrumb className="bb-dashboard__nav" style={{ top }}>
-        <BreadcrumbItem
-          className="bb-dashboard__nav-item"
-          tag={Link}
-          getProps={isActive}
-          to="/rosters">
+        <BreadcrumbItem className="bb-dashboard__nav-item" tag={ExactMatchLink} to="/">
           Rosters
         </BreadcrumbItem>
 
@@ -67,28 +65,27 @@ const Dashboard: FunctionComponent<DashboardProps> = () => {
         {location.pathname.indexOf('sync') >= 0 && (
           <BreadcrumbItem
             className="bb-dashboard__nav-item"
-            getProps={isActive}
-            tag={Link}
+            tag={ExactMatchLink}
             to="/rosters/sync">
             Sync
           </BreadcrumbItem>
         )}
         {/* sync */}
-        {currentRoster && (
+        {!!currentRoster && (
           <BreadcrumbItem
             className="bb-dashboard__nav-item"
-            getProps={isActive}
+            tag={ExactMatchLink}
             to={`/rosters/${getRosterKey(currentRoster)}`}>
             {currentRoster.roster.name}
           </BreadcrumbItem>
         )}
       </Breadcrumb>
       <Container className="bb-dashboard__content">
-        <Router className="bb-dashboard__router">
-          <DashboardRosters path="rosters" default />
+        <Routes>
+          <DashboardRosters path="/" />
           <DashboardSync path="rosters/sync" />
           <DashboardRosterDetails path="rosters/:rosterKey" />
-        </Router>
+        </Routes>
       </Container>
     </div>
   );

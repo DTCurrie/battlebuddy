@@ -1,47 +1,63 @@
-import { RouteComponentProps, useNavigate } from '@reach/router';
 import { dequal } from 'dequal';
-import React, { FunctionComponent, useCallback, useContext, useEffect, useState } from 'react';
-import { RosterData } from '../../../../utils/shapes';
+import React, { FunctionComponent, useCallback, useContext, useEffect } from 'react';
+import { RouteProps } from 'react-router';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { useRosters } from '../../../behaviors/use-rosters/use-rosters';
+
 import { RostersContext } from '../../../providers/RostersProvider/RostersProvider';
+
 import { getRosterKey } from './roster-key';
 
-export interface DashboardRosterDetailsProps extends RouteComponentProps {
+export interface DashboardRosterDetailsParams {
   rosterKey?: string;
 }
 
-const DashboardRosterDetails: FunctionComponent<DashboardRosterDetailsProps> = ({ rosterKey }) => {
+const DashboardRosterDetails: FunctionComponent<RouteProps> = () => {
   const navigate = useNavigate();
-  const { currentRoster, setCurrentRoster } = useContext(RostersContext);
+  const { rosterKey }: DashboardRosterDetailsParams = useParams();
+
   const [{ rosters }] = useRosters();
+  const { currentRoster, setCurrentRoster } = useContext(RostersContext);
 
   const getRoster = useCallback(
     () => rosters.find((r) => rosterKey && getRosterKey(r) === encodeURI(rosterKey)),
     [rosterKey, rosters]
   );
 
-  const [roster, setRoster] = useState<RosterData>();
-
   useEffect(() => {
-    if (currentRoster && !dequal(currentRoster, roster)) {
-      setRoster(currentRoster);
+    if (!rosterKey) {
       return;
     }
 
     const keyedRoster = getRoster();
-    if (keyedRoster) {
-      setCurrentRoster(keyedRoster);
-      setRoster(keyedRoster);
+
+    if (currentRoster && !dequal(currentRoster, keyedRoster)) {
+      setCurrentRoster(currentRoster);
       return;
     }
 
-    navigate('/rosters');
-  }, [currentRoster, getRoster, navigate, roster, setCurrentRoster]);
+    if (!currentRoster && !!keyedRoster) {
+      setCurrentRoster(keyedRoster);
+      return;
+    }
+
+    if (!currentRoster && !keyedRoster) {
+      // navigate('/rosters');
+    }
+  }, [currentRoster, getRoster, navigate, rosterKey, setCurrentRoster]);
+
+  if (!currentRoster) {
+    return null;
+  }
+
+  const { roster } = currentRoster;
+  const { name, forces } = roster;
 
   return (
     <div className="bb-dashboard-roster-details bb-view">
-      <h2>{roster?.roster.name}</h2>
+      <h2>{name}</h2>
+      <code>{JSON.stringify(forces.map((force) => force.map))}</code>
     </div>
   );
 };

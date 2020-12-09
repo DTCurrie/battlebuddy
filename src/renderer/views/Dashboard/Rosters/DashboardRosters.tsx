@@ -1,15 +1,17 @@
-import { RouteComponentProps } from '@reach/router';
 import React, { FunctionComponent, useContext, useEffect, useState } from 'react';
+import { RouteProps } from 'react-router';
 import { CardColumns } from 'reactstrap';
+
 import { noop } from '../../../../utils/noop';
 import { RosterData } from '../../../../utils/shapes';
 
 import { useRosters } from '../../../behaviors/use-rosters/use-rosters';
-import RosterCard from '../../../components/RosterCard/RosterCard';
-import { RostersContext } from '../../../providers/RostersProvider/RostersProvider';
-import { getRosterKey } from './roster-key';
 
-export type DashboardRostersProps = RouteComponentProps;
+import RosterCard from '../../../components/RosterCard/RosterCard';
+
+import { RostersContext } from '../../../providers/RostersProvider/RostersProvider';
+
+import { getRosterKey } from './roster-key';
 
 export interface DashboardRostersMap {
   [id: string]: RosterData[];
@@ -25,7 +27,7 @@ const mapRosters = (rosters: RosterData[]): DashboardRostersMap =>
     return accumulator;
   }, {} as DashboardRostersMap);
 
-const DashboardRosters: FunctionComponent<DashboardRostersProps> = () => {
+const DashboardRosters: FunctionComponent<RouteProps> = () => {
   const { clearCurrentRoster } = useContext(RostersContext);
   const [{ rosters }] = useRosters();
   const [mappedRosters] = useState<DashboardRostersMap>(mapRosters(rosters));
@@ -41,7 +43,7 @@ const DashboardRosters: FunctionComponent<DashboardRostersProps> = () => {
       {Object.keys(mappedRosters)
         .sort()
         .map((gameSystem) => (
-          <>
+          <div key={gameSystem}>
             <h3 className="bb-dashboard-rosters__game-system" key={gameSystem}>
               {gameSystem}
             </h3>
@@ -59,7 +61,7 @@ const DashboardRosters: FunctionComponent<DashboardRostersProps> = () => {
                 );
               })}
             </CardColumns>
-          </>
+          </div>
         ))}
     </div>
   );
