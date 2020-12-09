@@ -20,9 +20,9 @@ class ErrorBoundary extends Component<ComponentPropsWithoutRef<'div'>, ErrorBoun
   render = (): ReactNode => {
     if (this.state.errorInfo) {
       return (
-        <UncontrolledAlert color="danger">
-          <summary>Something went wrong</summary>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
+        <UncontrolledAlert className="bb-error-boundary" color="danger">
+          <summary className="bb-error-boundary__summary">Something went wrong</summary>
+          <details className="bb-error-boundary__details" style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             {this.state.errorInfo.componentStack}
           </details>

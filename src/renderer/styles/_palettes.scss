@@ -1,0 +1,15 @@
+@import './palettes/kill-team.module';
+
+@each $name, $color in $kill-team {
+  .kill-team--#{$name} {
+    color: $color;
+  }
+}
+
+@import './palettes/warcry.module';
+
+@each $name, $color in $kill-team {
+  .warcry--#{$name} {
+    color: $color;
+  }
+}

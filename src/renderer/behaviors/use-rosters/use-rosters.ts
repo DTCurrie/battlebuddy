@@ -5,6 +5,7 @@ import { useStorage } from '../use-storage/use-storage';
 
 export interface RostersStorage {
   rosters: RosterData[];
+  currentRoster?: RosterData;
 }
 
 export const RostersSchema: Schema<RostersStorage> = {
@@ -12,9 +13,12 @@ export const RostersSchema: Schema<RostersStorage> = {
     type: 'array',
     default: [],
   },
+  currentRoster: {
+    type: 'object',
+  },
 };
 
 export const useRosters = (): [RostersStorage, ElectronStore<Schema<RostersStorage>>] => {
-  const rosters = useStorage('rosters', RostersSchema);
+  const rosters = useStorage('bb-rosters', RostersSchema);
   return rosters;
 };

@@ -9,6 +9,7 @@ module.exports = merge(baseConfig, {
   target: 'electron-renderer',
   entry: {
     app: ['@babel/polyfill', './src/renderer/App.tsx'],
+    styles: ['./src/renderer/styles/styles.scss'],
   },
   optimization: { moduleIds: 'named' },
   module: {

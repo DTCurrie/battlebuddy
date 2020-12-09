@@ -1,0 +1,120 @@
+@import '~bootstrap/scss/functions';
+
+@import '~bootstrap/scss/variables';
+
+@import '~bootstrap/scss/mixins';
+
+// ----------
+// Kill Team
+//
+
+$kill-team__orange: rgb(248, 234, 227) rgb(238, 204, 186) rgb(227, 170, 140) rgb(216, 135, 93)
+  rgb(207, 110, 59) rgb(199, 84, 24) rgb(193, 77, 21) rgb(186, 67, 17) rgb(179, 58, 14)
+  rgb(166, 41, 8) rgb(255, 174, 177) rgb(255, 113, 118) rgb(255, 87, 93) rgb(255, 72, 79);
+
+$kill-team__orange--50: nth($kill-team__orange, 1);
+$kill-team__orange--100: nth($kill-team__orange, 2);
+$kill-team__orange--200: nth($kill-team__orange, 3);
+$kill-team__orange--300: nth($kill-team__orange, 4);
+$kill-team__orange--400: nth($kill-team__orange, 5);
+$kill-team__orange--500: nth($kill-team__orange, 6);
+$kill-team__orange--600: nth($kill-team__orange, 7);
+$kill-team__orange--700: nth($kill-team__orange, 8);
+$kill-team__orange--800: nth($kill-team__orange, 9);
+$kill-team__orange--900: nth($kill-team__orange, 10);
+$kill-team__orange--A100: nth($kill-team__orange, 11);
+$kill-team__orange--A200: nth($kill-team__orange, 12);
+$kill-team__orange--A400: nth($kill-team__orange, 13);
+$kill-team__orange--A700: nth($kill-team__orange, 14);
+
+$kill-team__black: rgb(230, 230, 229) rgb(194, 192, 191) rgb(153, 150, 148) rgb(112, 108, 105)
+  rgb(81, 77, 73) rgb(50, 45, 41) rgb(45, 40, 36) rgb(38, 34, 31) rgb(31, 28, 25) rgb(19, 17, 15)
+  rgb(244, 28, 65) rgb(201, 10, 43) rgb(185, 0, 32) rgb(170, 0, 29);
+
+$kill-team__black--50: nth($kill-team__black, 1);
+$kill-team__black--100: nth($kill-team__black, 2);
+$kill-team__black--200: nth($kill-team__black, 3);
+$kill-team__black--300: nth($kill-team__black, 4);
+$kill-team__black--400: nth($kill-team__black, 5);
+$kill-team__black--500: nth($kill-team__black, 6);
+$kill-team__black--600: nth($kill-team__black, 7);
+$kill-team__black--700: nth($kill-team__black, 8);
+$kill-team__black--800: nth($kill-team__black, 9);
+$kill-team__black--900: nth($kill-team__black, 10);
+$kill-team__black--A100: nth($kill-team__black, 11);
+$kill-team__black--A200: nth($kill-team__black, 12);
+$kill-team__black--A400: nth($kill-team__black, 13);
+$kill-team__black--A700: nth($kill-team__black, 14);
+
+$kill-team__drab: rgb(242, 243, 242) rgb(223, 225, 221) rgb(201, 205, 199) rgb(179, 184, 177)
+  rgb(163, 169, 160) rgb(147, 154, 143) rgb(139, 146, 135) rgb(128, 136, 124) rgb(118, 126, 114)
+  rgb(100, 108, 96) rgb(214, 250, 185) rgb(181, 245, 128) rgb(166, 255, 93) rgb(158, 255, 78);
+
+$kill-team__drab--50: nth($kill-team__drab, 1);
+$kill-team__drab--100: nth($kill-team__drab, 2);
+$kill-team__drab--200: nth($kill-team__drab, 3);
+$kill-team__drab--300: nth($kill-team__drab, 4);
+$kill-team__drab--400: nth($kill-team__drab, 5);
+$kill-team__drab--500: nth($kill-team__drab, 6);
+$kill-team__drab--600: nth($kill-team__drab, 7);
+$kill-team__drab--700: nth($kill-team__drab, 8);
+$kill-team__drab--800: nth($kill-team__drab, 9);
+$kill-team__drab--900: nth($kill-team__drab, 10);
+$kill-team__drab--A100: nth($kill-team__drab, 11);
+$kill-team__drab--A200: nth($kill-team__drab, 12);
+$kill-team__drab--A400: nth($kill-team__drab, 13);
+$kill-team__drab--A700: nth($kill-team__drab, 14);
+
+$kill-team__grey: rgb(240, 241, 242) rgb(218, 221, 223) rgb(194, 198, 202) rgb(170, 175, 180)
+  rgb(151, 157, 164) rgb(133, 140, 148) rgb(125, 132, 140) rgb(114, 121, 129) rgb(104, 111, 119)
+  rgb(85, 92, 101) rgb(166, 216, 249) rgb(109, 191, 246) rgb(74, 183, 255) rgb(59, 177, 255);
+
+$kill-team__grey--50: nth($kill-team__grey, 1);
+$kill-team__grey--100: nth($kill-team__grey, 2);
+$kill-team__grey--200: nth($kill-team__grey, 3);
+$kill-team__grey--300: nth($kill-team__grey, 4);
+$kill-team__grey--400: nth($kill-team__grey, 5);
+$kill-team__grey--500: nth($kill-team__grey, 6);
+$kill-team__grey--600: nth($kill-team__grey, 7);
+$kill-team__grey--700: nth($kill-team__grey, 8);
+$kill-team__grey--800: nth($kill-team__grey, 9);
+$kill-team__grey--900: nth($kill-team__grey, 10);
+$kill-team__grey--A100: nth($kill-team__grey, 11);
+$kill-team__grey--A200: nth($kill-team__grey, 12);
+$kill-team__grey--A400: nth($kill-team__grey, 13);
+$kill-team__grey--A700: nth($kill-team__grey, 14);
+
+$kill-team__khaki: rgb(250, 245, 241) rgb(243, 230, 220) rgb(236, 214, 197) rgb(228, 197, 173)
+  rgb(222, 184, 156) rgb(216, 172, 138) rgb(212, 165, 130) rgb(206, 155, 119) rgb(200, 146, 109)
+  rgb(191, 130, 90) rgb(255, 255, 255) rgb(255, 222, 210) rgb(255, 203, 185) rgb(255, 192, 169);
+
+$kill-team__khaki--50: nth($kill-team__khaki, 1);
+$kill-team__khaki--100: nth($kill-team__khaki, 2);
+$kill-team__khaki--200: nth($kill-team__khaki, 3);
+$kill-team__khaki--300: nth($kill-team__khaki, 4);
+$kill-team__khaki--400: nth($kill-team__khaki, 5);
+$kill-team__khaki--500: nth($kill-team__khaki, 6);
+$kill-team__khaki--600: nth($kill-team__khaki, 7);
+$kill-team__khaki--700: nth($kill-team__khaki, 8);
+$kill-team__khaki--800: nth($kill-team__khaki, 9);
+$kill-team__khaki--900: nth($kill-team__khaki, 10);
+$kill-team__khaki--A100: nth($kill-team__khaki, 11);
+$kill-team__khaki--A200: nth($kill-team__khaki, 12);
+$kill-team__khaki--A400: nth($kill-team__khaki, 13);
+$kill-team__khaki--A700: nth($kill-team__khaki, 14);
+
+$kill-team: (
+  orange: nth($kill-team__orange, 6),
+  black: nth($kill-team__black, 6),
+  drab: nth($kill-team__drab, 6),
+  grey: nth($kill-team__grey, 6),
+  khaki: nth($kill-team__khaki, 6),
+);
+
+:export {
+  killTeamOrange: map-get($kill-team, orange);
+  killTeamBlack: map-get($kill-team, black);
+  killTeamDrab: map-get($kill-team, drab);
+  killTeamGrey: map-get($kill-team, grey);
+  killTeamKhaki: map-get($kill-team, khaki);
+}

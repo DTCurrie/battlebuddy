@@ -1,6 +1,6 @@
 import ElectronStore, { Schema } from 'electron-store';
 import { useEffect, useState } from 'react';
-import equal from 'fast-deep-equal/react';
+import { dequal } from 'dequal';
 
 export const useStorage = <T>(
   name: string,
@@ -8,6 +8,7 @@ export const useStorage = <T>(
   defaults?: Readonly<T>
 ): [T, ElectronStore<Schema<T>>] => {
   const [storage] = useState(new ElectronStore({ name, schema, watch: true, defaults }));
+
   const [value, setValue] = useState<T>(
     Object.keys(storage.store).reduce((accumulator, current) => {
       accumulator[current] = storage.get(current as keyof T);
@@ -16,7 +17,7 @@ export const useStorage = <T>(
   );
 
   const unsubscribe = storage.onDidAnyChange((newValue, oldValue) => {
-    if (!!newValue && !!oldValue && !equal(newValue, oldValue)) {
+    if (!!newValue && !!oldValue && !dequal(newValue, oldValue)) {
       setValue(newValue);
     }
   });

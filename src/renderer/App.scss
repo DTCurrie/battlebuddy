@@ -1,23 +1,31 @@
-@import './styles/theme';
+@import '~bootstrap/scss/functions';
+
+@import '~bootstrap/scss/variables';
+
+@import '~bootstrap/scss/mixins';
 
 .bb-app {
   position: relative;
 
-  .notification-container {
-    top: unset;
-    bottom: 0;
+  &__notifications {
+    position: relative;
 
-    width: 100%;
-    padding: 0;
+    .notification-center {
+      top: unset;
+      bottom: 0;
 
-    @include media-breakpoint-up(md) {
-      position: absolute;
+      width: 100%;
+      padding: 0;
 
-      top: 0;
-      bottom: unset;
+      @include media-breakpoint-up(md) {
+        position: absolute;
 
-      width: 320px;
-      padding: 0px 15px;
+        top: 0;
+        bottom: unset;
+
+        width: 320px;
+        padding: 0px 15px;
+      }
     }
   }
 }

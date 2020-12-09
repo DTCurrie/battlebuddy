@@ -11,16 +11,16 @@ const DashboardSync: FunctionComponent<DashboardSyncProps> = () => {
   const [{ rosterPath }] = useConfig();
 
   return (
-    <div className="bb-dashboard-sync">
-      <h2>Sync</h2>
-      <p>
+    <div className="bb-dashboard-sync bb-view">
+      <h2 className="bb-dashboard-sync__heading">Sync</h2>
+      <p className="bb-dashboard-sync__info">
         It looks like you haven&apos;t synced your rosters yet. We will currently attempt to sync
         your rosters from the following location:
       </p>
-      <figure>
+      <figure className="bb-dashboard-sync__roster-path">
         <code>{rosterPath}</code>
       </figure>
-      <SyncButton />
+      <SyncButton className="bb-dashboard-sync__sync-button" />
     </div>
   );
 };

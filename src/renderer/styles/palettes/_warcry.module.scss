@@ -1,0 +1,120 @@
+@import '~bootstrap/scss/functions';
+
+@import '~bootstrap/scss/variables';
+
+@import '~bootstrap/scss/mixins';
+
+// ----------
+// Warcry
+//
+
+$warcry__umber: rgb(236, 231, 229) rgb(209, 194, 189) rgb(178, 154, 145) rgb(147, 113, 101)
+  rgb(123, 82, 68) rgb(100, 52, 35) rgb(92, 47, 31) rgb(82, 39, 26) rgb(72, 33, 21) rgb(54, 21, 12)
+  rgb(255, 49, 79) rgb(243, 0, 35) rgb(218, 0, 32) rgb(202, 0, 29);
+
+$warcry__umber--50: nth($warcry__umber, 1);
+$warcry__umber--100: nth($warcry__umber, 2);
+$warcry__umber--200: nth($warcry__umber, 3);
+$warcry__umber--300: nth($warcry__umber, 4);
+$warcry__umber--400: nth($warcry__umber, 5);
+$warcry__umber--500: nth($warcry__umber, 6);
+$warcry__umber--600: nth($warcry__umber, 7);
+$warcry__umber--700: nth($warcry__umber, 8);
+$warcry__umber--800: nth($warcry__umber, 9);
+$warcry__umber--900: nth($warcry__umber, 10);
+$warcry__umber--A100: nth($warcry__umber, 11);
+$warcry__umber--A200: nth($warcry__umber, 12);
+$warcry__umber--A400: nth($warcry__umber, 13);
+$warcry__umber--A700: nth($warcry__umber, 14);
+
+$warcry__tan: rgb(251, 246, 242) rgb(246, 233, 222) rgb(240, 219, 200) rgb(233, 205, 178)
+  rgb(229, 194, 162) rgb(224, 183, 145) rgb(220, 176, 137) rgb(216, 167, 126) rgb(211, 159, 116)
+  rgb(203, 144, 98) rgb(255, 255, 255) rgb(255, 239, 232) rgb(255, 221, 206) rgb(255, 211, 191);
+
+$warcry__tan--50: nth($warcry__tan, 1);
+$warcry__tan--100: nth($warcry__tan, 2);
+$warcry__tan--200: nth($warcry__tan, 3);
+$warcry__tan--300: nth($warcry__tan, 4);
+$warcry__tan--400: nth($warcry__tan, 5);
+$warcry__tan--500: nth($warcry__tan, 6);
+$warcry__tan--600: nth($warcry__tan, 7);
+$warcry__tan--700: nth($warcry__tan, 8);
+$warcry__tan--800: nth($warcry__tan, 9);
+$warcry__tan--900: nth($warcry__tan, 10);
+$warcry__tan--A100: nth($warcry__tan, 11);
+$warcry__tan--A200: nth($warcry__tan, 12);
+$warcry__tan--A400: nth($warcry__tan, 13);
+$warcry__tan--A700: nth($warcry__tan, 14);
+
+$warcry__green: rgb(244, 245, 239) rgb(228, 230, 215) rgb(210, 213, 188) rgb(191, 196, 161)
+  rgb(178, 183, 141) rgb(164, 170, 121) rgb(156, 163, 113) rgb(146, 153, 102) rgb(137, 144, 92)
+  rgb(120, 127, 73) rgb(255, 254, 174) rgb(255, 253, 113) rgb(255, 253, 87) rgb(255, 253, 72);
+
+$warcry__green--50: nth($warcry__green, 1);
+$warcry__green--100: nth($warcry__green, 2);
+$warcry__green--200: nth($warcry__green, 3);
+$warcry__green--300: nth($warcry__green, 4);
+$warcry__green--400: nth($warcry__green, 5);
+$warcry__green--500: nth($warcry__green, 6);
+$warcry__green--600: nth($warcry__green, 7);
+$warcry__green--700: nth($warcry__green, 8);
+$warcry__green--800: nth($warcry__green, 9);
+$warcry__green--900: nth($warcry__green, 10);
+$warcry__green--A100: nth($warcry__green, 11);
+$warcry__green--A200: nth($warcry__green, 12);
+$warcry__green--A400: nth($warcry__green, 13);
+$warcry__green--A700: nth($warcry__green, 14);
+
+$warcry__grey: rgb(244, 242, 242) rgb(227, 223, 223) rgb(209, 202, 202) rgb(190, 180, 180)
+  rgb(176, 164, 164) rgb(162, 148, 148) rgb(154, 140, 140) rgb(144, 129, 129) rgb(134, 119, 119)
+  rgb(117, 101, 101) rgb(251, 198, 205) rgb(247, 140, 155) rgb(255, 107, 127) rgb(255, 92, 114);
+
+$warcry__grey--50: nth($warcry__grey, 1);
+$warcry__grey--100: nth($warcry__grey, 2);
+$warcry__grey--200: nth($warcry__grey, 3);
+$warcry__grey--300: nth($warcry__grey, 4);
+$warcry__grey--400: nth($warcry__grey, 5);
+$warcry__grey--500: nth($warcry__grey, 6);
+$warcry__grey--600: nth($warcry__grey, 7);
+$warcry__grey--700: nth($warcry__grey, 8);
+$warcry__grey--800: nth($warcry__grey, 9);
+$warcry__grey--900: nth($warcry__grey, 10);
+$warcry__grey--A100: nth($warcry__grey, 11);
+$warcry__grey--A200: nth($warcry__grey, 12);
+$warcry__grey--A400: nth($warcry__grey, 13);
+$warcry__grey--A700: nth($warcry__grey, 14);
+
+$warcry__yellow: rgb(254, 249, 236) rgb(254, 241, 208) rgb(253, 231, 177) rgb(252, 221, 145)
+  rgb(251, 214, 122) rgb(250, 207, 98) rgb(249, 202, 90) rgb(249, 195, 80) rgb(248, 189, 70)
+  rgb(246, 178, 52) rgb(255, 255, 255) rgb(255, 247, 238) rgb(255, 235, 213) rgb(255, 227, 198);
+
+$warcry__yellow--50: nth($warcry__yellow, 1);
+$warcry__yellow--100: nth($warcry__yellow, 2);
+$warcry__yellow--200: nth($warcry__yellow, 3);
+$warcry__yellow--300: nth($warcry__yellow, 4);
+$warcry__yellow--400: nth($warcry__yellow, 5);
+$warcry__yellow--500: nth($warcry__yellow, 6);
+$warcry__yellow--600: nth($warcry__yellow, 7);
+$warcry__yellow--700: nth($warcry__yellow, 8);
+$warcry__yellow--800: nth($warcry__yellow, 9);
+$warcry__yellow--900: nth($warcry__yellow, 10);
+$warcry__yellow--A100: nth($warcry__yellow, 11);
+$warcry__yellow--A200: nth($warcry__yellow, 12);
+$warcry__yellow--A400: nth($warcry__yellow, 13);
+$warcry__yellow--A700: nth($warcry__yellow, 14);
+
+$warcry: (
+  umber: nth($warcry__umber, 6),
+  tan: nth($warcry__tan, 6),
+  green: nth($warcry__green, 6),
+  grey: nth($warcry__grey, 6),
+  yellow: nth($warcry__yellow, 6),
+);
+
+:export {
+  warcryUmber: map-get($warcry, umber);
+  warcryTan: map-get($warcry, tan);
+  warcryGreen: map-get($warcry, green);
+  warcryGrey: map-get($warcry, grey);
+  warcryYellow: map-get($warcry, yellow);
+}
